@@ -1,0 +1,10 @@
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.csprojAssemblyReference.cache
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.Form1.resources
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.Properties.Resources.resources
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.csproj.GenerateResource.cache
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.csproj.CoreCompileInputs.cache
+C:\Users\Malk al\source\repos\myGame\bin\Debug\myGame.exe.config
+C:\Users\Malk al\source\repos\myGame\bin\Debug\myGame.exe
+C:\Users\Malk al\source\repos\myGame\bin\Debug\myGame.pdb
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.exe
+C:\Users\Malk al\source\repos\myGame\obj\Debug\myGame.pdb
