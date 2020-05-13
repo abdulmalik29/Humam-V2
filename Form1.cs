@@ -25,22 +25,22 @@ namespace myGame
 
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game
         {
-            if (goUp == true)
+            if (goUp == true && player.Top >= 10)
             {
                 player.Top -= playerVel;
             }
 
-            if (goDown == true)
+            if (goDown == true && player.Top <= 680)
             {
                 player.Top += playerVel;
             }
 
-            if (goRight == true)
+            if (goRight == true && player.Left < 710)
             {
                 player.Left += playerVel;
             }
 
-            if (goLeft == true)
+            if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerVel;
             }
