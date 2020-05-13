@@ -14,6 +14,9 @@ namespace myGame
     {
         bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
         int score, playerVel;
+        int n = 0;
+
+
 
         public Form1()
         {
@@ -21,10 +24,15 @@ namespace myGame
             reset_game();
         }
 
-        
 
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game
         {
+            int player_x = player.Left;
+            string x_coord = player_x.ToString();
+
+            int player_y = player.Top;
+            string y_coord = player_y.ToString();
+
             if (goUp == true && player.Top >= 10)
             {
                 player.Top -= playerVel;
@@ -43,6 +51,23 @@ namespace myGame
             if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerVel;
+            }
+
+            foreach(Control Block in this.Controls)
+            {
+                if (Block is PictureBox)
+                {
+
+                    if ((string)Block.Tag == "blocks")
+                    {
+                        if (player.Bounds.IntersectsWith(Block.Bounds))
+                        {
+                            n++;
+                            Console.WriteLine("test" + n);
+                            Console.WriteLine(x_coord + " , " + y_coord);
+                        }
+                    }
+                }
             }
         }
 
