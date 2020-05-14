@@ -68,6 +68,7 @@
             this.block_f1 = new System.Windows.Forms.PictureBox();
             this.game_timer = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
+            this.extra_block = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).BeginInit();
@@ -105,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_f2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).BeginInit();
             this.SuspendLayout();
             // 
             // score_txt
@@ -491,12 +493,23 @@
             this.player.TabIndex = 37;
             this.player.TabStop = false;
             // 
+            // extra_block
+            // 
+            this.extra_block.Image = global::myGame.Properties.Resources.block1001;
+            this.extra_block.Location = new System.Drawing.Point(684, 662);
+            this.extra_block.Name = "extra_block";
+            this.extra_block.Size = new System.Drawing.Size(100, 100);
+            this.extra_block.TabIndex = 38;
+            this.extra_block.TabStop = false;
+            this.extra_block.Tag = "blocks";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.extra_block);
             this.Controls.Add(this.player);
             this.Controls.Add(this.block_f6);
             this.Controls.Add(this.block_f5);
@@ -535,7 +548,9 @@
             this.Controls.Add(this.block_a2);
             this.Controls.Add(this.block_a1);
             this.Controls.Add(this.score_txt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "myGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.key_is_down);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.key_is_up);
@@ -576,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_f2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,6 +637,7 @@
         private System.Windows.Forms.PictureBox block_f1;
         private System.Windows.Forms.Timer game_timer;
         private System.Windows.Forms.PictureBox player;
+        private System.Windows.Forms.PictureBox extra_block;
     }
 }
 

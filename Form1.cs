@@ -67,6 +67,7 @@ namespace myGame
             if (player_x <= 90 || player_x >= 660 || player_y <= 90 || player_y >= 660) // to check if the player have left the initial game boundaries
             {
                 Console.WriteLine("you lost");
+                gameOver();
             }
 
 
@@ -132,13 +133,15 @@ namespace myGame
             }
         }
 
-        private void reset_game()
+        private void reset_game() // a fucnction that reset the game and most of its virables
         {
             game_is_over = false;
             score_txt.Text = "Score = 0";
             score = 0;
             playerVel = 10;
+            
 
+            // returns all the blocks to its initial location
             player.Location = new Point(200, 200);
 
             block_a1.Location = new Point(100,100);
@@ -168,7 +171,7 @@ namespace myGame
             block_d3.Location = new Point(400, 300);
             block_d2.Location = new Point(400, 200);
             block_d1.Location = new Point(400, 100);
-
+            
             block_e6.Location = new Point(500, 600);
             block_e5.Location = new Point(500, 500);
             block_e4.Location = new Point(500, 400);
@@ -190,11 +193,11 @@ namespace myGame
                     x.Visible = true;
                 }
             }
-            block_a1.Visible = false;  // to test the code
+            extra_block.Visible = false;  // hide the extra block to be used latter
             game_timer.Start();
          }
 
-        private void gameOver(string massege)
+        private void gameOver()
         {
 
         }
