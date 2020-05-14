@@ -14,7 +14,7 @@ namespace myGame
     {
         bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
         int score, playerVel;
-        int n = 0;
+        int test = 0;
 
 
 
@@ -25,7 +25,7 @@ namespace myGame
         }
 
 
-        private void mainGameTimer(object sender, EventArgs e) // the main loop for the game
+        private void mainGameTimer(object sender, EventArgs e) // the main loop for the game which have most of the ruls 
         {
             int player_x = player.Left;
             //string x_coord = player_x.ToString();
@@ -34,7 +34,11 @@ namespace myGame
             //string y_coord = player_y.ToString();
 
 
-            // 
+
+            
+            // these allow the player to be moved via the keyboard
+            // also it does not allaw the player to go over the screen
+
             if (goUp == true && player.Top >= 10)
             {
                 player.Top -= playerVel;
@@ -66,7 +70,7 @@ namespace myGame
             }
 
 
-            foreach (Control Block in this.Controls)
+            foreach (Control Block in this.Controls) // used to check for other tags ??????
             {
                 if (Block is PictureBox)
                 {
@@ -82,7 +86,7 @@ namespace myGame
         }
 
 
-        private void key_is_down(object sender, KeyEventArgs e)
+        private void key_is_down(object sender, KeyEventArgs e) // bind the key with a boolean variable
         {
             if(e.KeyCode == Keys.W)
             {
