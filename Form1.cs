@@ -14,7 +14,8 @@ namespace myGame
     {
         bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
         int score, playerVel;
-        int test = 0;
+        //int test = 0;
+        //const int topOfTheScreen = 0, bottomOfTheScreen = 700;
 
 
 
@@ -28,13 +29,9 @@ namespace myGame
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game which have most of the ruls 
         {
             int player_x = player.Left;
-            //string x_coord = player_x.ToString();
-
             int player_y = player.Top;
-            //string y_coord = player_y.ToString();
 
-
-
+            shake_12(block_a1);
             
             // these allow the player to be moved via the keyboard
             // also it does not allaw the player to go over the screen
@@ -68,6 +65,23 @@ namespace myGame
             {
                 Console.WriteLine("you lost");
                 gameOver();
+            }
+
+            if (is_player_TopLeft())
+            {
+                Console.WriteLine("player is in the top left");
+
+            }else if (is_player_TopRight())
+            {
+                Console.WriteLine("player is in the top right 000");
+
+            }else if (is_player_BottomLeft())
+            {
+                Console.WriteLine("player is in the bottom left");
+
+            }else if (is_player_BottomRight())
+            {
+                Console.WriteLine("player is in the bottom right");
             }
 
 
@@ -196,6 +210,48 @@ namespace myGame
             extra_block.Visible = false;  // hide the extra block to be used latter
             game_timer.Start();
          }
+
+        private bool is_player_TopLeft()
+        {
+            if (player.Top < 400 && player.Left < 400)
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool is_player_TopRight()
+        {
+            if (player.Top < 400 && player.Left > 400)
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool is_player_BottomLeft()
+        {
+            if (player.Top >= 400 && player.Left <= 400)
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool is_player_BottomRight()
+        {
+            if (player.Top >= 400 && player.Left > 400)
+            {
+                return true;
+            }
+             return false;
+        }
+
+        
+        // a method used to shake the 12 blocks and remove them
+        private void shake_12(Control block1, Control block2, Control block3, Control block4, Control block5, Control block6,
+                              Control block7, Control block8, Control block9, Control block10, Control block11, Control block12)
+        {
+            block1.Top += 1; 
+        }
+
 
         private void gameOver()
         {

@@ -7,12 +7,422 @@
 'myGame.exe' (CLR v4.0.30319: myGame.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
 'myGame.exe' (CLR v4.0.30319: myGame.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
 200 , 200
-190 , 200
-180 , 200
-170 , 200
-160 , 200
-150 , 200
-140 , 200
-130 , 200
-120 , 200
-The program '[2768] myGame.exe' has exited with code 0 (0x0).
+200 , 210
+200 , 220
+200 , 230
+200 , 240
+200 , 250
+200 , 260
+200 , 270
+200 , 280
+200 , 280
+210 , 290
+210 , 290
+220 , 300
+220 , 300
+230 , 310
+230 , 310
+240 , 320
+240 , 320
+250 , 330
+250 , 330
+260 , 340
+260 , 340
+270 , 350
+270 , 350
+280 , 360
+280 , 360
+290 , 370
+290 , 370
+300 , 380
+300 , 380
+310 , 390
+310 , 390
+320 , 400
+320 , 400
+330 , 410
+330 , 410
+340 , 420
+340 , 420
+350 , 430
+350 , 430
+360 , 440
+360 , 440
+370 , 450
+370 , 450
+380 , 460
+380 , 460
+390 , 470
+390 , 470
+400 , 480
+400 , 480
+410 , 490
+410 , 490
+420 , 500
+420 , 500
+430 , 510
+430 , 510
+440 , 520
+440 , 520
+450 , 530
+450 , 530
+460 , 540
+460 , 540
+470 , 550
+470 , 550
+480 , 560
+480 , 560
+490 , 570
+490 , 570
+500 , 580
+500 , 580
+510 , 590
+510 , 590
+520 , 600
+520 , 600
+530 , 610
+530 , 610
+540 , 620
+540 , 620
+550 , 630
+550 , 630
+560 , 640
+560 , 640
+570 , 650
+570 , 650
+580 , 660
+580 , 660
+you lost
+590 , 670
+590 , 670
+you lost
+600 , 680
+600 , 680
+you lost
+610 , 690
+610 , 690
+you lost
+620 , 700
+620 , 700
+you lost
+630 , 710
+you lost
+you lost
+640 , 710
+you lost
+you lost
+650 , 710
+you lost
+you lost
+660 , 710
+you lost
+you lost
+670 , 710
+you lost
+you lost
+680 , 710
+you lost
+you lost
+690 , 710
+you lost
+you lost
+700 , 710
+you lost
+you lost
+710 , 710
+you lost
+you lost
+720 , 710
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+you lost
+730 , 710
+you lost
+you lost
+730 , 700
+you lost
+you lost
+730 , 690
+you lost
+you lost
+730 , 680
+you lost
+you lost
+730 , 670
+you lost
+you lost
+730 , 660
+you lost
+you lost
+730 , 650
+you lost
+you lost
+730 , 640
+you lost
+you lost
+730 , 630
+you lost
+you lost
+730 , 620
+you lost
+730 , 610
+you lost
+730 , 600
+you lost
+730 , 590
+you lost
+730 , 580
+you lost
+730 , 570
+730 , 570
+you lost
+720 , 560
+720 , 560
+you lost
+710 , 550
+710 , 550
+you lost
+700 , 540
+700 , 540
+you lost
+690 , 530
+690 , 530
+you lost
+680 , 520
+680 , 520
+you lost
+670 , 510
+670 , 510
+you lost
+660 , 500
+660 , 500
+you lost
+650 , 490
+650 , 490
+640 , 480
+640 , 480
+630 , 470
+630 , 470
+620 , 460
+620 , 460
+610 , 450
+610 , 450
+600 , 440
+600 , 440
+590 , 430
+590 , 430
+580 , 420
+580 , 420
+570 , 410
+570 , 410
+560 , 400
+560 , 400
+550 , 390
+550 , 390
+540 , 380
+540 , 380
+530 , 370
+530 , 370
+520 , 360
+520 , 360
+510 , 350
+510 , 350
+500 , 340
+500 , 340
+490 , 330
+490 , 330
+480 , 320
+480 , 320
+470 , 310
+470 , 310
+460 , 300
+460 , 300
+450 , 290
+450 , 290
+440 , 280
+440 , 280
+430 , 270
+430 , 270
+420 , 260
+420 , 260
+410 , 250
+410 , 250
+400 , 240
+400 , 240
+390 , 230
+390 , 230
+380 , 220
+380 , 220
+370 , 210
+370 , 210
+360 , 200
+360 , 200
+350 , 190
+350 , 190
+340 , 180
+340 , 180
+330 , 170
+330 , 170
+320 , 160
+320 , 160
+310 , 150
+310 , 150
+300 , 140
+300 , 140
+290 , 130
+290 , 130
+280 , 120
+280 , 120
+270 , 110
+270 , 110
+260 , 100
+260 , 100
+250 , 90
+250 , 90
+you lost
+240 , 80
+240 , 80
+you lost
+230 , 70
+230 , 70
+you lost
+220 , 60
+220 , 60
+you lost
+210 , 50
+210 , 50
+you lost
+200 , 40
+200 , 40
+you lost
+190 , 30
+190 , 30
+you lost
+180 , 20
+180 , 20
+you lost
+170 , 10
+170 , 10
+you lost
+160 , 0
+you lost
+150 , 0
+you lost
+140 , 0
+you lost
+130 , 0
+you lost
+120 , 0
+you lost
+110 , 0
+you lost
+100 , 0
+you lost
+90 , 0
+90 , 0
+you lost
+80 , 10
+80 , 10
+you lost
+70 , 20
+70 , 20
+you lost
+60 , 30
+60 , 30
+you lost
+50 , 40
+50 , 40
+you lost
+40 , 50
+40 , 50
+you lost
+30 , 60
+30 , 60
+you lost
+20 , 70
+20 , 70
+you lost
+10 , 80
+10 , 80
+you lost
+0 , 90
+you lost
+0 , 100
+you lost
+0 , 110
+you lost
+0 , 120
+you lost
+0 , 130
+you lost
+0 , 140
+0 , 140
+you lost
+10 , 150
+10 , 150
+you lost
+20 , 160
+you lost
+30 , 160
+you lost
+40 , 160
+you lost
+50 , 160
+you lost
+60 , 160
+you lost
+70 , 160
+you lost
+80 , 160
+you lost
+90 , 160
+you lost
+100 , 160
+110 , 160
+120 , 160
+120 , 160
+130 , 150
+130 , 150
+140 , 140
+140 , 140
+150 , 130
+150 , 120
+150 , 110
+150 , 100
+160 , 100
+170 , 100
+180 , 100
+190 , 100
+200 , 100
+210 , 100
+220 , 100
+230 , 100
+240 , 100
+250 , 100
+260 , 100
+The program '[23212] myGame.exe' has exited with code 0 (0x0).
