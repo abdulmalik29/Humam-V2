@@ -28,43 +28,53 @@ namespace myGame
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game
         {
             int player_x = player.Left;
-            string x_coord = player_x.ToString();
+            //string x_coord = player_x.ToString();
 
             int player_y = player.Top;
-            string y_coord = player_y.ToString();
+            //string y_coord = player_y.ToString();
 
+
+            // 
             if (goUp == true && player.Top >= 10)
             {
                 player.Top -= playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
             }
 
-            if (goDown == true && player.Top <= 680)
+            if (goDown == true && player.Top <= 700)
             {
                 player.Top += playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
             }
 
-            if (goRight == true && player.Left < 710)
+            if (goRight == true && player.Left < 730)
             {
                 player.Left += playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
+            }
+            
+
+            if (player_x <= 90 || player_x >= 660 || player_y <= 90 || player_y >= 660) // to check if the player have left the initial game boundaries
+            {
+                Console.WriteLine("you lost");
             }
 
-            foreach(Control Block in this.Controls)
+
+            foreach (Control Block in this.Controls)
             {
                 if (Block is PictureBox)
                 {
-
                     if ((string)Block.Tag == "blocks")
                     {
-                        if (player.Bounds.IntersectsWith(Block.Bounds))
-                        {
-                            n++;
-                            Console.WriteLine("test" + n);
-                            Console.WriteLine(x_coord + " , " + y_coord);
+                        if (player.Bounds.IntersectsWith(Block.Bounds) && !Block.Visible)  // to check is on a visible block or not
+                        {                                                                  // if they are not they fall over and lose the game
+                          Console.WriteLine("you lost");                                    
                         }
                     }
                 }
@@ -176,6 +186,7 @@ namespace myGame
                     x.Visible = true;
                 }
             }
+            block_a1.Visible = false;  // to test the code
             game_timer.Start();
          }
 
