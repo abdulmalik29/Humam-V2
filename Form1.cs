@@ -120,7 +120,7 @@ namespace myGame
 
         private void start_game()
         {
-           Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6);
+           Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, 0);
         }
 
         private void check_for_overlapping()

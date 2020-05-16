@@ -18,22 +18,22 @@ namespace myGame
                 block1.Top++;
                 block3.Top++;
                 block5.Top++;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
 
                 block1.Top--;
                 block3.Top--;
                 block5.Top--;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
 
                 block2.Left++;
                 block4.Left++;
                 block6.Left++;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
 
                 block2.Left--;
                 block4.Left--;
                 block6.Left--;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
 
                 block1.Top++;
                 block3.Top++;
@@ -41,7 +41,7 @@ namespace myGame
                 block2.Left++;
                 block4.Left++;
                 block6.Left++;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
 
                 block1.Top--;
                 block3.Top--;
@@ -49,7 +49,7 @@ namespace myGame
                 block2.Left--;
                 block4.Left--;
                 block6.Left--;
-                await Task.Delay(200);
+                await Task.Delay(200 - delay_time);
             }
 
                 //foreach (PictureBox box in )
