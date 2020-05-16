@@ -16,7 +16,7 @@ namespace myGame
     {
         bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
         int score, playerVel, player_x, player_y;
- 
+
 
         //int test = 0;
         //const int topOfTheScreen = 0, bottomOfTheScreen = 700;
@@ -35,7 +35,7 @@ namespace myGame
 
             move_player();
             check_for_overlapping();
-            //shake_12(block_a1);
+            Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6);
 
 
             if (player.Left <= (100 - playerVel) || (player.Left >= 650 + playerVel) || player.Top <= (100 - playerVel) || player.Top >= (650 - playerVel)) // to check if the player have left the initial game boundaries
@@ -114,13 +114,13 @@ namespace myGame
 
         private void check_for_overlapping()
         {
-            foreach (Control Block in this.Controls) // used to check for other tags ??????
+            foreach (Control block in this.Controls) // used to check for other tags ??????
             {
-                if (Block is PictureBox)
+                if (block is PictureBox)
                 {
-                    if ((string)Block.Tag == "blocks")
+                    if ((string)block.Tag == "blocks")
                     {
-                        if (player.Bounds.IntersectsWith(Block.Bounds) && !Block.Visible)  // to check if the player is on a visible block or not
+                        if (player.Bounds.IntersectsWith(block.Bounds) && !block.Visible)  // to check if the player is on a visible block or not
                         {                                                                  // if they are not they fall over and lose the game
                             Console.WriteLine("you lost 0000");
                         }
@@ -265,12 +265,7 @@ namespace myGame
 
         
         // a method used to shake the 12 blocks and remove them
-        private void shake_12(Control block1, Control block2, Control block3, Control block4, Control block5, Control block6,
-                              Control block7, Control block8, Control block9, Control block10, Control block11, Control block12)
-        {
-            block1.Top += 1; 
-        }
-
+        
 
         private void gameOver()
         {
