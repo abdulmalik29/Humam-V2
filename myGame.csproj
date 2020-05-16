@@ -87,5 +87,8 @@
   <ItemGroup>
     <None Include="Resources\block1001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikPng.com_blue-flame-png_840679.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

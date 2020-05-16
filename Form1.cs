@@ -35,7 +35,6 @@ namespace myGame
 
             move_player();
             check_for_overlapping();
-            Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6);
 
 
             if (player.Left <= (100 - playerVel) || (player.Left >= 650 + playerVel) || player.Top <= (100 - playerVel) || player.Top >= (650 - playerVel)) // to check if the player have left the initial game boundaries
@@ -89,6 +88,9 @@ namespace myGame
             }
 
         }
+
+
+
         private void key_is_up(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W)
@@ -110,6 +112,15 @@ namespace myGame
             {
                 goRight = false;
             }
+            if (e.KeyCode == Keys.Enter)
+            {
+                start_game();
+            }
+        }
+
+        private void start_game()
+        {
+           Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6);
         }
 
         private void check_for_overlapping()
@@ -129,6 +140,10 @@ namespace myGame
             }
         }
 
+        private void key_is_pressed(object sender, KeyPressEventArgs e)
+        {
+
+        }
         private void move_player()
         {
             // this method allow the player to be moved via the keyboard
@@ -160,6 +175,7 @@ namespace myGame
                 Console.WriteLine("{0} , {1}", player_x, player_y);
             }
         }
+
 
         private void reset_game() // a fucnction that reset the game and most of its virables
         {
@@ -269,7 +285,7 @@ namespace myGame
 
         private void gameOver()
         {
-
+            //game_timer.Stop();
         }
 
         private void pause_game()
