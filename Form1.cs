@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +15,9 @@ namespace myGame
     public partial class Form1 : Form
     {
         bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
-        int score, playerVel;
+        int score, playerVel, player_x, player_y;
+ 
+
         //int test = 0;
         //const int topOfTheScreen = 0, bottomOfTheScreen = 700;
 
@@ -28,44 +32,19 @@ namespace myGame
 
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game which have most of the ruls 
         {
-            int player_x = player.Left;
-            int player_y = player.Top;
 
-            shake_12(block_a1);
-            
-            // these allow the player to be moved via the keyboard
-            // also it does not allaw the player to go over the screen
+            move_player();
+            check_for_overlapping();
+            //shake_12(block_a1);
 
-            if (goUp == true && player.Top >= 10)
-            {
-                player.Top -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
 
-            if (goDown == true && player.Top <= 700)
-            {
-                player.Top += playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
+            if (player.Left <= (100 - playerVel) || (player.Left >= 650 + playerVel) || player.Top <= (100 - playerVel) || player.Top >= (650 - playerVel)) // to check if the player have left the initial game boundaries
 
-            if (goRight == true && player.Left < 730)
-            {
-                player.Left += playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-
-            if (goLeft == true && player.Left > 0)
-            {
-                player.Left -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-            
-
-            if (player_x <= 90 || player_x >= 660 || player_y <= 90 || player_y >= 660) // to check if the player have left the initial game boundaries
             {
                 Console.WriteLine("you lost");
                 gameOver();
             }
+
 
             if (is_player_TopLeft())
             {
@@ -73,7 +52,7 @@ namespace myGame
 
             }else if (is_player_TopRight())
             {
-                Console.WriteLine("player is in the top right 000");
+                Console.WriteLine("player is in the top right");
 
             }else if (is_player_BottomLeft())
             {
@@ -84,20 +63,6 @@ namespace myGame
                 Console.WriteLine("player is in the bottom right");
             }
 
-
-            foreach (Control Block in this.Controls) // used to check for other tags ??????
-            {
-                if (Block is PictureBox)
-                {
-                    if ((string)Block.Tag == "blocks")
-                    {
-                        if (player.Bounds.IntersectsWith(Block.Bounds) && !Block.Visible)  // to check is on a visible block or not
-                        {                                                                  // if they are not they fall over and lose the game
-                          Console.WriteLine("you lost");                                    
-                        }
-                    }
-                }
-            }
         }
 
 
@@ -147,18 +112,72 @@ namespace myGame
             }
         }
 
+        private void check_for_overlapping()
+        {
+            foreach (Control Block in this.Controls) // used to check for other tags ??????
+            {
+                if (Block is PictureBox)
+                {
+                    if ((string)Block.Tag == "blocks")
+                    {
+                        if (player.Bounds.IntersectsWith(Block.Bounds) && !Block.Visible)  // to check if the player is on a visible block or not
+                        {                                                                  // if they are not they fall over and lose the game
+                            Console.WriteLine("you lost 0000");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void move_player()
+        {
+            // this method allow the player to be moved via the keyboard
+            // also it does not allaw the player to go over the screen
+
+            int player_x = player.Left;
+            int player_y = player.Top;
+            if (goUp == true && player.Top >= 10)
+            {
+                player.Top -= playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
+            }
+
+            if (goDown == true && player.Top <= 700)
+            {
+                player.Top += playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
+            }
+
+            if (goRight == true && player.Left < 730)
+            {
+                player.Left += playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
+            }
+
+            if (goLeft == true && player.Left > 0)
+            {
+                player.Left -= playerVel;
+                Console.WriteLine("{0} , {1}", player_x, player_y);
+            }
+        }
+
         private void reset_game() // a fucnction that reset the game and most of its virables
         {
             game_is_over = false;
             score_txt.Text = "Score = 0";
             score = 0;
             playerVel = 10;
-            
 
-            // returns all the blocks to its initial location
+            reset_blocks();
             player.Location = new Point(200, 200);
+            extra_block.Visible = false;  // hide the extra block to be used latter
+            game_timer.Start();
+         }
 
-            block_a1.Location = new Point(100,100);
+        private void reset_blocks()  // a method to returns all the blocks to its initial location and make them visible
+
+        {
+            block_a1.Location = new Point(100, 100);
             block_a2.Location = new Point(100, 200);
             block_a3.Location = new Point(100, 300);
             block_a4.Location = new Point(100, 400);
@@ -185,7 +204,7 @@ namespace myGame
             block_d3.Location = new Point(400, 300);
             block_d2.Location = new Point(400, 200);
             block_d1.Location = new Point(400, 100);
-            
+
             block_e6.Location = new Point(500, 600);
             block_e5.Location = new Point(500, 500);
             block_e4.Location = new Point(500, 400);
@@ -200,6 +219,8 @@ namespace myGame
             block_f2.Location = new Point(600, 200);
             block_f1.Location = new Point(600, 100);
 
+            extra_block.Location = new Point(750,700);
+
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
@@ -207,9 +228,7 @@ namespace myGame
                     x.Visible = true;
                 }
             }
-            extra_block.Visible = false;  // hide the extra block to be used latter
-            game_timer.Start();
-         }
+        }
 
         private bool is_player_TopLeft()
         {

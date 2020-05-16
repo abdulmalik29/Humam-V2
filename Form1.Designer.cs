@@ -496,7 +496,7 @@
             // extra_block
             // 
             this.extra_block.Image = global::myGame.Properties.Resources.block1001;
-            this.extra_block.Location = new System.Drawing.Point(684, 662);
+            this.extra_block.Location = new System.Drawing.Point(731, 600);
             this.extra_block.Name = "extra_block";
             this.extra_block.Size = new System.Drawing.Size(100, 100);
             this.extra_block.TabIndex = 38;
