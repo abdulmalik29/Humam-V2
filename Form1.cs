@@ -36,7 +36,7 @@ namespace myGame
 
             void check_if_player_left_boundries()
             {
-                if (player_img.Left <= (100 - player.playerVel) || (player_img.Left >= 650 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (650 - player.playerVel)) // to check if the player have left the initial game boundaries
+                if (player_img.Left <= (100 - player.playerVel) || (player_img.Left >= 750 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (750 - player.playerVel)) // to check if the player have left the initial game boundaries
 
                 {
                     Debug.WriteLine("you lost");
@@ -137,6 +137,7 @@ namespace myGame
             block_a4.Location = new Point(400, 100);
             block_a5.Location = new Point(500, 100);
             block_a6.Location = new Point(600, 100);
+            block_a7.Location = new Point(700, 100);
 
             block_b1.Location = new Point(100, 200);
             block_b2.Location = new Point(200, 200);
@@ -144,6 +145,7 @@ namespace myGame
             block_b4.Location = new Point(400, 200);
             block_b5.Location = new Point(500, 200);
             block_b6.Location = new Point(600, 200);
+            block_b7.Location = new Point(700, 200);
 
             block_c1.Location = new Point(100, 300);
             block_c2.Location = new Point(200, 300);
@@ -151,6 +153,7 @@ namespace myGame
             block_c4.Location = new Point(400, 300);
             block_c5.Location = new Point(500, 300);
             block_c6.Location = new Point(600, 300);
+            block_c7.Location = new Point(700, 300);
 
             block_d1.Location = new Point(100, 400);
             block_d2.Location = new Point(200, 400);
@@ -158,6 +161,7 @@ namespace myGame
             block_d4.Location = new Point(400, 400);
             block_d5.Location = new Point(500, 400);
             block_d6.Location = new Point(600, 400);
+            block_d7.Location = new Point(700, 400);
 
             block_e1.Location = new Point(100, 500);
             block_e2.Location = new Point(200, 500);
@@ -165,6 +169,7 @@ namespace myGame
             block_e4.Location = new Point(400, 500);
             block_e5.Location = new Point(500, 500);
             block_e6.Location = new Point(600, 500);
+            block_e7.Location = new Point(700, 500);
 
             block_f1.Location = new Point(100, 600);
             block_f2.Location = new Point(200, 600);
@@ -172,8 +177,18 @@ namespace myGame
             block_f4.Location = new Point(400, 600);
             block_f5.Location = new Point(500, 600);
             block_f6.Location = new Point(600, 600);
+            block_f7.Location = new Point(700, 600);
 
-            extra_block.Location = new Point(750,700);
+            block_g1.Location = new Point(100, 700);
+            block_g2.Location = new Point(200, 700);
+            block_g3.Location = new Point(300, 700);
+            block_g4.Location = new Point(400, 700);
+            block_g5.Location = new Point(500, 700);
+            block_g6.Location = new Point(600, 700);
+            block_g7.Location = new Point(700, 700);
+
+
+            extra_block.Location = new Point(-50,700);
 
             foreach (Control x in this.Controls)
             {
@@ -188,8 +203,6 @@ namespace myGame
         {
             //game_timer.Stop();
         }
-
-        //private void pause_game(){game_timer.();}
 
         private void increase_score(int number)
         {

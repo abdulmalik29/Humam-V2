@@ -69,6 +69,19 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
+            this.block_a7 = new System.Windows.Forms.PictureBox();
+            this.block_b7 = new System.Windows.Forms.PictureBox();
+            this.block_c7 = new System.Windows.Forms.PictureBox();
+            this.block_d7 = new System.Windows.Forms.PictureBox();
+            this.block_e7 = new System.Windows.Forms.PictureBox();
+            this.block_f7 = new System.Windows.Forms.PictureBox();
+            this.block_g1 = new System.Windows.Forms.PictureBox();
+            this.block_g2 = new System.Windows.Forms.PictureBox();
+            this.block_g3 = new System.Windows.Forms.PictureBox();
+            this.block_g4 = new System.Windows.Forms.PictureBox();
+            this.block_g5 = new System.Windows.Forms.PictureBox();
+            this.block_g6 = new System.Windows.Forms.PictureBox();
+            this.block_g7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.extra_block)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f6)).BeginInit();
@@ -107,6 +120,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_a7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_b7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_c7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_d7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_e7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_f7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
             this.SuspendLayout();
             // 
             // score_txt
@@ -138,7 +164,7 @@
             // extra_block
             // 
             this.extra_block.Image = global::myGame.Properties.Resources.block1001;
-            this.extra_block.Location = new System.Drawing.Point(731, 600);
+            this.extra_block.Location = new System.Drawing.Point(-39, 700);
             this.extra_block.Name = "extra_block";
             this.extra_block.Size = new System.Drawing.Size(100, 100);
             this.extra_block.TabIndex = 38;
@@ -505,13 +531,156 @@
             this.block_a1.TabStop = false;
             this.block_a1.Tag = "blocks";
             // 
+            // block_a7
+            // 
+            this.block_a7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_a7.Location = new System.Drawing.Point(700, 100);
+            this.block_a7.Name = "block_a7";
+            this.block_a7.Size = new System.Drawing.Size(100, 100);
+            this.block_a7.TabIndex = 39;
+            this.block_a7.TabStop = false;
+            this.block_a7.Tag = "blocks";
+            // 
+            // block_b7
+            // 
+            this.block_b7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_b7.Location = new System.Drawing.Point(700, 200);
+            this.block_b7.Name = "block_b7";
+            this.block_b7.Size = new System.Drawing.Size(100, 100);
+            this.block_b7.TabIndex = 40;
+            this.block_b7.TabStop = false;
+            this.block_b7.Tag = "blocks";
+            // 
+            // block_c7
+            // 
+            this.block_c7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_c7.Location = new System.Drawing.Point(700, 300);
+            this.block_c7.Name = "block_c7";
+            this.block_c7.Size = new System.Drawing.Size(100, 100);
+            this.block_c7.TabIndex = 41;
+            this.block_c7.TabStop = false;
+            this.block_c7.Tag = "blocks";
+            // 
+            // block_d7
+            // 
+            this.block_d7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_d7.Location = new System.Drawing.Point(700, 400);
+            this.block_d7.Name = "block_d7";
+            this.block_d7.Size = new System.Drawing.Size(100, 100);
+            this.block_d7.TabIndex = 42;
+            this.block_d7.TabStop = false;
+            this.block_d7.Tag = "blocks";
+            // 
+            // block_e7
+            // 
+            this.block_e7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_e7.Location = new System.Drawing.Point(700, 500);
+            this.block_e7.Name = "block_e7";
+            this.block_e7.Size = new System.Drawing.Size(100, 100);
+            this.block_e7.TabIndex = 43;
+            this.block_e7.TabStop = false;
+            this.block_e7.Tag = "blocks";
+            // 
+            // block_f7
+            // 
+            this.block_f7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_f7.Location = new System.Drawing.Point(700, 600);
+            this.block_f7.Name = "block_f7";
+            this.block_f7.Size = new System.Drawing.Size(100, 100);
+            this.block_f7.TabIndex = 44;
+            this.block_f7.TabStop = false;
+            this.block_f7.Tag = "blocks";
+            // 
+            // block_g1
+            // 
+            this.block_g1.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g1.Location = new System.Drawing.Point(100, 700);
+            this.block_g1.Name = "block_g1";
+            this.block_g1.Size = new System.Drawing.Size(100, 100);
+            this.block_g1.TabIndex = 45;
+            this.block_g1.TabStop = false;
+            this.block_g1.Tag = "blocks";
+            // 
+            // block_g2
+            // 
+            this.block_g2.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g2.Location = new System.Drawing.Point(200, 700);
+            this.block_g2.Name = "block_g2";
+            this.block_g2.Size = new System.Drawing.Size(100, 100);
+            this.block_g2.TabIndex = 46;
+            this.block_g2.TabStop = false;
+            this.block_g2.Tag = "blocks";
+            // 
+            // block_g3
+            // 
+            this.block_g3.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g3.Location = new System.Drawing.Point(300, 700);
+            this.block_g3.Name = "block_g3";
+            this.block_g3.Size = new System.Drawing.Size(100, 100);
+            this.block_g3.TabIndex = 47;
+            this.block_g3.TabStop = false;
+            this.block_g3.Tag = "blocks";
+            // 
+            // block_g4
+            // 
+            this.block_g4.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g4.Location = new System.Drawing.Point(400, 700);
+            this.block_g4.Name = "block_g4";
+            this.block_g4.Size = new System.Drawing.Size(100, 100);
+            this.block_g4.TabIndex = 48;
+            this.block_g4.TabStop = false;
+            this.block_g4.Tag = "blocks";
+            // 
+            // block_g5
+            // 
+            this.block_g5.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g5.Location = new System.Drawing.Point(500, 700);
+            this.block_g5.Name = "block_g5";
+            this.block_g5.Size = new System.Drawing.Size(100, 100);
+            this.block_g5.TabIndex = 49;
+            this.block_g5.TabStop = false;
+            this.block_g5.Tag = "blocks";
+            // 
+            // block_g6
+            // 
+            this.block_g6.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g6.Location = new System.Drawing.Point(600, 700);
+            this.block_g6.Name = "block_g6";
+            this.block_g6.Size = new System.Drawing.Size(100, 100);
+            this.block_g6.TabIndex = 50;
+            this.block_g6.TabStop = false;
+            this.block_g6.Tag = "blocks";
+            // 
+            // block_g7
+            // 
+            this.block_g7.Image = global::myGame.Properties.Resources.block1001;
+            this.block_g7.Location = new System.Drawing.Point(700, 700);
+            this.block_g7.Name = "block_g7";
+            this.block_g7.Size = new System.Drawing.Size(100, 100);
+            this.block_g7.TabIndex = 51;
+            this.block_g7.TabStop = false;
+            this.block_g7.Tag = "blocks";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(784, 761);
+            this.ClientSize = new System.Drawing.Size(884, 861);
             this.Controls.Add(this.player_img);
+            this.Controls.Add(this.block_g7);
+            this.Controls.Add(this.block_g6);
+            this.Controls.Add(this.block_g5);
+            this.Controls.Add(this.block_g4);
+            this.Controls.Add(this.block_g3);
+            this.Controls.Add(this.block_g2);
+            this.Controls.Add(this.block_g1);
+            this.Controls.Add(this.block_f7);
+            this.Controls.Add(this.block_e7);
+            this.Controls.Add(this.block_d7);
+            this.Controls.Add(this.block_c7);
+            this.Controls.Add(this.block_b7);
+            this.Controls.Add(this.block_a7);
             this.Controls.Add(this.extra_block);
             this.Controls.Add(this.block_f6);
             this.Controls.Add(this.block_f5);
@@ -594,6 +763,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_a7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_b7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_c7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_d7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_e7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_f7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block_g7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -640,6 +822,19 @@
         private System.Windows.Forms.PictureBox extra_block;
         public System.Windows.Forms.PictureBox player_img;
         public System.Windows.Forms.PictureBox block_a1;
+        public System.Windows.Forms.PictureBox block_a7;
+        public System.Windows.Forms.PictureBox block_b7;
+        public System.Windows.Forms.PictureBox block_c7;
+        public System.Windows.Forms.PictureBox block_d7;
+        public System.Windows.Forms.PictureBox block_e7;
+        public System.Windows.Forms.PictureBox block_f7;
+        public System.Windows.Forms.PictureBox block_g1;
+        public System.Windows.Forms.PictureBox block_g2;
+        public System.Windows.Forms.PictureBox block_g3;
+        public System.Windows.Forms.PictureBox block_g4;
+        public System.Windows.Forms.PictureBox block_g5;
+        public System.Windows.Forms.PictureBox block_g6;
+        public System.Windows.Forms.PictureBox block_g7;
     }
 }
 
