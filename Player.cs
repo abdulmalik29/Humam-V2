@@ -31,7 +31,7 @@ namespace myGame
             if (goDown == true && player_img.Top <= 700)
             {
                 player_img.Top += playerVel;
-                player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
+                //player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
                 Console.WriteLine("{0} , {1}", player_x, player_y);
             }
 
@@ -47,6 +47,12 @@ namespace myGame
                 Console.WriteLine("{0} , {1}", player_x, player_y);
             }
         }
+
+        public void change_player_img()
+        {
+         //player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
+        }
+
         public bool is_player_TopLeft()
         {
             if (player_img.Top < 400 && player_img.Left < 400)

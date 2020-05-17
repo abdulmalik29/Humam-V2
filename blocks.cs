@@ -18,22 +18,22 @@ namespace myGame
                 block1.Top++;
                 block3.Top++;
                 block5.Top++;
-                await Task.Delay(200 - delay_time);
+                await Task.Delay(210 - delay_time);
 
                 block1.Top--;
                 block3.Top--;
                 block5.Top--;
-                await Task.Delay(200 - delay_time);
+                await Task.Delay(210 - delay_time);
 
                 block2.Left++;
                 block4.Left++;
                 block6.Left++;
-                await Task.Delay(200 - delay_time);
+                await Task.Delay(210 - delay_time);
 
                 block2.Left--;
                 block4.Left--;
                 block6.Left--;
-                await Task.Delay(200 - delay_time);
+                await Task.Delay(210 - delay_time);
 
                 block1.Top++;
                 block3.Top++;
@@ -41,7 +41,7 @@ namespace myGame
                 block2.Left++;
                 block4.Left++;
                 block6.Left++;
-                await Task.Delay(200 - delay_time);
+                await Task.Delay(210 - delay_time);
 
                 block1.Top--;
                 block3.Top--;
@@ -49,13 +49,13 @@ namespace myGame
                 block2.Left--;
                 block4.Left--;
                 block6.Left--;
-                await Task.Delay(200 - delay_time);
-
-
-                block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
-                await Task.Delay(1000 - stages_delay);
-                block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
+                await Task.Delay(210 - delay_time);
             }
+
+
+            block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
+            await Task.Delay(1150 - stages_delay);
+            block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
 
         }
 

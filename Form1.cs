@@ -114,10 +114,6 @@ namespace myGame
         } // a method that always checks if the player is on block or not
 
 
-        private void start_game()
-        {
-            Stage.level1_one();
-        }
         private void reset_game() // a fucnction that reset the game and most of its virables
         {
             game_is_over = false;
@@ -141,40 +137,40 @@ namespace myGame
             block_a5.Location = new Point(100, 500);
             block_a6.Location = new Point(100, 600);
 
-            block_b6.Location = new Point(200, 600);
-            block_b5.Location = new Point(200, 500);
-            block_b4.Location = new Point(200, 400);
-            block_b3.Location = new Point(200, 300);
-            block_b2.Location = new Point(200, 200);
             block_b1.Location = new Point(200, 100);
+            block_b2.Location = new Point(200, 200);
+            block_b3.Location = new Point(200, 300);
+            block_b4.Location = new Point(200, 400);
+            block_b5.Location = new Point(200, 500);
+            block_b6.Location = new Point(200, 600);
 
-            block_c6.Location = new Point(300, 600);
-            block_c5.Location = new Point(300, 500);
-            block_c4.Location = new Point(300, 400);
-            block_c3.Location = new Point(300, 300);
-            block_c2.Location = new Point(300, 200);
             block_c1.Location = new Point(300, 100);
+            block_c2.Location = new Point(300, 200);
+            block_c3.Location = new Point(300, 300);
+            block_c4.Location = new Point(300, 400);
+            block_c5.Location = new Point(300, 500);
+            block_c6.Location = new Point(300, 600);
 
-            block_d6.Location = new Point(400, 600);
-            block_d5.Location = new Point(400, 500);
-            block_d4.Location = new Point(400, 400);
-            block_d3.Location = new Point(400, 300);
-            block_d2.Location = new Point(400, 200);
             block_d1.Location = new Point(400, 100);
+            block_d2.Location = new Point(400, 200);
+            block_d3.Location = new Point(400, 300);
+            block_d4.Location = new Point(400, 400);
+            block_d5.Location = new Point(400, 500);
+            block_d6.Location = new Point(400, 600);
 
-            block_e6.Location = new Point(500, 600);
-            block_e5.Location = new Point(500, 500);
-            block_e4.Location = new Point(500, 400);
-            block_e3.Location = new Point(500, 300);
-            block_e2.Location = new Point(500, 200);
             block_e1.Location = new Point(500, 100);
+            block_e2.Location = new Point(500, 200);
+            block_e3.Location = new Point(500, 300);
+            block_e4.Location = new Point(500, 400);
+            block_e5.Location = new Point(500, 500);
+            block_e6.Location = new Point(500, 600);
 
-            block_f6.Location = new Point(600, 600);
-            block_f5.Location = new Point(600, 500);
-            block_f4.Location = new Point(600, 400);
-            block_f3.Location = new Point(600, 300);
-            block_f2.Location = new Point(600, 200);
             block_f1.Location = new Point(600, 100);
+            block_f2.Location = new Point(600, 200);
+            block_f3.Location = new Point(600, 300);
+            block_f4.Location = new Point(600, 400);
+            block_f5.Location = new Point(600, 500);
+            block_f6.Location = new Point(600, 600);
 
             extra_block.Location = new Point(750,700);
 
@@ -196,5 +192,31 @@ namespace myGame
         {
          //   game_timer.Stop();
         }
+
+        private void start_game()
+        {
+            stage_2();
+        }
+        public void stage_0() // lll
+        {
+            Blocks.shake_6(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, 0, -100);
+            Blocks.shake_6(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, 0, -100);
+            Blocks.shake_6(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, 0, -100);
+        }
+        public void stage_1() // ≡
+        {
+            Blocks.shake_6(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, 0, 0);
+            Blocks.shake_6(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, 0, 0);
+            Blocks.shake_6(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, 0, 0);
+        }
+
+        public void stage_2()
+        {
+            Blocks.shake_6(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, 0, 0);
+            Blocks.shake_6(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, 0, 0);
+            Blocks.shake_6(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, 0, 0);
+
+        }
     }
+
 }

@@ -128,7 +128,6 @@
             // 
             this.player_img.BackColor = System.Drawing.Color.White;
             this.player_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.player_img.Image = global::myGame.Properties.Resources.boss;
             this.player_img.Location = new System.Drawing.Point(500, 300);
             this.player_img.Name = "player_img";
             this.player_img.Size = new System.Drawing.Size(50, 50);
