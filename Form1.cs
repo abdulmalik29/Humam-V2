@@ -14,8 +14,10 @@ namespace myGame
 {
     public partial class Form1 : Form
     {
-        bool goUp, goDown, goLeft, goRight, game_is_over, game_is_paused;
-        int score, playerVel, player_x, player_y;
+        bool game_is_over, game_is_paused;
+        int score;
+        Player player;
+        
 
 
         //int test = 0;
@@ -26,6 +28,7 @@ namespace myGame
         public Form1()
         {
             InitializeComponent();
+            player = new Player(player_img);
             reset_game();
         }
 
@@ -33,35 +36,19 @@ namespace myGame
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game which have most of the ruls 
         {
 
-            move_player();
+            player.move_player();
             check_for_overlapping();
+            check_if_player_left_boundries();
 
-
-            if (player.Left <= (100 - playerVel) || (player.Left >= 650 + playerVel) || player.Top <= (100 - playerVel) || player.Top >= (650 - playerVel)) // to check if the player have left the initial game boundaries
-
+            void check_if_player_left_boundries()
             {
-                Console.WriteLine("you lost");
-                gameOver();
+                if (player_img.Left <= (100 - player.playerVel) || (player_img.Left >= 650 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (650 - player.playerVel)) // to check if the player have left the initial game boundaries
+
+                {
+                    Console.WriteLine("you lost");
+                    gameOver();
+                }
             }
-
-
-            if (is_player_TopLeft())
-            {
-                Console.WriteLine("player is in the top left");
-
-            }else if (is_player_TopRight())
-            {
-                Console.WriteLine("player is in the top right");
-
-            }else if (is_player_BottomLeft())
-            {
-                Console.WriteLine("player is in the bottom left");
-
-            }else if (is_player_BottomRight())
-            {
-                Console.WriteLine("player is in the bottom right");
-            }
-
         }
 
 
@@ -69,58 +56,51 @@ namespace myGame
         {
             if(e.KeyCode == Keys.W)
             {
-                goUp = true;
+                player.goUp = true;
             }
 
             if (e.KeyCode == Keys.S)
             {
-                goDown = true;
+                player.goDown = true;
             }
 
             if (e.KeyCode == Keys.A)
             {
-                goLeft = true;
+                player.goLeft = true;
             }
 
             if (e.KeyCode == Keys.D)
             {
-                goRight = true;
+                player.goRight = true;
             }
 
         }
-
-
 
         private void key_is_up(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W)
             {
-                goUp = false;
+                player.goUp = false;
             }
 
             if (e.KeyCode == Keys.S)
             {
-                goDown = false;
+                player.goDown = false;
             }
 
             if (e.KeyCode == Keys.A)
             {
-                goLeft = false;
+                player.goLeft = false;
             }
 
             if (e.KeyCode == Keys.D)
             {
-                goRight = false;
+                player.goRight = false;
             }
             if (e.KeyCode == Keys.Enter)
             {
                 start_game();
             }
-        }
-
-        private void start_game()
-        {
-           Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, 0);
         }
 
         private void check_for_overlapping()
@@ -131,7 +111,7 @@ namespace myGame
                 {
                     if ((string)block.Tag == "blocks")
                     {
-                        if (player.Bounds.IntersectsWith(block.Bounds) && !block.Visible)  // to check if the player is on a visible block or not
+                        if (player_img.Bounds.IntersectsWith(block.Bounds) && !block.Visible)  // to check if the player is on a visible block or not
                         {                                                                  // if they are not they fall over and lose the game
                             Console.WriteLine("you lost 0000");
                         }
@@ -140,52 +120,20 @@ namespace myGame
             }
         }
 
-        private void key_is_pressed(object sender, KeyPressEventArgs e)
+
+        private void start_game()
         {
-
+            Stage.level1_one();
         }
-        private void move_player()
-        {
-            // this method allow the player to be moved via the keyboard
-            // also it does not allaw the player to go over the screen
-
-            int player_x = player.Left;
-            int player_y = player.Top;
-            if (goUp == true && player.Top >= 10)
-            {
-                player.Top -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-
-            if (goDown == true && player.Top <= 700)
-            {
-                player.Top += playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-
-            if (goRight == true && player.Left < 730)
-            {
-                player.Left += playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-
-            if (goLeft == true && player.Left > 0)
-            {
-                player.Left -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
-            }
-        }
-
-
         private void reset_game() // a fucnction that reset the game and most of its virables
         {
             game_is_over = false;
             score_txt.Text = "Score = 0";
             score = 0;
-            playerVel = 10;
+            player.playerVel = 10;
 
             reset_blocks();
-            player.Location = new Point(200, 200);
+            player_img.Location = new Point(200, 200);
             extra_block.Visible = false;  // hide the extra block to be used latter
             game_timer.Start();
          }
@@ -245,43 +193,6 @@ namespace myGame
                 }
             }
         }
-
-        private bool is_player_TopLeft()
-        {
-            if (player.Top < 400 && player.Left < 400)
-            {
-                return true;
-            }
-            return false;
-        }
-        private bool is_player_TopRight()
-        {
-            if (player.Top < 400 && player.Left > 400)
-            {
-                return true;
-            }
-            return false;
-        }
-        private bool is_player_BottomLeft()
-        {
-            if (player.Top >= 400 && player.Left <= 400)
-            {
-                return true;
-            }
-            return false;
-        }
-        private bool is_player_BottomRight()
-        {
-            if (player.Top >= 400 && player.Left > 400)
-            {
-                return true;
-            }
-             return false;
-        }
-
-        
-        // a method used to shake the 12 blocks and remove them
-        
 
         private void gameOver()
         {

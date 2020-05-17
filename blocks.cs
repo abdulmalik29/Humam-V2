@@ -51,12 +51,13 @@ namespace myGame
                 block6.Left--;
                 await Task.Delay(200 - delay_time);
             }
+        }
 
                 //foreach (PictureBox box in )
-                block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
-                await Task.Delay(1000);
-                block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
+                //block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
+                //await Task.Delay(1000);
+                //block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
 
-        }
+
     }
 }

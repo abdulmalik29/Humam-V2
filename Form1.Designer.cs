@@ -32,7 +32,7 @@
             this.score_txt = new System.Windows.Forms.Label();
             this.game_timer = new System.Windows.Forms.Timer(this.components);
             this.extra_block = new System.Windows.Forms.PictureBox();
-            this.player = new System.Windows.Forms.PictureBox();
+            this.player_img = new System.Windows.Forms.PictureBox();
             this.block_f6 = new System.Windows.Forms.PictureBox();
             this.block_f5 = new System.Windows.Forms.PictureBox();
             this.block_f4 = new System.Windows.Forms.PictureBox();
@@ -70,7 +70,7 @@
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.extra_block)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f4)).BeginInit();
@@ -134,14 +134,14 @@
             this.extra_block.TabStop = false;
             this.extra_block.Tag = "blocks";
             // 
-            // player
+            // player_img
             // 
-            this.player.BackColor = System.Drawing.Color.White;
-            this.player.Location = new System.Drawing.Point(500, 300);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(50, 50);
-            this.player.TabIndex = 37;
-            this.player.TabStop = false;
+            this.player_img.BackColor = System.Drawing.Color.White;
+            this.player_img.Location = new System.Drawing.Point(500, 300);
+            this.player_img.Name = "player_img";
+            this.player_img.Size = new System.Drawing.Size(50, 50);
+            this.player_img.TabIndex = 37;
+            this.player_img.TabStop = false;
             // 
             // block_f6
             // 
@@ -509,7 +509,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 761);
-            this.Controls.Add(this.player);
+            this.Controls.Add(this.player_img);
             this.Controls.Add(this.extra_block);
             this.Controls.Add(this.block_f6);
             this.Controls.Add(this.block_f5);
@@ -555,7 +555,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.key_is_down);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.key_is_up);
             ((System.ComponentModel.ISupportInitialize)(this.extra_block)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f4)).EndInit();
@@ -599,7 +599,6 @@
         #endregion
 
         private System.Windows.Forms.Label score_txt;
-        private System.Windows.Forms.PictureBox block_a1;
         private System.Windows.Forms.PictureBox block_a2;
         private System.Windows.Forms.PictureBox block_a3;
         private System.Windows.Forms.PictureBox block_a4;
@@ -637,7 +636,8 @@
         private System.Windows.Forms.PictureBox block_f1;
         private System.Windows.Forms.Timer game_timer;
         private System.Windows.Forms.PictureBox extra_block;
-        public System.Windows.Forms.PictureBox player;
+        public System.Windows.Forms.PictureBox player_img;
+        public System.Windows.Forms.PictureBox block_a1;
     }
 }
 
