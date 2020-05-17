@@ -17,13 +17,6 @@ namespace myGame
         bool game_is_over, game_is_paused;
         int score;
         Player player;
-        
-
-
-        //int test = 0;
-        //const int topOfTheScreen = 0, bottomOfTheScreen = 700;
-
-
 
         public Form1()
         {
@@ -118,7 +111,7 @@ namespace myGame
                     }
                 }
             }
-        }
+        } // a method that always checks if the player is on block or not
 
 
         private void start_game()

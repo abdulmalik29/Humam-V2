@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.score_txt = new System.Windows.Forms.Label();
             this.game_timer = new System.Windows.Forms.Timer(this.components);
-            this.extra_block = new System.Windows.Forms.PictureBox();
             this.player_img = new System.Windows.Forms.PictureBox();
+            this.extra_block = new System.Windows.Forms.PictureBox();
             this.block_f6 = new System.Windows.Forms.PictureBox();
             this.block_f5 = new System.Windows.Forms.PictureBox();
             this.block_f4 = new System.Windows.Forms.PictureBox();
@@ -69,8 +69,8 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f4)).BeginInit();
@@ -124,6 +124,18 @@
             this.game_timer.Interval = 20;
             this.game_timer.Tick += new System.EventHandler(this.mainGameTimer);
             // 
+            // player_img
+            // 
+            this.player_img.BackColor = System.Drawing.Color.White;
+            this.player_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.player_img.Image = global::myGame.Properties.Resources.boss;
+            this.player_img.Location = new System.Drawing.Point(500, 300);
+            this.player_img.Name = "player_img";
+            this.player_img.Size = new System.Drawing.Size(50, 50);
+            this.player_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player_img.TabIndex = 37;
+            this.player_img.TabStop = false;
+            // 
             // extra_block
             // 
             this.extra_block.Image = global::myGame.Properties.Resources.block1001;
@@ -133,15 +145,6 @@
             this.extra_block.TabIndex = 38;
             this.extra_block.TabStop = false;
             this.extra_block.Tag = "blocks";
-            // 
-            // player_img
-            // 
-            this.player_img.BackColor = System.Drawing.Color.White;
-            this.player_img.Location = new System.Drawing.Point(500, 300);
-            this.player_img.Name = "player_img";
-            this.player_img.Size = new System.Drawing.Size(50, 50);
-            this.player_img.TabIndex = 37;
-            this.player_img.TabStop = false;
             // 
             // block_f6
             // 
@@ -554,8 +557,8 @@
             this.Text = "myGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.key_is_down);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.key_is_up);
-            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extra_block)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_f4)).EndInit();

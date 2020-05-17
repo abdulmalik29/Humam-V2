@@ -31,6 +31,7 @@ namespace myGame
             if (goDown == true && player_img.Top <= 700)
             {
                 player_img.Top += playerVel;
+                player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
                 Console.WriteLine("{0} , {1}", player_x, player_y);
             }
 

@@ -11,7 +11,7 @@ namespace myGame
 {
     internal class Blocks
     {
-        public static async void shake_6(PictureBox block1, PictureBox block2, PictureBox block3, PictureBox block4, PictureBox block5, PictureBox block6, int delay_time)
+        public static async void shake_6(PictureBox block1, PictureBox block2, PictureBox block3, PictureBox block4, PictureBox block5, PictureBox block6, int delay_time, int stages_delay)
         {
             for  (int counter = 0;  counter < 2; counter++)
             {
@@ -50,14 +50,14 @@ namespace myGame
                 block4.Left--;
                 block6.Left--;
                 await Task.Delay(200 - delay_time);
+
+
+                block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
+                await Task.Delay(1000 - stages_delay);
+                block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
             }
+
         }
-
-                //foreach (PictureBox box in )
-                //block1.Visible = false; block2.Visible = false; block3.Visible = false; block4.Visible = false; block5.Visible = false; block6.Visible = false;
-                //await Task.Delay(1000);
-                //block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
-
 
     }
 }
