@@ -58,6 +58,36 @@ namespace myGame
             block1.Visible = true; block2.Visible = true; block3.Visible = true; block4.Visible = true; block5.Visible = true; block6.Visible = true;
 
         }
+        public static async void shake_2(PictureBox block1, PictureBox block2, int delay_time, int stages_delay)
+        {
+            for (int counter = 0; counter < 2; counter++)
+            {
+                block1.Top++;
+                await Task.Delay(210 - delay_time);
 
+                block1.Top--;
+                await Task.Delay(210 - delay_time);
+
+                block2.Left++;
+                await Task.Delay(210 - delay_time);
+
+                block2.Left--;
+                await Task.Delay(210 - delay_time);
+
+                block1.Top++;
+                block2.Left++;
+                await Task.Delay(210 - delay_time);
+
+                block1.Top--;
+                block2.Left--;
+                await Task.Delay(210 - delay_time);
+            }
+
+
+            block1.Visible = false; block2.Visible = false;
+            await Task.Delay(1150 - stages_delay);
+            block1.Visible = true; block2.Visible = true;
+        }
     }
+    
 }
