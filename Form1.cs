@@ -199,46 +199,90 @@ namespace myGame
 
         private async Task start_gameAsync()
         {
-/*            int delay_between_stages = 3900;
-            stage_0(0, -90);
+            //Blocks.shake_6(block_f4, block_f4, block_f4, block_f4, block_f4, block_f4, 0, 0);
+            int delay_between_stages = 3900;
+
+            stage_9(0, score);
             await Task.Delay(delay_between_stages);
-            stage_1(0, 0);
-            await Task.Delay(delay_between_stages);
-            stage_2(0, 10);
-            await Task.Delay(delay_between_stages);*/
-            stage_3(0, score);
+            stage_7(0, score);
         }
 
-        public void stage_0(int t1, int t2) // lll
-        {
-            Blocks.shake_6(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, t1, t2);
-            Blocks.shake_6(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, t1, t2);
-            Blocks.shake_6(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, t1, t2);
-            increase_score(10);
-            
-        }
-
-        public void stage_1(int t1, int t2) // ≡
+        public void stage_0(int t1, int t2) // locks like l l l removes 2 4 6 ▥
         {
             Blocks.shake_6(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, t1, t2);
             Blocks.shake_6(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, t1, t2);
             Blocks.shake_6(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, t1, t2);
             increase_score(10);
+            
+        }
+        public void stage_1(int t1, int t2) // locks like l l l removes 1 3 5 ▥
+        {
+            Blocks.shake_6(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, t1, t2);
+            Blocks.shake_6(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, t1, t2);
+            Blocks.shake_6(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, t1, t2);
+            increase_score(10);
+
         }
 
-        public void stage_2(int t1, int t2)
+
+        public void stage_2(int t1, int t2) //  locks like ≡ removes b d f ▤
         {
+            Blocks.shake_6(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, t1, t2);
             Blocks.shake_6(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, t1, t2);
-            Blocks.shake_6(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, t1, t2);
             Blocks.shake_6(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, t1, t2);
             increase_score(10);
         }
-        public void stage_3(int t1, int t2)
+        public void stage_3(int t1, int t2) //  locks like ≡ removes a c e ▤
         {
+            Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, t1, t2);
+            Blocks.shake_6(block_c1, block_c2, block_c3, block_c4, block_c5, block_c6, t1, t2);
+            Blocks.shake_6(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, t1, t2);
+            increase_score(10);
+        }
+
+
+        public void stage_4(int t1, int t2) // remove the entire right side ◨
+        {
+            //Blocks.shake_6(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, t1, t2);
+            Blocks.shake_6(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, t1, t2);
+            Blocks.shake_6(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, t1, t2);
+            increase_score(10);
+        }
+        public void stage_5(int t1, int t2) // remove the entire left side side  ◧
+        {
+            //Blocks.shake_6(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, t1, t2);
+            Blocks.shake_6(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, t1, t2);
+            Blocks.shake_6(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, t1, t2);
+            increase_score(10);
+        }
+        public void stage_6(int t1, int t2) // themove the middel part 
+        {
+            Blocks.shake_6(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, t1, t2);
+            Blocks.shake_6(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, t1, t2);
+        }
+
+
+        public void stage_7(int t1, int t2) // 2 re ove top left and bottom right □ ■
+        {                                                                      // ■ □
             Blocks.shake_6(block_a1, block_a2, block_a3, block_b1, block_b2, block_b3, t1, t2);
             Blocks.shake_6(block_c1, block_c2, block_c3, block_d4, block_d5, block_d6, t1, t2);
             Blocks.shake_6(block_e4, block_e5, block_e6, block_f4, block_f5, block_f6, t1, t2);
             increase_score(10);
+        }
+        public void stage_8(int t1, int t2) // 2 remove top right and bottom left ■ □
+        {                                                                      // □ ■
+            Blocks.shake_6(block_a4, block_a5, block_a6, block_b4, block_b5, block_b6, t1, t2);
+            Blocks.shake_6(block_c4, block_c5, block_c6, block_d1, block_d2, block_d3, t1, t2);
+            Blocks.shake_6(block_e1, block_e2, block_e3, block_f1, block_f2, block_f3, t1, t2);
+            increase_score(10);
+        }
+
+
+        public void stage_9(int t1, int t2) //
+        {
+            Blocks.shake_6(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, t1, t2);
+            Blocks.shake_6(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, t1, t2);
+            //Blocks.shake_6(block_b2, block_c2, block_d2, block_e2, block_c2, block_d2, t1, t2);
         }
     }
 
