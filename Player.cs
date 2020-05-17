@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace myGame
 {
@@ -25,26 +26,26 @@ namespace myGame
             if (goUp == true && player_img.Top >= 10)
             {
                 player_img.Top -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
+                Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goDown == true && player_img.Top <= 700)
             {
                 player_img.Top += playerVel;
                 //player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
+                Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goRight == true && player_img.Left < 730)
             {
                 player_img.Left += playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
+                Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goLeft == true && player_img.Left > 0)
             {
                 player_img.Left -= playerVel;
-                Console.WriteLine("{0} , {1}", player_x, player_y);
+                Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
         }
 
