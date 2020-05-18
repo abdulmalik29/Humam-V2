@@ -48,7 +48,7 @@ namespace myGame
 
         private void key_is_down(object sender, KeyEventArgs e) // bind the key with a boolean variable
         {
-            if(e.KeyCode == Keys.W)
+            if (e.KeyCode == Keys.W)
             {
                 player.goUp = true;
             }
@@ -109,7 +109,8 @@ namespace myGame
                         {                                                                     // if they are not they fall over and lose the game
                             Debug.WriteLine("you lost 0000");
                             gameOver();
-                        }else if (player_img.Bounds.IntersectsWith(block.Bounds))
+                        }
+                        else if (player_img.Bounds.IntersectsWith(block.Bounds))
                         {
                             Debug.WriteLine(block.Name);  // tool to name the block the the player standing on to make debuging easiers
                         }
@@ -129,7 +130,7 @@ namespace myGame
             player_img.Location = new Point(200, 200);
             extra_block.Visible = false;  // hide the extra block to be used latter
             game_timer.Start();
-         }
+        }
 
         private void reset_blocks()  // a method to returns all the blocks to its initial location and make them visible
 
@@ -191,7 +192,7 @@ namespace myGame
             block_g7.Location = new Point(700, 700);
 
 
-            extra_block.Location = new Point(-50,700);
+            extra_block.Location = new Point(-50, 700);
 
             foreach (Control x in this.Controls)
             {
@@ -235,7 +236,7 @@ namespace myGame
                         await Task.Delay(delay_between_stages);
                         stage_8(0, score);
                         await Task.Delay(delay_between_stages);*/
-            stage_9(0, -200);
+            stage_12(0, -200);
         }
 
         public void stage_0(int t1, int t2) // locks like l l l removes 2 4 6 ▥
@@ -244,7 +245,7 @@ namespace myGame
             Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
             Blocks.shake_7(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, block_g6, t1, t2);
             increase_score(10);
-            
+
         }
         public void stage_1(int t1, int t2) // locks like l l l removes 1 3 5 7 ▥
         {
@@ -293,6 +294,7 @@ namespace myGame
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
             Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
+            increase_score(10);
         }
 
 
@@ -316,13 +318,38 @@ namespace myGame
         }
 
 
-        public void stage_9(int t1, int t2) //
-        {
+        public void stage_9(int t1, int t2) // locks like ▼
+        {                                              // ▲
             Blocks.shake_7(block_b1, block_c1, block_d1, block_e1, block_f1, block_c2, block_d2, t1, t2);
             Blocks.shake_7(block_e2, block_b7, block_c7, block_d7, block_e7, block_f7, block_c6, t1, t2);
             Blocks.shake_7(block_d6, block_f7, block_d5, block_d7, block_d3, block_f7, block_e6, t1, t2);
             increase_score(10);
         }
-    }
 
-}
+        public void stage_10(int t1, int t2) // locks like ⯐ 
+        {
+            Blocks.shake_7(block_a1, block_a2, block_a3, block_b1, block_b2, block_b3, block_c1, t1, t2);
+            Blocks.shake_7(block_c2, block_c3, block_e1, block_e2, block_e3, block_f1, block_f2, t1, t2);
+            Blocks.shake_7(block_e5, block_e6, block_e7, block_f5, block_f6, block_f7, block_g5, t1, t2);
+            Blocks.shake_7(block_g1, block_g2, block_g3, block_g6, block_f3, block_a5, block_a6, t1, t2);
+            Blocks.shake_7(block_a7, block_b5, block_b6, block_b7, block_c5, block_c6, block_c7, t1, t2);
+            Blocks.shake_1(block_g7, t1, t2);
+            increase_score(10);
+        }
+        public void stage_11(int t1, int t2) // locks like ❖ {easy} 
+        {
+            Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
+            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            increase_score(10);
+        }
+        public void stage_12(int t1, int t2) // locks like ◳
+        {
+            Blocks.shake_5(block_a3, block_b3, block_c3, block_d3, block_e3, t1, t2);
+            Blocks.shake_5(block_a4, block_b4, block_c4, block_d4, block_e4, t1, t2);
+            Blocks.shake_5(block_c5, block_d5, block_e5, block_a5, block_b5, t1, t2);
+            Blocks.shake_5(block_a6, block_b6, block_c6, block_d6, block_e6, t1, t2);
+            Blocks.shake_5(block_a7, block_b7, block_c7, block_d7, block_e7, t1, t2);
+            increase_score(10);
+        }
+    }
+}   
