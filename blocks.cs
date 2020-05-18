@@ -33,7 +33,7 @@ namespace myGame
 
         public static async void shake_2(PictureBox block1, PictureBox block2, int delay_time, int stages_delay)
         {
-            for (int counter = 0; counter < 3; counter++)
+            for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
                 await Task.Delay(210 - delay_time);
@@ -64,7 +64,7 @@ namespace myGame
 
         public static async void shake_1(PictureBox block1, int delay_time, int stages_delay)
         {
-            for (int counter = 0; counter < 3; counter++)
+            for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
                 await Task.Delay(210 - delay_time);
