@@ -18,11 +18,13 @@ namespace myGame
         //bool game_is_paused;
         public int score;
         Player player;
+        Enemy boss;
 
         public Form1()
         {
             InitializeComponent();
             player = new Player(player_img);
+            boss = new Enemy(boss_img);
             reset_game();
         }
 
