@@ -245,54 +245,141 @@ namespace myGame
         {
             int delay_between_stages = 3900;
             int rand;
-            stage_12(0, -100);
+            stage_0(0, -100);
+            await Task.Delay(delay_between_stages);
+            stage_1(0, -100);
             await Task.Delay(delay_between_stages);
 
-            while (score < 50)
+            while (score < 90)
             {
-            rand = Random_Number.random_number_between(1, 2);
+            rand = Random_Number.random_number_between(1, 4);
                 if (player.is_player_TopLeft() == true)
                 {
                     switch (rand)
                     {
                         case 1:
-                            stage_1(0, -100);
+                            stage_16(0, -100);
                             await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
+                            rand = Random_Number.random_number_between(1, 4);
                             Debug.WriteLine(rand);
                             break;
                         case 2:
-                            stage_3(0, -100);
+                            stage_13(0, -100);
                             await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
+                            rand = Random_Number.random_number_between(1, 4);
                             Debug.WriteLine(rand);
                             break;
+                        case 3:
+                            stage_8(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
+                            stage_5(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+
                     }
                 }
-                if (player.is_player_TopMiddle() == true)
+                else if (player.is_player_TopMiddle() == true)
                 {
                     switch (rand)
                     {
                         case 1:
-                            stage_2(0, -100);
+                            stage_10(0, -100);
                             await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
+                            rand = Random_Number.random_number_between(1, 4);
                             Debug.WriteLine(rand);
                             break;
                         case 2:
+                            stage_6(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 3:
                             stage_2(0, -100);
                             await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
+                            stage_12(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
                             Debug.WriteLine(rand);
                             break;
                     }
                 }
-                if (player.is_player_TopRight() == true)
+                else if (player.is_player_TopRight() == true)
                 {
                     switch (rand)
                     {
                         case 1:
+                            stage_15(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_9(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 3:
+                            stage_7(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
                             stage_4(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                    }
+                }
+                else if (player.is_player_BottomLeft() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_17(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_9(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 3:
+                            stage_7(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
+                            stage_5(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                    }
+                }
+                else if (player.is_player_BottomMiddle() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_10(0, -100);
                             await Task.Delay(delay_between_stages);
                             rand = Random_Number.random_number_between(1, 2);
                             Debug.WriteLine(rand);
@@ -303,64 +390,54 @@ namespace myGame
                             rand = Random_Number.random_number_between(1, 2);
                             Debug.WriteLine(rand);
                             break;
+                        case 3:
+                            stage_3(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
+                            stage_12(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
                     }
                 }
-
-                if (player.is_player_BottomLeft() == true)
+                else if(player.is_player_BottomRight() == true)
                 {
                     switch (rand)
                     {
                         case 1:
-                            stage_7(0, -100);
+                            stage_15(0, -100);
                             await Task.Delay(delay_between_stages);
                             rand = Random_Number.random_number_between(1, 2);
                             Debug.WriteLine(rand);
                             break;
                         case 2:
-                            stage_8(0, -100);
+                            stage_13(0, -100);
                             await Task.Delay(delay_between_stages);
                             rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 3:
+                            stage_15(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 4:
+                            stage_4(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 4);
                             Debug.WriteLine(rand);
                             break;
                     }
                 }
-
-                if (player.is_player_BottomMiddle() == true)
+                else
                 {
-                    switch (rand)
-                    {
-                        case 1:
-                            stage_2(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
-                            break;
-                        case 2:
-                            stage_2(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
-                            break;
-                    }
-                }
-
-                if (player.is_player_BottomRight() == true)
-                {
-                    switch (rand)
-                    {
-                        case 1:
-                            stage_9(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
-                            break;
-                        case 2:
-                            stage_10(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
-                            break;
-                    }
+                    stage_0(0, -100);
+                    await Task.Delay(delay_between_stages);
                 }
             }
         }
