@@ -56,7 +56,15 @@ namespace myGame
 
         public bool is_player_TopLeft()
         {
-            if (player_img.Top < 450 && player_img.Left < 450)
+            if (player_img.Top < 450 && player_img.Left < 350)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool is_player_TopMiddle()
+        {
+            if (player_img.Top < 450 && player_img.Left >= 350 && player_img.Left < 550)
             {
                 return true;
             }
@@ -64,15 +72,24 @@ namespace myGame
         }
         public bool is_player_TopRight()
         {
-            if (player_img.Top < 450 && player_img.Left > 450)
+            if (player_img.Top < 450 && player_img.Left >= 550)
             {
                 return true;
             }
             return false;
         }
+
         public bool is_player_BottomLeft()
         {
-            if (player_img.Top >= 450 && player_img.Left <= 450)
+            if (player_img.Top >= 450 && player_img.Left < 350)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool is_player_BottomMiddle()
+        {
+            if (player_img.Top >= 450 && player_img.Left >= 350 && player_img.Left < 550)
             {
                 return true;
             }
@@ -80,32 +97,16 @@ namespace myGame
         }
         public bool is_player_BottomRight()
         {
-            if (player_img.Top >= 450 && player_img.Left > 450)
+            if (player_img.Top >= 450 && player_img.Left >= 550)
             {
                 return true;
             }
             return false;
         }
+      
+        
 
 
     }
 }
-/* void debugger() // a function to check if Is_player_... functions work
- {
-     if (player.is_player_TopLeft() == true)
-     {
-         Debug.WriteLine("top left");
-     }
-     else if (player.is_player_TopRight() == true)
-     {
-         Debug.WriteLine("top right");
-     }
-     else if (player.is_player_BottomLeft() == true)
-     {
-         Debug.WriteLine("bot left");
-     }
-     else if (player.is_player_BottomRight() == true)
-     {
-         Debug.WriteLine("bot right");
-     }
- }*/
+

@@ -33,14 +33,41 @@ namespace myGame
             player.move_player();
             check_for_overlapping();
             check_if_player_left_boundries();
+            debugger();
 
             void check_if_player_left_boundries()
             {
                 if (player_img.Left <= (100 - player.playerVel) || (player_img.Left >= 750 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (750 - player.playerVel)) // to check if the player have left the initial game boundaries
-
                 {
                     Debug.WriteLine("you lost");
                     gameOver();
+                }
+            }
+            void debugger() // a function to check if Is_player_... functions work
+            {
+                if (player.is_player_TopLeft() == true)
+                {
+                    Debug.WriteLine("top left");
+                }
+                else if (player.is_player_TopRight() == true)
+                {
+                    Debug.WriteLine("top right");
+                }
+                else if (player.is_player_BottomLeft() == true)
+                {
+                    Debug.WriteLine("bot left");
+                }
+                else if (player.is_player_BottomRight() == true)
+                {
+                    Debug.WriteLine("bot right");
+                }
+                else if (player.is_player_TopMiddle() == true)
+                {
+                    Debug.WriteLine("top midlle");
+                }
+                else if (player.is_player_BottomMiddle() == true)
+                {
+                    Debug.WriteLine("bot midlle");
                 }
             }
         }
@@ -112,7 +139,7 @@ namespace myGame
                         }
                         else if (player_img.Bounds.IntersectsWith(block.Bounds))
                         {
-                            Debug.WriteLine(block.Name);  // tool to name the block the the player standing on to make debuging easiers
+                            //Debug.WriteLine(block.Name);  // tool to name the block the the player standing on to make debuging easiers
                         }
                     }
                 }
@@ -218,25 +245,65 @@ namespace myGame
         {
             int delay_between_stages = 3900;
 
-            /*            stage_0(0, score);
+            stage_0(0, -100);
+            await Task.Delay(delay_between_stages);
+            int rand = Random_Number.random_number_between(1, 2);
+
+            while (score < 50)
+            {
+                if (player.is_player_TopLeft() == true)
+                {
+                    if (rand == 1)
+                    {
+                        stage_1(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_1(0, score);
+                    }
+                    else if (rand == 2)
+                    {
+                        stage_3(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_2(0, score);
+                    }
+                }
+                if (player.is_player_TopRight() == true)
+                {
+                    if (rand == 1)
+                    {
+                        stage_4(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_3(0, score);
+                    }
+                    else if (rand == 2)
+                    {
+                        stage_6(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_4(0, score);
+                    }
+                }
+                if (player.is_player_BottomLeft() == true)
+                {
+                    if (rand == 1)
+                    {
+                        stage_7(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_5(0, score);
+                    }
+                    else if (rand == 2)
+                    {
+                        stage_8(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_6(0, score);
+                    }
+                }
+                if (player.is_player_BottomRight() == true)
+                {
+                    if (rand == 1)
+                    {
+                        stage_9(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_7(0, score);
+                    }
+                    else if (rand == 2)
+                    {
+                        stage_10(0, -100);
                         await Task.Delay(delay_between_stages);
-                        stage_8(0, score);
-                        await Task.Delay(delay_between_stages);*/
-            stage_15(0, -200);
+                    }
+                }
+            }
         }
 
         public void stage_0(int t1, int t2) // locks like l l l removes 2 4 6 ▥
@@ -258,7 +325,7 @@ namespace myGame
         }
 
 
-        public void stage_2(int t1, int t2) //  locks like ≡ removes b d f ▤
+        public void stage_2(int t1, int t2) //  locks like ≡ removes b d f ▤ ***** need a better one
         {
             Blocks.shake_7(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, block_b7, t1, t2);
             Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
@@ -289,7 +356,7 @@ namespace myGame
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             increase_score(10);
         }
-        public void stage_6(int t1, int t2) // themove the middel part ( 3 4 5)
+        public void stage_6(int t1, int t2) // themove the middel part ( 3 4 5) ********* not used 
         {
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
