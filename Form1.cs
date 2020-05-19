@@ -33,7 +33,7 @@ namespace myGame
             player.move_player();
             check_for_overlapping();
             check_if_player_left_boundries();
-            debugger();
+            //location_debugger();
 
             void check_if_player_left_boundries()
             {
@@ -43,7 +43,7 @@ namespace myGame
                     gameOver();
                 }
             }
-            void debugger() // a function to check if Is_player_... functions work
+            void location_debugger() // a function to check if Is_player_... functions work
             {
                 if (player.is_player_TopLeft() == true)
                 {
@@ -244,63 +244,122 @@ namespace myGame
         private async Task start_gameAsync()
         {
             int delay_between_stages = 3900;
-
-            stage_0(0, -100);
+            int rand;
+            stage_12(0, -100);
             await Task.Delay(delay_between_stages);
-            int rand = Random_Number.random_number_between(1, 2);
 
             while (score < 50)
             {
+            rand = Random_Number.random_number_between(1, 2);
                 if (player.is_player_TopLeft() == true)
                 {
-                    if (rand == 1)
+                    switch (rand)
                     {
-                        stage_1(0, -100);
-                        await Task.Delay(delay_between_stages);
+                        case 1:
+                            stage_1(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_3(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
                     }
-                    else if (rand == 2)
+                }
+                if (player.is_player_TopMiddle() == true)
+                {
+                    switch (rand)
                     {
-                        stage_3(0, -100);
-                        await Task.Delay(delay_between_stages);
+                        case 1:
+                            stage_2(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_2(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
                     }
                 }
                 if (player.is_player_TopRight() == true)
                 {
-                    if (rand == 1)
+                    switch (rand)
                     {
-                        stage_4(0, -100);
-                        await Task.Delay(delay_between_stages);
-                    }
-                    else if (rand == 2)
-                    {
-                        stage_6(0, -100);
-                        await Task.Delay(delay_between_stages);
+                        case 1:
+                            stage_4(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_6(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
                     }
                 }
+
                 if (player.is_player_BottomLeft() == true)
                 {
-                    if (rand == 1)
+                    switch (rand)
                     {
-                        stage_7(0, -100);
-                        await Task.Delay(delay_between_stages);
-                    }
-                    else if (rand == 2)
-                    {
-                        stage_8(0, -100);
-                        await Task.Delay(delay_between_stages);
+                        case 1:
+                            stage_7(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_8(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
                     }
                 }
+
+                if (player.is_player_BottomMiddle() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_2(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_2(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                    }
+                }
+
                 if (player.is_player_BottomRight() == true)
                 {
-                    if (rand == 1)
+                    switch (rand)
                     {
-                        stage_9(0, -100);
-                        await Task.Delay(delay_between_stages);
-                    }
-                    else if (rand == 2)
-                    {
-                        stage_10(0, -100);
-                        await Task.Delay(delay_between_stages);
+                        case 1:
+                            stage_9(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
+                        case 2:
+                            stage_10(0, -100);
+                            await Task.Delay(delay_between_stages);
+                            rand = Random_Number.random_number_between(1, 2);
+                            Debug.WriteLine(rand);
+                            break;
                     }
                 }
             }
@@ -314,7 +373,7 @@ namespace myGame
             increase_score(10);
 
         }
-        public void stage_1(int t1, int t2) // locks like l l l removes 1 3 5 7 ▥
+        public void stage_1(int t1, int t2) // locks like l l l removes 1 3 5 7 ▥ delete
         {
             Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
@@ -324,43 +383,45 @@ namespace myGame
 
         }
 
-
-        public void stage_2(int t1, int t2) //  locks like ≡ removes b d f ▤ ***** need a better one
-        {
-            Blocks.shake_7(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, block_b7, t1, t2);
-            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
-            Blocks.shake_7(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, block_f7, t1, t2);
-            increase_score(10);
-        }
-        public void stage_3(int t1, int t2) //  locks like ≡ removes a c e g ▤
+        public void stage_2(int t1, int t2) //  removes the entire top side (a b c)
         {
             Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
+            Blocks.shake_7(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, block_b7, t1, t2);
             Blocks.shake_7(block_c1, block_c2, block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
+            
+            //Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            increase_score(10);
+        }
+        public void stage_3(int t1, int t2) //  removes the entire bottom side  (e f h)
+        {
             Blocks.shake_7(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
+            Blocks.shake_7(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, block_f7, t1, t2);
             Blocks.shake_7(block_g1, block_g2, block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
             increase_score(10);
         }
 
 
-        public void stage_4(int t1, int t2) // remove the entire right side ◨ (5 6 7)
+        public void stage_4(int t1, int t2) // remove the entire right side ◧(5 6 7)
         {
             Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
             Blocks.shake_7(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, block_g6, t1, t2);
             Blocks.shake_7(block_a7, block_b7, block_c7, block_d7, block_e7, block_f7, block_g7, t1, t2);
             increase_score(10);
         }
-        public void stage_5(int t1, int t2) // remove the entire left side side  ◧ (1 2 3)
+        public void stage_5(int t1, int t2) // remove the entire left side side  ◨  (1 2 3)
         {
             Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
             Blocks.shake_7(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, block_g2, t1, t2);
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             increase_score(10);
         }
-        public void stage_6(int t1, int t2) // themove the middel part ( 3 4 5) ********* not used 
+        public void stage_6(int t1, int t2) // themove the middel part ( 3 4 5) 
         {
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
             Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
+            Blocks.shake_2(block_a2, block_a6, t1, t2);
+            Blocks.shake_2(block_g2, block_g6, t1, t2);
             increase_score(10);
         }
 
@@ -385,15 +446,30 @@ namespace myGame
         }
 
 
-        public void stage_9(int t1, int t2) // locks like ▼ ***** fix the blocks order
+        public void stage_9(int t1, int t2) // locks like ▼ 
         {                                              // ▲
-            Blocks.shake_7(block_b1, block_c1, block_d1, block_e1, block_f1, block_c2, block_d2, t1, t2);
-            Blocks.shake_7(block_e2, block_b7, block_c7, block_d7, block_e7, block_f7, block_c6, t1, t2);
-            Blocks.shake_7(block_d6, block_f7, block_d5, block_d7, block_d3, block_f7, block_e6, t1, t2);
+            Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
+            Blocks.shake_5(block_f2, block_e2, block_d2, block_c2, block_b2, t1, t2);
+            Blocks.shake_3(block_c3, block_d3, block_e3, t1, t2);
+            Blocks.shake_1(block_d4, t1, t2);
+            Blocks.shake_3(block_e5, block_d5, block_c5, t1, t2);
+            Blocks.shake_5(block_b6, block_c6, block_d6, block_e6, block_f6, t1, t2);
+            Blocks.shake_7(block_a7, block_b7, block_c7, block_d7, block_e7, block_f7, block_g7, t1, t2);
+            increase_score(10);
+        }
+        public void stage_10(int t1, int t2) // locks like ▶◀
+        { 
+            Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
+            Blocks.shake_5(block_b2, block_b3, block_b4, block_b5, block_b6, t1, t2);
+            Blocks.shake_3(block_c3, block_c4, block_c5, t1, t2);
+            Blocks.shake_1(block_d4, t1, t2);
+            Blocks.shake_3(block_e5, block_e4, block_e3, t1, t2);
+            Blocks.shake_5(block_f2, block_f3, block_f4, block_f5, block_f6, t1, t2);
+            Blocks.shake_7(block_g7, block_g6, block_g5, block_g4, block_g3, block_g2, block_g1, t1, t2);
             increase_score(10);
         }
 
-        public void stage_10(int t1, int t2) // locks like ⯐ can be the second to last stage
+        public void stage_11(int t1, int t2) // locks like ⯐ can be the second to last stage
         {
             Blocks.shake_7(block_a1, block_a2, block_a3, block_b1, block_b2, block_b3, block_c1, t1, t2);
             Blocks.shake_7(block_c2, block_c3, block_e1, block_e2, block_e3, block_f1, block_f2, t1, t2);
@@ -403,13 +479,31 @@ namespace myGame
             Blocks.shake_1(block_g7, t1, t2);
             increase_score(10);
         }
-        public void stage_11(int t1, int t2) // locks like ❖ {easy} 
+        public void stage_12(int t1, int t2) // removes switzerland flag 
         {
+            Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
             Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
-            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
+            Blocks.shake_3(block_c1, block_d1, block_e1, t1, t2);
+            Blocks.shake_3(block_d2, block_e2, block_c2, t1, t2);
+            Blocks.shake_3(block_c6, block_d6, block_e6, t1, t2);
+            Blocks.shake_3(block_d7, block_e7, block_c7, t1, t2);
+
             increase_score(10);
         }
-        public void stage_12(int t1, int t2) // locks like ◳
+        public void stage_13(int t1, int t2) // locks like a diamond in the middle ❖
+        {
+            Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
+            Blocks.shake_3(block_b1, block_b2, block_b3, t1, t2);
+            Blocks.shake_3(block_b5, block_b6, block_b7, t1, t2);
+            Blocks.shake_3(block_c2, block_c1, block_d1, t1, t2);
+            Blocks.shake_3(block_c6, block_c7, block_d7, t1, t2);
+            Blocks.shake_3(block_f5, block_f6, block_f7, t1, t2);
+            Blocks.shake_7(block_e1, block_e2, block_e6, block_e7, block_f1, block_f2, block_f3, t1, t2);
+            Blocks.shake_7(block_g1, block_g2, block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
+            increase_score(10);
+        }
+        public void stage_14(int t1, int t2) // locks like ◳
         {
             Blocks.shake_5(block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
             Blocks.shake_5(block_b7, block_b6, block_b5, block_b4, block_b3, t1, t2);
@@ -419,7 +513,7 @@ namespace myGame
             increase_score(10);
         }
 
-        public void stage_13(int t1, int t2) // locks like ◲
+        public void stage_15(int t1, int t2) // locks like ◲
         {
             Blocks.shake_5(block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
             Blocks.shake_5(block_d7, block_d6, block_d5, block_d4, block_d3, t1, t2);
@@ -428,7 +522,7 @@ namespace myGame
             Blocks.shake_5(block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
             increase_score(10);
         }
-        public void stage_14(int t1, int t2) // locks like ◰
+        public void stage_16(int t1, int t2) // locks like ◰
         {
             Blocks.shake_5(block_a1, block_a2, block_a3, block_a4, block_a5, t1, t2);
             Blocks.shake_5(block_b5, block_b4, block_b3, block_b2, block_b1, t1, t2);
@@ -437,7 +531,7 @@ namespace myGame
             Blocks.shake_5(block_e1, block_e2, block_e3, block_e4, block_e5, t1, t2);
             increase_score(10);
         }
-        public void stage_15(int t1, int t2) // locks like ◱
+        public void stage_17(int t1, int t2) // locks like ◱
         {
             Blocks.shake_5(block_c1, block_c2, block_c3, block_c4, block_c5, t1, t2);
             Blocks.shake_5(block_d5, block_d4, block_d3, block_d2, block_d1, t1, t2);
