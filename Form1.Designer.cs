@@ -163,7 +163,6 @@
             // 
             // extra_block
             // 
-            this.extra_block.Image = global::myGame.Properties.Resources.block1001;
             this.extra_block.Location = new System.Drawing.Point(-39, 700);
             this.extra_block.Name = "extra_block";
             this.extra_block.Size = new System.Drawing.Size(100, 100);
@@ -173,7 +172,6 @@
             // 
             // block_f6
             // 
-            this.block_f6.Image = global::myGame.Properties.Resources.block1001;
             this.block_f6.Location = new System.Drawing.Point(600, 600);
             this.block_f6.Name = "block_f6";
             this.block_f6.Size = new System.Drawing.Size(100, 100);
@@ -183,7 +181,6 @@
             // 
             // block_f5
             // 
-            this.block_f5.Image = global::myGame.Properties.Resources.block1001;
             this.block_f5.Location = new System.Drawing.Point(500, 600);
             this.block_f5.Name = "block_f5";
             this.block_f5.Size = new System.Drawing.Size(100, 100);
@@ -193,7 +190,6 @@
             // 
             // block_f4
             // 
-            this.block_f4.Image = global::myGame.Properties.Resources.block1001;
             this.block_f4.Location = new System.Drawing.Point(400, 600);
             this.block_f4.Name = "block_f4";
             this.block_f4.Size = new System.Drawing.Size(100, 100);
@@ -203,7 +199,6 @@
             // 
             // block_f3
             // 
-            this.block_f3.Image = global::myGame.Properties.Resources.block1001;
             this.block_f3.Location = new System.Drawing.Point(300, 600);
             this.block_f3.Name = "block_f3";
             this.block_f3.Size = new System.Drawing.Size(100, 100);
@@ -213,7 +208,6 @@
             // 
             // block_f2
             // 
-            this.block_f2.Image = global::myGame.Properties.Resources.block1001;
             this.block_f2.Location = new System.Drawing.Point(200, 600);
             this.block_f2.Name = "block_f2";
             this.block_f2.Size = new System.Drawing.Size(100, 100);
@@ -223,7 +217,6 @@
             // 
             // block_f1
             // 
-            this.block_f1.Image = global::myGame.Properties.Resources.block1001;
             this.block_f1.Location = new System.Drawing.Point(100, 600);
             this.block_f1.Name = "block_f1";
             this.block_f1.Size = new System.Drawing.Size(100, 100);
@@ -233,7 +226,6 @@
             // 
             // block_e6
             // 
-            this.block_e6.Image = global::myGame.Properties.Resources.block1001;
             this.block_e6.Location = new System.Drawing.Point(600, 500);
             this.block_e6.Name = "block_e6";
             this.block_e6.Size = new System.Drawing.Size(100, 100);
@@ -243,7 +235,6 @@
             // 
             // block_e5
             // 
-            this.block_e5.Image = global::myGame.Properties.Resources.block1001;
             this.block_e5.Location = new System.Drawing.Point(500, 500);
             this.block_e5.Name = "block_e5";
             this.block_e5.Size = new System.Drawing.Size(100, 100);
@@ -253,7 +244,6 @@
             // 
             // block_e4
             // 
-            this.block_e4.Image = global::myGame.Properties.Resources.block1001;
             this.block_e4.Location = new System.Drawing.Point(400, 500);
             this.block_e4.Name = "block_e4";
             this.block_e4.Size = new System.Drawing.Size(100, 100);
@@ -263,7 +253,6 @@
             // 
             // block_e3
             // 
-            this.block_e3.Image = global::myGame.Properties.Resources.block1001;
             this.block_e3.Location = new System.Drawing.Point(300, 500);
             this.block_e3.Name = "block_e3";
             this.block_e3.Size = new System.Drawing.Size(100, 100);
@@ -273,7 +262,6 @@
             // 
             // block_e2
             // 
-            this.block_e2.Image = global::myGame.Properties.Resources.block1001;
             this.block_e2.Location = new System.Drawing.Point(200, 500);
             this.block_e2.Name = "block_e2";
             this.block_e2.Size = new System.Drawing.Size(100, 100);
@@ -283,7 +271,6 @@
             // 
             // block_e1
             // 
-            this.block_e1.Image = global::myGame.Properties.Resources.block1001;
             this.block_e1.Location = new System.Drawing.Point(100, 500);
             this.block_e1.Name = "block_e1";
             this.block_e1.Size = new System.Drawing.Size(100, 100);
@@ -293,7 +280,6 @@
             // 
             // block_d6
             // 
-            this.block_d6.Image = global::myGame.Properties.Resources.block1001;
             this.block_d6.Location = new System.Drawing.Point(600, 401);
             this.block_d6.Name = "block_d6";
             this.block_d6.Size = new System.Drawing.Size(100, 100);
@@ -303,7 +289,6 @@
             // 
             // block_d5
             // 
-            this.block_d5.Image = global::myGame.Properties.Resources.block1001;
             this.block_d5.Location = new System.Drawing.Point(500, 401);
             this.block_d5.Name = "block_d5";
             this.block_d5.Size = new System.Drawing.Size(100, 100);
@@ -313,7 +298,6 @@
             // 
             // block_d4
             // 
-            this.block_d4.Image = global::myGame.Properties.Resources.block1001;
             this.block_d4.Location = new System.Drawing.Point(400, 401);
             this.block_d4.Name = "block_d4";
             this.block_d4.Size = new System.Drawing.Size(100, 100);
@@ -323,7 +307,6 @@
             // 
             // block_d3
             // 
-            this.block_d3.Image = global::myGame.Properties.Resources.block1001;
             this.block_d3.Location = new System.Drawing.Point(300, 401);
             this.block_d3.Name = "block_d3";
             this.block_d3.Size = new System.Drawing.Size(100, 100);
@@ -333,7 +316,6 @@
             // 
             // block_d2
             // 
-            this.block_d2.Image = global::myGame.Properties.Resources.block1001;
             this.block_d2.Location = new System.Drawing.Point(200, 401);
             this.block_d2.Name = "block_d2";
             this.block_d2.Size = new System.Drawing.Size(100, 100);
@@ -343,7 +325,6 @@
             // 
             // block_d1
             // 
-            this.block_d1.Image = global::myGame.Properties.Resources.block1001;
             this.block_d1.Location = new System.Drawing.Point(100, 401);
             this.block_d1.Name = "block_d1";
             this.block_d1.Size = new System.Drawing.Size(100, 100);
@@ -353,7 +334,6 @@
             // 
             // block_c6
             // 
-            this.block_c6.Image = global::myGame.Properties.Resources.block1001;
             this.block_c6.Location = new System.Drawing.Point(600, 300);
             this.block_c6.Name = "block_c6";
             this.block_c6.Size = new System.Drawing.Size(100, 100);
@@ -363,7 +343,6 @@
             // 
             // block_c5
             // 
-            this.block_c5.Image = global::myGame.Properties.Resources.block1001;
             this.block_c5.Location = new System.Drawing.Point(500, 300);
             this.block_c5.Name = "block_c5";
             this.block_c5.Size = new System.Drawing.Size(100, 100);
@@ -373,7 +352,6 @@
             // 
             // block_c4
             // 
-            this.block_c4.Image = global::myGame.Properties.Resources.block1001;
             this.block_c4.Location = new System.Drawing.Point(400, 300);
             this.block_c4.Name = "block_c4";
             this.block_c4.Size = new System.Drawing.Size(100, 100);
@@ -383,7 +361,6 @@
             // 
             // block_c3
             // 
-            this.block_c3.Image = global::myGame.Properties.Resources.block1001;
             this.block_c3.Location = new System.Drawing.Point(300, 300);
             this.block_c3.Name = "block_c3";
             this.block_c3.Size = new System.Drawing.Size(100, 100);
@@ -393,7 +370,6 @@
             // 
             // block_c2
             // 
-            this.block_c2.Image = global::myGame.Properties.Resources.block1001;
             this.block_c2.Location = new System.Drawing.Point(200, 300);
             this.block_c2.Name = "block_c2";
             this.block_c2.Size = new System.Drawing.Size(100, 100);
@@ -403,7 +379,6 @@
             // 
             // block_c1
             // 
-            this.block_c1.Image = global::myGame.Properties.Resources.block1001;
             this.block_c1.Location = new System.Drawing.Point(100, 300);
             this.block_c1.Name = "block_c1";
             this.block_c1.Size = new System.Drawing.Size(100, 100);
@@ -413,7 +388,6 @@
             // 
             // block_b6
             // 
-            this.block_b6.Image = global::myGame.Properties.Resources.block1001;
             this.block_b6.Location = new System.Drawing.Point(600, 200);
             this.block_b6.Name = "block_b6";
             this.block_b6.Size = new System.Drawing.Size(100, 100);
@@ -423,7 +397,6 @@
             // 
             // block_b5
             // 
-            this.block_b5.Image = global::myGame.Properties.Resources.block1001;
             this.block_b5.Location = new System.Drawing.Point(500, 200);
             this.block_b5.Name = "block_b5";
             this.block_b5.Size = new System.Drawing.Size(100, 100);
@@ -433,7 +406,6 @@
             // 
             // block_b4
             // 
-            this.block_b4.Image = global::myGame.Properties.Resources.block1001;
             this.block_b4.Location = new System.Drawing.Point(400, 200);
             this.block_b4.Name = "block_b4";
             this.block_b4.Size = new System.Drawing.Size(100, 100);
@@ -443,7 +415,6 @@
             // 
             // block_b3
             // 
-            this.block_b3.Image = global::myGame.Properties.Resources.block1001;
             this.block_b3.Location = new System.Drawing.Point(300, 200);
             this.block_b3.Name = "block_b3";
             this.block_b3.Size = new System.Drawing.Size(100, 100);
@@ -453,7 +424,6 @@
             // 
             // block_b2
             // 
-            this.block_b2.Image = global::myGame.Properties.Resources.block1001;
             this.block_b2.Location = new System.Drawing.Point(200, 200);
             this.block_b2.Name = "block_b2";
             this.block_b2.Size = new System.Drawing.Size(100, 100);
@@ -463,7 +433,6 @@
             // 
             // block_b1
             // 
-            this.block_b1.Image = global::myGame.Properties.Resources.block1001;
             this.block_b1.Location = new System.Drawing.Point(100, 200);
             this.block_b1.Name = "block_b1";
             this.block_b1.Size = new System.Drawing.Size(100, 100);
@@ -473,7 +442,6 @@
             // 
             // block_a6
             // 
-            this.block_a6.Image = global::myGame.Properties.Resources.block1001;
             this.block_a6.Location = new System.Drawing.Point(600, 100);
             this.block_a6.Name = "block_a6";
             this.block_a6.Size = new System.Drawing.Size(100, 100);
@@ -483,7 +451,6 @@
             // 
             // block_a5
             // 
-            this.block_a5.Image = global::myGame.Properties.Resources.block1001;
             this.block_a5.Location = new System.Drawing.Point(500, 100);
             this.block_a5.Name = "block_a5";
             this.block_a5.Size = new System.Drawing.Size(100, 100);
@@ -493,7 +460,6 @@
             // 
             // block_a4
             // 
-            this.block_a4.Image = global::myGame.Properties.Resources.block1001;
             this.block_a4.Location = new System.Drawing.Point(400, 100);
             this.block_a4.Name = "block_a4";
             this.block_a4.Size = new System.Drawing.Size(100, 100);
@@ -503,7 +469,6 @@
             // 
             // block_a3
             // 
-            this.block_a3.Image = global::myGame.Properties.Resources.block1001;
             this.block_a3.Location = new System.Drawing.Point(300, 100);
             this.block_a3.Name = "block_a3";
             this.block_a3.Size = new System.Drawing.Size(100, 100);
@@ -513,7 +478,6 @@
             // 
             // block_a2
             // 
-            this.block_a2.Image = global::myGame.Properties.Resources.block1001;
             this.block_a2.Location = new System.Drawing.Point(200, 100);
             this.block_a2.Name = "block_a2";
             this.block_a2.Size = new System.Drawing.Size(100, 100);
@@ -523,7 +487,6 @@
             // 
             // block_a1
             // 
-            this.block_a1.Image = global::myGame.Properties.Resources.block1001;
             this.block_a1.Location = new System.Drawing.Point(100, 100);
             this.block_a1.Name = "block_a1";
             this.block_a1.Size = new System.Drawing.Size(100, 100);
@@ -533,7 +496,6 @@
             // 
             // block_a7
             // 
-            this.block_a7.Image = global::myGame.Properties.Resources.block1001;
             this.block_a7.Location = new System.Drawing.Point(700, 100);
             this.block_a7.Name = "block_a7";
             this.block_a7.Size = new System.Drawing.Size(100, 100);
@@ -543,7 +505,6 @@
             // 
             // block_b7
             // 
-            this.block_b7.Image = global::myGame.Properties.Resources.block1001;
             this.block_b7.Location = new System.Drawing.Point(700, 200);
             this.block_b7.Name = "block_b7";
             this.block_b7.Size = new System.Drawing.Size(100, 100);
@@ -553,7 +514,6 @@
             // 
             // block_c7
             // 
-            this.block_c7.Image = global::myGame.Properties.Resources.block1001;
             this.block_c7.Location = new System.Drawing.Point(700, 300);
             this.block_c7.Name = "block_c7";
             this.block_c7.Size = new System.Drawing.Size(100, 100);
@@ -563,7 +523,6 @@
             // 
             // block_d7
             // 
-            this.block_d7.Image = global::myGame.Properties.Resources.block1001;
             this.block_d7.Location = new System.Drawing.Point(700, 400);
             this.block_d7.Name = "block_d7";
             this.block_d7.Size = new System.Drawing.Size(100, 100);
@@ -573,7 +532,6 @@
             // 
             // block_e7
             // 
-            this.block_e7.Image = global::myGame.Properties.Resources.block1001;
             this.block_e7.Location = new System.Drawing.Point(700, 500);
             this.block_e7.Name = "block_e7";
             this.block_e7.Size = new System.Drawing.Size(100, 100);
@@ -583,7 +541,6 @@
             // 
             // block_f7
             // 
-            this.block_f7.Image = global::myGame.Properties.Resources.block1001;
             this.block_f7.Location = new System.Drawing.Point(700, 600);
             this.block_f7.Name = "block_f7";
             this.block_f7.Size = new System.Drawing.Size(100, 100);
@@ -593,7 +550,6 @@
             // 
             // block_g1
             // 
-            this.block_g1.Image = global::myGame.Properties.Resources.block1001;
             this.block_g1.Location = new System.Drawing.Point(100, 700);
             this.block_g1.Name = "block_g1";
             this.block_g1.Size = new System.Drawing.Size(100, 100);
@@ -603,7 +559,6 @@
             // 
             // block_g2
             // 
-            this.block_g2.Image = global::myGame.Properties.Resources.block1001;
             this.block_g2.Location = new System.Drawing.Point(200, 700);
             this.block_g2.Name = "block_g2";
             this.block_g2.Size = new System.Drawing.Size(100, 100);
@@ -613,7 +568,6 @@
             // 
             // block_g3
             // 
-            this.block_g3.Image = global::myGame.Properties.Resources.block1001;
             this.block_g3.Location = new System.Drawing.Point(300, 700);
             this.block_g3.Name = "block_g3";
             this.block_g3.Size = new System.Drawing.Size(100, 100);
@@ -623,7 +577,6 @@
             // 
             // block_g4
             // 
-            this.block_g4.Image = global::myGame.Properties.Resources.block1001;
             this.block_g4.Location = new System.Drawing.Point(400, 700);
             this.block_g4.Name = "block_g4";
             this.block_g4.Size = new System.Drawing.Size(100, 100);
@@ -633,7 +586,6 @@
             // 
             // block_g5
             // 
-            this.block_g5.Image = global::myGame.Properties.Resources.block1001;
             this.block_g5.Location = new System.Drawing.Point(500, 700);
             this.block_g5.Name = "block_g5";
             this.block_g5.Size = new System.Drawing.Size(100, 100);
@@ -643,7 +595,6 @@
             // 
             // block_g6
             // 
-            this.block_g6.Image = global::myGame.Properties.Resources.block1001;
             this.block_g6.Location = new System.Drawing.Point(600, 700);
             this.block_g6.Name = "block_g6";
             this.block_g6.Size = new System.Drawing.Size(100, 100);
@@ -653,7 +604,6 @@
             // 
             // block_g7
             // 
-            this.block_g7.Image = global::myGame.Properties.Resources.block1001;
             this.block_g7.Location = new System.Drawing.Point(700, 700);
             this.block_g7.Name = "block_g7";
             this.block_g7.Size = new System.Drawing.Size(100, 100);

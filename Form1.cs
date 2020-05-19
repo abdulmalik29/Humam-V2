@@ -151,7 +151,7 @@ namespace myGame
         {
             score_txt.Text = "Score = 0";
             score = -10;
-            player.playerVel = 10;
+            player.playerVel = 5;
 
             reset_blocks();
             player_img.Location = new Point(200, 200);
@@ -243,43 +243,37 @@ namespace myGame
 
         private async Task start_gameAsync()
         {
-            int delay_between_stages = 3900;
+            int delay_between_stages = 3900; ;
             int rand;
-            stage_0(0, -100);
+            stage_2(0, -100);
             await Task.Delay(delay_between_stages);
-            stage_1(0, -100);
-            await Task.Delay(delay_between_stages);
+            //stage_1(0, -100);
+            //await Task.Delay(delay_between_stages);
 
             while (score < 90)
             {
             rand = Random_Number.random_number_between(1, 4);
+            delay_between_stages = 3900 - 100;
+
                 if (player.is_player_TopLeft() == true)
                 {
                     switch (rand)
                     {
                         case 1:
-                            stage_16(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_16(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_13(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_8(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_8(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_5(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
 
                     }
@@ -289,28 +283,20 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_10(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_6(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_6(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_2(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_2(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_12(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_12(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
                 }
@@ -319,28 +305,20 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_15(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_14(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_9(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_9(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_7(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_4(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
                 }
@@ -349,28 +327,20 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_17(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_17(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_9(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_9(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_7(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_5(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
                 }
@@ -379,28 +349,20 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_10(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_6(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_6(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_3(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_3(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_12(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_12(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
                 }
@@ -409,36 +371,36 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_15(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_15(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 2);
-                            Debug.WriteLine(rand);
+                            stage_13(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_15(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_8(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(0, -100);
-                            await Task.Delay(delay_between_stages);
-                            rand = Random_Number.random_number_between(1, 4);
-                            Debug.WriteLine(rand);
+                            stage_4(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
                 }
                 else
                 {
-                    stage_0(0, -100);
+                    stage_0(0, score);
                     await Task.Delay(delay_between_stages);
                 }
+            }
+
+            async Task<int> stages_func(int delay, int num)
+            {
+                await Task.Delay(delay);
+                rand = Random_Number.random_number_between(1, 4);
+                Debug.WriteLine(num);
+                return rand;
             }
         }
 
@@ -450,27 +412,31 @@ namespace myGame
             increase_score(10);
 
         }
-        public void stage_1(int t1, int t2) // locks like l l l removes 1 3 5 7 ▥ delete
+        public void stage_1(int t1, int t2) // locks like l l l removes a c e g 
         {
-            Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
-            Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
-            Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
-            Blocks.shake_7(block_a7, block_b7, block_c7, block_d7, block_e7, block_f7, block_g7, t1, t2);
+            Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
+            Blocks.shake_7(block_c1, block_c2, block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
+            Blocks.shake_7(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
+            Blocks.shake_7(block_g1, block_g2, block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
             increase_score(10);
 
         }
 
-        public void stage_2(int t1, int t2) //  removes the entire top side (a b c)
+        public void stage_2(int t1, int t2) //  removes the entire top side (a b c d)
         {
             Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
             Blocks.shake_7(block_b1, block_b2, block_b3, block_b4, block_b5, block_b6, block_b7, t1, t2);
             Blocks.shake_7(block_c1, block_c2, block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
-            
-            //Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            Blocks.shake_3(block_e1, block_f1, block_g1, t1, t2);
+            Blocks.shake_3(block_e2, block_f2, block_g2, t1, t2);
+            Blocks.shake_3(block_e6, block_f6, block_g6, t1, t2);
+            Blocks.shake_3(block_e7, block_f7, block_g7, t1, t2);
             increase_score(10);
         }
-        public void stage_3(int t1, int t2) //  removes the entire bottom side  (e f h)
+        public void stage_3(int t1, int t2) //  removes the entire bottom side  (d e f h)
         {
+            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
             Blocks.shake_7(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
             Blocks.shake_7(block_f1, block_f2, block_f3, block_f4, block_f5, block_f6, block_f7, t1, t2);
             Blocks.shake_7(block_g1, block_g2, block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
@@ -478,18 +444,23 @@ namespace myGame
         }
 
 
-        public void stage_4(int t1, int t2) // remove the entire right side ◧(5 6 7)
+        public void stage_4(int t1, int t2) // remove the entire right side ◧(4 5 6 7)
         {
+            Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
             Blocks.shake_7(block_a5, block_b5, block_c5, block_d5, block_e5, block_f5, block_g5, t1, t2);
             Blocks.shake_7(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, block_g6, t1, t2);
             Blocks.shake_7(block_a7, block_b7, block_c7, block_d7, block_e7, block_f7, block_g7, t1, t2);
+            Blocks.shake_3(block_a2, block_a3, block_a4, t1, t2);
+            Blocks.shake_3(block_g2, block_g3, block_g4, t1, t2);
+            Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
             increase_score(10);
         }
-        public void stage_5(int t1, int t2) // remove the entire left side side  ◨  (1 2 3)
+        public void stage_5(int t1, int t2) // remove the entire left side side  ◨  (1 2 3 4)
         {
             Blocks.shake_7(block_a1, block_b1, block_c1, block_d1, block_e1, block_f1, block_g1, t1, t2);
             Blocks.shake_7(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, block_g2, t1, t2);
             Blocks.shake_7(block_a3, block_b3, block_c3, block_d3, block_e3, block_f3, block_g3, t1, t2);
+            Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
             increase_score(10);
         }
         public void stage_6(int t1, int t2) // themove the middel part ( 3 4 5) 
@@ -573,6 +544,7 @@ namespace myGame
             Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
             Blocks.shake_3(block_b1, block_b2, block_b3, t1, t2);
             Blocks.shake_3(block_b5, block_b6, block_b7, t1, t2);
+            Blocks.shake_1(block_d4, t1, t2);
             Blocks.shake_3(block_c2, block_c1, block_d1, t1, t2);
             Blocks.shake_3(block_c6, block_c7, block_d7, t1, t2);
             Blocks.shake_3(block_f5, block_f6, block_f7, t1, t2);
@@ -589,7 +561,7 @@ namespace myGame
             Blocks.shake_5(block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
             increase_score(10);
         }
-
+        
         public void stage_15(int t1, int t2) // locks like ◲
         {
             Blocks.shake_5(block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
@@ -617,6 +589,7 @@ namespace myGame
             Blocks.shake_5(block_g1, block_g2, block_g3, block_g4, block_g5, t1, t2);
             increase_score(10);
         }
+
         public void level1_final(int t1, int t2) // locks like ⧇
         {
 
