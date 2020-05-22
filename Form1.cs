@@ -17,7 +17,7 @@ namespace myGame
     {
         //bool game_is_paused;
         public int score;
-        Player player;
+        private Player player;
         Enemy boss;
 
         public Form1()
@@ -151,7 +151,8 @@ namespace myGame
 
         private void reset_game() // a fucnction that reset the game and most of its virables
         {
-            score_txt.Text = "Score = 0";
+            you_lost_panel.Visible = false;
+           score_txt.Text = "Score = 0";
             score = -10;
             player.playerVel = 5;
 
@@ -234,7 +235,8 @@ namespace myGame
 
         private void gameOver()
         {
-            //game_timer.Stop();
+            game_timer.Stop();
+            you_lost_panel.Visible = true;
         }
 
         private void increase_score(int number)
@@ -252,7 +254,7 @@ namespace myGame
             //stage_1(0, -100);
             //await Task.Delay(delay_between_stages);
 
-            while (score < 90)
+            while (score < 900)
             {
             rand = Random_Number.random_number_between(1, 4);
             delay_between_stages = 3900 - 100;
@@ -595,6 +597,11 @@ namespace myGame
         public void level1_final(int t1, int t2) // locks like ⧇
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reset_game();
         }
     }
 }   
