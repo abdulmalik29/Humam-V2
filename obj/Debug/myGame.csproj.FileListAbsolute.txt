@@ -17,4 +17,5 @@ C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csproj.GenerateResource
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csproj.CoreCompileInputs.cache
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.exe
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.pdb
+C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.test.resources
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csprojAssemblyReference.cache

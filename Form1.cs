@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading;
+using System.Windows.Forms.VisualStyles;
+using System.Xml;
 
 namespace myGame
 {
@@ -26,9 +29,24 @@ namespace myGame
             player = new Player(player_img);
             boss = new Enemy(boss_img);
             reset_game();
+            //game_start_menu();
         }
 
-
+        private void game_start_menu()
+        {
+            this.BackColor = default;
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button)
+                {
+                    x.Visible = true;
+                }
+                else
+                {
+                    x.Visible = false;
+                }
+            }
+        }
         private void mainGameTimer(object sender, EventArgs e) // the main loop for the game which have most of the ruls 
         {
 
@@ -149,12 +167,15 @@ namespace myGame
         } // a method that always checks if the player is on block or not
 
 
-        private void reset_game() // a fucnction that reset the game and most of its virables
+        public void reset_game() // a fucnction that reset the game or start the game
         {
-            you_lost_panel.Visible = false;
-           score_txt.Text = "Score = 0";
-            score = -10;
+            this.BackColor = Color.FromArgb(255, 153, 0);
+            start_game_button.Visible = false;
+            score_txt.Visible = true;
+
+            score_txt.Text = "Score = 0";
             player.playerVel = 5;
+            score = -10;
 
             reset_blocks();
             player_img.Location = new Point(200, 200);
@@ -236,7 +257,7 @@ namespace myGame
         private void gameOver()
         {
             game_timer.Stop();
-            you_lost_panel.Visible = true;
+            
         }
 
         private void increase_score(int number)
@@ -599,7 +620,7 @@ namespace myGame
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void start_game_button_Click(object sender, EventArgs e)
         {
             reset_game();
         }

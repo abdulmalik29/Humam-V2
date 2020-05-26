@@ -83,9 +83,7 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
-            this.you_lost_panel = new System.Windows.Forms.Panel();
-            this.restart_game_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.start_game_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -138,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).BeginInit();
-            this.you_lost_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // score_txt
@@ -161,9 +158,9 @@
             this.boss_img.BackColor = System.Drawing.Color.White;
             this.boss_img.BackgroundImage = global::myGame.Properties.Resources.block100;
             this.boss_img.Image = global::myGame.Properties.Resources.boss;
-            this.boss_img.Location = new System.Drawing.Point(400, 100);
+            this.boss_img.Location = new System.Drawing.Point(300, 100);
             this.boss_img.Name = "boss_img";
-            this.boss_img.Size = new System.Drawing.Size(181, 200);
+            this.boss_img.Size = new System.Drawing.Size(300, 295);
             this.boss_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.boss_img.TabIndex = 52;
             this.boss_img.TabStop = false;
@@ -679,33 +676,17 @@
             this.block_a1.TabStop = false;
             this.block_a1.Tag = "blocks";
             // 
-            // you_lost_panel
+            // start_game_button
             // 
-            this.you_lost_panel.Controls.Add(this.label1);
-            this.you_lost_panel.Controls.Add(this.restart_game_button);
-            this.you_lost_panel.Location = new System.Drawing.Point(371, 323);
-            this.you_lost_panel.Name = "you_lost_panel";
-            this.you_lost_panel.Size = new System.Drawing.Size(200, 100);
-            this.you_lost_panel.TabIndex = 53;
-            // 
-            // restart_game_button
-            // 
-            this.restart_game_button.Location = new System.Drawing.Point(54, 74);
-            this.restart_game_button.Name = "restart_game_button";
-            this.restart_game_button.Size = new System.Drawing.Size(75, 23);
-            this.restart_game_button.TabIndex = 0;
-            this.restart_game_button.Text = "play again";
-            this.restart_game_button.UseVisualStyleBackColor = true;
-            this.restart_game_button.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "you lost";
+            this.start_game_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start_game_button.ForeColor = System.Drawing.Color.Purple;
+            this.start_game_button.Location = new System.Drawing.Point(273, 606);
+            this.start_game_button.Name = "start_game_button";
+            this.start_game_button.Size = new System.Drawing.Size(391, 94);
+            this.start_game_button.TabIndex = 53;
+            this.start_game_button.Text = "Press to start";
+            this.start_game_button.UseVisualStyleBackColor = true;
+            this.start_game_button.Click += new System.EventHandler(this.start_game_button_Click);
             // 
             // Form1
             // 
@@ -713,7 +694,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(884, 861);
-            this.Controls.Add(this.you_lost_panel);
+            this.Controls.Add(this.start_game_button);
             this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
             this.Controls.Add(this.block_g7);
@@ -767,7 +748,8 @@
             this.Controls.Add(this.block_a2);
             this.Controls.Add(this.block_a1);
             this.Controls.Add(this.score_txt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "myGame";
@@ -825,8 +807,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
-            this.you_lost_panel.ResumeLayout(false);
-            this.you_lost_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -887,9 +867,7 @@
         public System.Windows.Forms.PictureBox block_g6;
         public System.Windows.Forms.PictureBox block_g7;
         private System.Windows.Forms.PictureBox boss_img;
-        private System.Windows.Forms.Panel you_lost_panel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button restart_game_button;
+        private System.Windows.Forms.Button start_game_button;
     }
 }
 
