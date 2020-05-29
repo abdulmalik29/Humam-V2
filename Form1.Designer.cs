@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.score_txt = new System.Windows.Forms.Label();
             this.game_timer = new System.Windows.Forms.Timer(this.components);
+            this.start_game_button = new System.Windows.Forms.Button();
+            this.instructions_button = new System.Windows.Forms.Button();
+            this.quit_button = new System.Windows.Forms.Button();
             this.boss_img = new System.Windows.Forms.PictureBox();
             this.player_img = new System.Windows.Forms.PictureBox();
             this.block_g7 = new System.Windows.Forms.PictureBox();
@@ -83,7 +86,7 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
-            this.start_game_button = new System.Windows.Forms.Button();
+            this.game_over_window1 = new myGame.game_over_window();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -152,6 +155,43 @@
             // 
             this.game_timer.Interval = 20;
             this.game_timer.Tick += new System.EventHandler(this.mainGameTimer);
+            // 
+            // start_game_button
+            // 
+            this.start_game_button.BackColor = System.Drawing.Color.White;
+            this.start_game_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start_game_button.ForeColor = System.Drawing.Color.Purple;
+            this.start_game_button.Location = new System.Drawing.Point(200, 600);
+            this.start_game_button.Name = "start_game_button";
+            this.start_game_button.Size = new System.Drawing.Size(500, 100);
+            this.start_game_button.TabIndex = 53;
+            this.start_game_button.TabStop = false;
+            this.start_game_button.Text = "Press to start";
+            this.start_game_button.UseVisualStyleBackColor = false;
+            this.start_game_button.Click += new System.EventHandler(this.start_game_button_Click);
+            // 
+            // instructions_button
+            // 
+            this.instructions_button.BackColor = System.Drawing.Color.White;
+            this.instructions_button.ForeColor = System.Drawing.Color.Purple;
+            this.instructions_button.Location = new System.Drawing.Point(725, 740);
+            this.instructions_button.Name = "instructions_button";
+            this.instructions_button.Size = new System.Drawing.Size(75, 23);
+            this.instructions_button.TabIndex = 54;
+            this.instructions_button.TabStop = false;
+            this.instructions_button.Text = "instructions";
+            this.instructions_button.UseVisualStyleBackColor = false;
+            // 
+            // quit_button
+            // 
+            this.quit_button.BackColor = System.Drawing.Color.White;
+            this.quit_button.Location = new System.Drawing.Point(725, 769);
+            this.quit_button.Name = "quit_button";
+            this.quit_button.Size = new System.Drawing.Size(75, 23);
+            this.quit_button.TabIndex = 55;
+            this.quit_button.TabStop = false;
+            this.quit_button.Text = "quit";
+            this.quit_button.UseVisualStyleBackColor = false;
             // 
             // boss_img
             // 
@@ -676,17 +716,13 @@
             this.block_a1.TabStop = false;
             this.block_a1.Tag = "blocks";
             // 
-            // start_game_button
+            // game_over_window1
             // 
-            this.start_game_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_game_button.ForeColor = System.Drawing.Color.Purple;
-            this.start_game_button.Location = new System.Drawing.Point(273, 606);
-            this.start_game_button.Name = "start_game_button";
-            this.start_game_button.Size = new System.Drawing.Size(391, 94);
-            this.start_game_button.TabIndex = 53;
-            this.start_game_button.Text = "Press to start";
-            this.start_game_button.UseVisualStyleBackColor = true;
-            this.start_game_button.Click += new System.EventHandler(this.start_game_button_Click);
+            this.game_over_window1.BackColor = System.Drawing.Color.Black;
+            this.game_over_window1.Location = new System.Drawing.Point(151, 135);
+            this.game_over_window1.Name = "game_over_window1";
+            this.game_over_window1.Size = new System.Drawing.Size(618, 500);
+            this.game_over_window1.TabIndex = 56;
             // 
             // Form1
             // 
@@ -694,6 +730,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(884, 861);
+            this.Controls.Add(this.game_over_window1);
+            this.Controls.Add(this.quit_button);
+            this.Controls.Add(this.instructions_button);
             this.Controls.Add(this.start_game_button);
             this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
@@ -868,6 +907,9 @@
         public System.Windows.Forms.PictureBox block_g7;
         private System.Windows.Forms.PictureBox boss_img;
         private System.Windows.Forms.Button start_game_button;
+        private System.Windows.Forms.Button instructions_button;
+        private System.Windows.Forms.Button quit_button;
+        private game_over_window game_over_window1;
     }
 }
 
