@@ -719,9 +719,9 @@
             // game_over_window1
             // 
             this.game_over_window1.BackColor = System.Drawing.Color.Black;
-            this.game_over_window1.Location = new System.Drawing.Point(151, 135);
+            this.game_over_window1.Location = new System.Drawing.Point(78, 58);
             this.game_over_window1.Name = "game_over_window1";
-            this.game_over_window1.Size = new System.Drawing.Size(618, 500);
+            this.game_over_window1.Size = new System.Drawing.Size(370, 202);
             this.game_over_window1.TabIndex = 56;
             // 
             // Form1

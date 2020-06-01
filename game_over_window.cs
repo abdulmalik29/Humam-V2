@@ -12,6 +12,7 @@ namespace myGame
 {
     public partial class game_over_window : UserControl
     {
+        Form form1;
         public game_over_window()
         {
             InitializeComponent();
