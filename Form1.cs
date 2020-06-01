@@ -29,8 +29,8 @@ namespace myGame
             InitializeComponent();
             player = new Player(player_img);
             boss = new Enemy(boss_img);
-            reset_game();
-            //game_start_menu();
+            //reset_game();
+            game_start_menu();
         }
 
         private void game_start_menu()
@@ -170,7 +170,7 @@ namespace myGame
 
         public void reset_game() // a fucnction that reset the game or start the game
         {
-            
+            this.Focus();
             this.BackColor = Color.FromArgb(255, 153, 0);
             foreach (Control button in this.Controls)
             {
@@ -268,6 +268,7 @@ namespace myGame
         {
             game_timer.Stop();
             is_game_over = true;
+            game_over_window1.Visible = true;
 
 
         }
@@ -637,7 +638,20 @@ namespace myGame
         private void start_game_button_Click(object sender, EventArgs e)
         {
             reset_game();
+            this.Focus();
 
+        }
+
+        private void game_over_window1_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            reset_game();
+            this.Focus();
+        }
+
+        private void game_over_window1_VisibleChanged(object sender, EventArgs e)
+        {
+            reset_game();
+            //this.Focus();
         }
     }
 }   
