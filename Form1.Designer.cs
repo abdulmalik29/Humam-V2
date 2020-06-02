@@ -743,12 +743,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(884, 861);
+            this.Controls.Add(this.player_img);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.instructions_button);
             this.Controls.Add(this.start_game_button);
             this.Controls.Add(this.boss_img);
-            this.Controls.Add(this.player_img);
             this.Controls.Add(this.block_g7);
             this.Controls.Add(this.block_g6);
             this.Controls.Add(this.block_g5);

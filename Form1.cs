@@ -187,8 +187,11 @@ namespace myGame
             player.playerVel = 5;
             score = -10;
 
+            int player_start_x = Random_Number.random_number_between(1, 6) *100;
+            int player_start_y = Random_Number.random_number_between(1, 6) *100;
+            player_img.Location = new Point(player_start_x, player_start_y);
+
             reset_blocks();
-            player_img.Location = new Point(200, 200);
             extra_block.Visible = false;  // hide the extra block to be used latter
             game_timer.Start();
         }
