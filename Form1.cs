@@ -268,7 +268,7 @@ namespace myGame
         {
             game_timer.Stop();
             is_game_over = true;
-            game_over_window1.Visible = true;
+            panel1.Visible = true;
 
 
         }
@@ -642,16 +642,11 @@ namespace myGame
 
         }
 
-        private void game_over_window1_ControlRemoved(object sender, ControlEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
             reset_game();
             this.Focus();
-        }
-
-        private void game_over_window1_VisibleChanged(object sender, EventArgs e)
-        {
-            reset_game();
-            //this.Focus();
         }
     }
 }   

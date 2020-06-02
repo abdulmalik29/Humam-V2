@@ -86,7 +86,8 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
-            this.game_over_window1 = new myGame.game_over_window();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -139,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // score_txt
@@ -716,13 +718,24 @@
             this.block_a1.TabStop = false;
             this.block_a1.Tag = "blocks";
             // 
-            // game_over_window1
+            // panel1
             // 
-            this.game_over_window1.BackColor = System.Drawing.Color.Black;
-            this.game_over_window1.Location = new System.Drawing.Point(78, 58);
-            this.game_over_window1.Name = "game_over_window1";
-            this.game_over_window1.Size = new System.Drawing.Size(370, 202);
-            this.game_over_window1.TabIndex = 56;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(600, 123);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 242);
+            this.panel1.TabIndex = 56;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(24, 84);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -730,7 +743,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(884, 861);
-            this.Controls.Add(this.game_over_window1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.instructions_button);
             this.Controls.Add(this.start_game_button);
@@ -846,6 +859,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -909,7 +923,8 @@
         private System.Windows.Forms.Button start_game_button;
         private System.Windows.Forms.Button instructions_button;
         private System.Windows.Forms.Button quit_button;
-        private game_over_window game_over_window1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
