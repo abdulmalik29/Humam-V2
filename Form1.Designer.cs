@@ -88,6 +88,7 @@
             this.block_a1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.boss_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -722,14 +723,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(600, 123);
+            this.panel1.Location = new System.Drawing.Point(12, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 242);
             this.panel1.TabIndex = 56;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 84);
+            this.button1.Location = new System.Drawing.Point(60, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -737,12 +738,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // boss_label
+            // 
+            this.boss_label.AutoSize = true;
+            this.boss_label.Font = new System.Drawing.Font("Gigi", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boss_label.Location = new System.Drawing.Point(593, 120);
+            this.boss_label.Name = "boss_label";
+            this.boss_label.Size = new System.Drawing.Size(109, 51);
+            this.boss_label.TabIndex = 58;
+            this.boss_label.Text = "Hello";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(884, 861);
+            this.Controls.Add(this.boss_label);
             this.Controls.Add(this.player_img);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.quit_button);
@@ -861,6 +873,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -925,6 +938,7 @@
         private System.Windows.Forms.Button quit_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label boss_label;
     }
 }
 
