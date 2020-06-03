@@ -54,12 +54,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Blocks.cs" />
-    <Compile Include="game_over_window.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="game_over_window.Designer.cs">
-      <DependentUpon>game_over_window.cs</DependentUpon>
-    </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,9 +66,6 @@
     <Compile Include="Stage.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="game_over_window.resx">
-      <DependentUpon>game_over_window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
