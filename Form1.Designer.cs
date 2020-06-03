@@ -201,12 +201,14 @@
             this.boss_img.BackColor = System.Drawing.Color.White;
             this.boss_img.BackgroundImage = global::myGame.Properties.Resources.block100;
             this.boss_img.Image = global::myGame.Properties.Resources.boss;
-            this.boss_img.Location = new System.Drawing.Point(300, 100);
+            this.boss_img.Location = new System.Drawing.Point(879, 554);
             this.boss_img.Name = "boss_img";
             this.boss_img.Size = new System.Drawing.Size(300, 295);
             this.boss_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.boss_img.TabIndex = 52;
             this.boss_img.TabStop = false;
+            this.boss_img.Tag = "enemy";
+            this.boss_img.Visible = false;
             // 
             // player_img
             // 
@@ -723,9 +725,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(12, 100);
+            this.panel1.Location = new System.Drawing.Point(819, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 242);
+            this.panel1.Size = new System.Drawing.Size(406, 394);
             this.panel1.TabIndex = 56;
             // 
             // button1
@@ -740,27 +742,31 @@
             // 
             // boss_label
             // 
-            this.boss_label.AutoSize = true;
-            this.boss_label.Font = new System.Drawing.Font("Gigi", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boss_label.Location = new System.Drawing.Point(593, 120);
+            this.boss_label.BackColor = System.Drawing.Color.Black;
+            this.boss_label.Font = new System.Drawing.Font("Senor Saturno", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boss_label.ForeColor = System.Drawing.Color.White;
+            this.boss_label.Location = new System.Drawing.Point(911, 28);
             this.boss_label.Name = "boss_label";
-            this.boss_label.Size = new System.Drawing.Size(109, 51);
+            this.boss_label.Size = new System.Drawing.Size(216, 88);
             this.boss_label.TabIndex = 58;
+            this.boss_label.Tag = "enemy";
             this.boss_label.Text = "Hello";
+            this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.boss_label.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(884, 861);
+            this.ClientSize = new System.Drawing.Size(1237, 861);
             this.Controls.Add(this.boss_label);
+            this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.instructions_button);
             this.Controls.Add(this.start_game_button);
-            this.Controls.Add(this.boss_img);
             this.Controls.Add(this.block_g7);
             this.Controls.Add(this.block_g6);
             this.Controls.Add(this.block_g5);
@@ -873,7 +879,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

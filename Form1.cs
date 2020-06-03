@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms.VisualStyles;
 using System.Xml;
+using System.Drawing.Drawing2D;
 
 namespace myGame
 {
@@ -21,12 +22,13 @@ namespace myGame
         //bool game_is_paused;
         public int score;
         private Player player;
-        bool is_game_over;
+        private bool is_game_over;
         Enemy boss;
 
         public Form1()
         {
             InitializeComponent();
+            this.Width = 900;
             player = new Player(player_img);
             boss = new Enemy(boss_img);
             //reset_game();
@@ -58,7 +60,7 @@ namespace myGame
 
             void check_if_player_left_boundries()
             {
-                if (player_img.Left <= (100 - player.playerVel) || (player_img.Left >= 750 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (750 - player.playerVel)) // to check if the player have left the initial game boundaries
+                if (player_img.Left <= (100 - player.playerVel) || (player_img.Left > 750 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (750 + player.playerVel)) // to check if the player have left the initial game boundaries
                 {
                     Debug.WriteLine("you lost");
                     gameOver();
@@ -172,6 +174,10 @@ namespace myGame
         {
             this.Focus();
             this.BackColor = Color.FromArgb(255, 153, 0);
+
+            boss_label.Visible = true;
+            boss_label.BackColor = Color.FromArgb(125, Color.Black); 
+            
             foreach (Control button in this.Controls)
             {
                 if (button is Button)
@@ -269,8 +275,9 @@ namespace myGame
 
         private void gameOver()
         {
-            game_timer.Stop();
             is_game_over = true;
+            game_timer.Stop();
+            panel1.Location = new Point(250, 250);
             panel1.Visible = true;
 
 
@@ -290,160 +297,158 @@ namespace myGame
             await Task.Delay(delay_between_stages);
             //stage_1(0, -100);
             //await Task.Delay(delay_between_stages);
-            while (is_game_over == false)
+            while (score < 900 && !is_game_over)
             {
-                while (score < 900)
+                rand = Random_Number.random_number_between(1, 4);
+                delay_between_stages = 3900 - 100;
+
+                if (player.is_player_TopLeft() == true)
                 {
-                    rand = Random_Number.random_number_between(1, 4);
-                    delay_between_stages = 3900 - 100;
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_16(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_13(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_8(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_5(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
 
-                    if (player.is_player_TopLeft() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_16(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_13(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_8(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_5(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-
-                        }
-                    }
-                    else if (player.is_player_TopMiddle() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_10(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_6(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_2(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_12(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                        }
-                    }
-                    else if (player.is_player_TopRight() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_14(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_9(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_7(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_4(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                        }
-                    }
-                    else if (player.is_player_BottomLeft() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_17(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_9(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_7(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_5(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                        }
-                    }
-                    else if (player.is_player_BottomMiddle() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_10(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_6(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_3(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_12(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                        }
-                    }
-                    else if (player.is_player_BottomRight() == true)
-                    {
-                        switch (rand)
-                        {
-                            case 1:
-                                stage_15(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 2:
-                                stage_13(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 3:
-                                stage_8(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                            case 4:
-                                stage_4(0, score);
-                                rand = await stages_func(delay_between_stages, rand);
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        stage_0(0, score);
-                        await Task.Delay(delay_between_stages);
                     }
                 }
-
-                async Task<int> stages_func(int delay, int num)
+                else if (player.is_player_TopMiddle() == true)
                 {
-                    await Task.Delay(delay);
-                    rand = Random_Number.random_number_between(1, 4);
-                    Debug.WriteLine(num);
-                    return rand;
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_10(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_6(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_2(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_12(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                    }
                 }
+                else if (player.is_player_TopRight() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_14(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_9(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_7(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_4(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                    }
+                }
+                else if (player.is_player_BottomLeft() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_17(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_9(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_7(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_5(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                    }
+                }
+                else if (player.is_player_BottomMiddle() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_10(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_6(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_3(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_12(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                    }
+                }
+                else if (player.is_player_BottomRight() == true)
+                {
+                    switch (rand)
+                    {
+                        case 1:
+                            stage_15(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 2:
+                            stage_13(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_8(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 4:
+                            stage_4(0, score);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                    }
+                }
+                else
+                {
+                    stage_0(0, score);
+                    await Task.Delay(delay_between_stages);
+                }
+                
+            }
+            //break;
+            async Task<int> stages_func(int delay, int num)
+            {
+                await Task.Delay(delay);
+                rand = Random_Number.random_number_between(1, 4);
+                Debug.WriteLine(num);
+                return rand;
             }
         }
 
