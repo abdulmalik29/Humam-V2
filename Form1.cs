@@ -38,8 +38,7 @@ namespace myGame
 
         private void game_start_menu()
         {
-            this.BackColor = default;
-            
+            BackColor = Color.Snow;
             foreach (Control control in this.Controls)
             {
                 if (control is Button)
@@ -142,10 +141,10 @@ namespace myGame
             {
                 player.goRight = false;
             }
-            if (e.KeyCode == Keys.Enter)
+/*            if (e.KeyCode == Keys.Enter)
             {
                 start_gameAsync();
-            }
+            }*/
         }
 
         private void check_for_overlapping()
@@ -171,14 +170,15 @@ namespace myGame
         } // a method that always checks if the player is on block or not
 
 
-        public void reset_game() // a fucnction that reset the game or start the game
+        public async void reset_game() // a fucnction that reset the game or start the game
         {
-            this.Focus();
-            this.BackColor = Color.FromArgb(255, 153, 0);
+            Focus();
+            BackgroundImage = null;
+            BackColor = Color.FromArgb(255, 153, 0);
 
             boss_label.Visible = true;
-            boss_label.BackColor = Color.FromArgb(125, Color.Black); 
-            
+            boss_label.BackColor = Color.FromArgb(125, Color.Black);
+
             foreach (Control button in this.Controls)
             {
                 if (button is Button)
@@ -194,13 +194,30 @@ namespace myGame
             player.playerVel = 5;
             score = -10;
 
-            int player_start_x = Random_Number.random_number_between(1, 6) *100;
-            int player_start_y = Random_Number.random_number_between(1, 6) *100;
+            int player_start_x = Random_Number.random_number_between(2, 6) * 100;
+            int player_start_y = Random_Number.random_number_between(2, 6) * 100;
             player_img.Location = new Point(player_start_x, player_start_y);
 
             reset_blocks();
             extra_block.Visible = false;  // hide the extra block to be used latter
+
+            await show_be_ready();
             game_timer.Start();
+            start_gameAsync();
+
+            async Task show_be_ready()
+            {
+                be_rady_panel.Visible = true;
+                be_rady_panel.BringToFront();
+                for (int counter = 3; counter > 0; counter--)
+                {
+                    be_rady_counter.Text = "" + counter;
+                    await Task.Delay(1000);
+                }
+                be_rady_panel.Visible = false;
+                be_rady_panel.SendToBack();
+                Focus();
+            }
         }
 
         private void reset_blocks()  // a method to returns all the blocks to its initial location and make them visible
@@ -658,9 +675,9 @@ namespace myGame
             void show_game_over_screen()
             {
                 game_timer.Stop();
-                panel1.Location = new Point(250, 250);
-                panel1.Visible = true;
-                panel1.BringToFront();
+                game_over_panel.Location = new Point(250, 250);
+                game_over_panel.Visible = true;
+                game_over_panel.BringToFront();
 
             }
 
@@ -668,9 +685,25 @@ namespace myGame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            game_over_panel.Visible = false;
+            BringToFront();
             reset_game();
-            this.Focus();
+            Focus();
+        }
+
+        private void home_play_again_Click(object sender, EventArgs e)
+        {
+            game_over_panel.Visible = false;
+            BringToFront();
+            game_start_menu();
+            Focus();
+        }
+
+        private void quit_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
-}   
+
+}

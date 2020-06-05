@@ -86,11 +86,17 @@
             this.block_a3 = new System.Windows.Forms.PictureBox();
             this.block_a2 = new System.Windows.Forms.PictureBox();
             this.block_a1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.boss_label = new System.Windows.Forms.Label();
-            this.user_naem_textBox = new System.Windows.Forms.TextBox();
+            this.game_over_panel = new System.Windows.Forms.Panel();
+            this.home_play_again = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.add_user_naem_button = new System.Windows.Forms.Button();
+            this.user_naem_textBox = new System.Windows.Forms.TextBox();
+            this.game_over_play_again = new System.Windows.Forms.Button();
+            this.boss_label = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.be_rady_panel = new System.Windows.Forms.Panel();
+            this.be_rady_counter = new System.Windows.Forms.Label();
+            this.be_rady_txt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -143,16 +149,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.game_over_panel.SuspendLayout();
+            this.be_rady_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // score_txt
             // 
-            this.score_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score_txt.Font = new System.Drawing.Font("Cosmic Alien", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score_txt.ForeColor = System.Drawing.Color.White;
             this.score_txt.Location = new System.Drawing.Point(12, 9);
             this.score_txt.Name = "score_txt";
-            this.score_txt.Size = new System.Drawing.Size(205, 58);
+            this.score_txt.Size = new System.Drawing.Size(326, 58);
             this.score_txt.TabIndex = 0;
             this.score_txt.Text = "Score = 0";
             // 
@@ -163,8 +170,10 @@
             // 
             // start_game_button
             // 
-            this.start_game_button.BackColor = System.Drawing.Color.White;
-            this.start_game_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start_game_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.start_game_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.start_game_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.start_game_button.Font = new System.Drawing.Font("Cosmic Alien", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_game_button.ForeColor = System.Drawing.Color.Purple;
             this.start_game_button.Location = new System.Drawing.Point(200, 600);
             this.start_game_button.Name = "start_game_button";
@@ -177,9 +186,12 @@
             // 
             // instructions_button
             // 
-            this.instructions_button.BackColor = System.Drawing.Color.White;
+            this.instructions_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.instructions_button.Cursor = System.Windows.Forms.Cursors.Help;
+            this.instructions_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.instructions_button.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.instructions_button.ForeColor = System.Drawing.Color.Purple;
-            this.instructions_button.Location = new System.Drawing.Point(725, 740);
+            this.instructions_button.Location = new System.Drawing.Point(625, 740);
             this.instructions_button.Name = "instructions_button";
             this.instructions_button.Size = new System.Drawing.Size(75, 23);
             this.instructions_button.TabIndex = 54;
@@ -189,21 +201,25 @@
             // 
             // quit_button
             // 
-            this.quit_button.BackColor = System.Drawing.Color.White;
-            this.quit_button.Location = new System.Drawing.Point(725, 769);
+            this.quit_button.BackColor = System.Drawing.Color.Red;
+            this.quit_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.quit_button.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quit_button.ForeColor = System.Drawing.Color.White;
+            this.quit_button.Location = new System.Drawing.Point(782, 44);
             this.quit_button.Name = "quit_button";
             this.quit_button.Size = new System.Drawing.Size(75, 23);
             this.quit_button.TabIndex = 55;
             this.quit_button.TabStop = false;
             this.quit_button.Text = "quit";
             this.quit_button.UseVisualStyleBackColor = false;
+            this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
             // 
             // boss_img
             // 
             this.boss_img.BackColor = System.Drawing.Color.White;
             this.boss_img.BackgroundImage = global::myGame.Properties.Resources.block100;
             this.boss_img.Image = global::myGame.Properties.Resources.boss;
-            this.boss_img.Location = new System.Drawing.Point(879, 554);
+            this.boss_img.Location = new System.Drawing.Point(958, 554);
             this.boss_img.Name = "boss_img";
             this.boss_img.Size = new System.Drawing.Size(300, 295);
             this.boss_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -723,33 +739,80 @@
             this.block_a1.TabStop = false;
             this.block_a1.Tag = "blocks";
             // 
-            // panel1
+            // game_over_panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.add_user_naem_button);
-            this.panel1.Controls.Add(this.user_naem_textBox);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(819, 129);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 394);
-            this.panel1.TabIndex = 56;
+            this.game_over_panel.BackColor = System.Drawing.Color.Black;
+            this.game_over_panel.Controls.Add(this.home_play_again);
+            this.game_over_panel.Controls.Add(this.label1);
+            this.game_over_panel.Controls.Add(this.add_user_naem_button);
+            this.game_over_panel.Controls.Add(this.user_naem_textBox);
+            this.game_over_panel.Controls.Add(this.game_over_play_again);
+            this.game_over_panel.Location = new System.Drawing.Point(852, 154);
+            this.game_over_panel.Name = "game_over_panel";
+            this.game_over_panel.Size = new System.Drawing.Size(406, 394);
+            this.game_over_panel.TabIndex = 56;
             // 
-            // button1
+            // home_play_again
             // 
-            this.button1.Location = new System.Drawing.Point(98, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.home_play_again.BackColor = System.Drawing.Color.White;
+            this.home_play_again.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_play_again.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.home_play_again.Location = new System.Drawing.Point(166, 329);
+            this.home_play_again.Name = "home_play_again";
+            this.home_play_again.Size = new System.Drawing.Size(84, 35);
+            this.home_play_again.TabIndex = 4;
+            this.home_play_again.Text = "Home ";
+            this.home_play_again.UseVisualStyleBackColor = false;
+            this.home_play_again.Click += new System.EventHandler(this.home_play_again_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cosmic Alien", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(53, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(322, 56);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Game Over!!";
+            // 
+            // add_user_naem_button
+            // 
+            this.add_user_naem_button.Cursor = System.Windows.Forms.Cursors.No;
+            this.add_user_naem_button.Enabled = false;
+            this.add_user_naem_button.Location = new System.Drawing.Point(269, 198);
+            this.add_user_naem_button.Name = "add_user_naem_button";
+            this.add_user_naem_button.Size = new System.Drawing.Size(75, 23);
+            this.add_user_naem_button.TabIndex = 2;
+            this.add_user_naem_button.Text = "add\r\n";
+            this.add_user_naem_button.UseVisualStyleBackColor = true;
+            // 
+            // user_naem_textBox
+            // 
+            this.user_naem_textBox.Location = new System.Drawing.Point(85, 201);
+            this.user_naem_textBox.Name = "user_naem_textBox";
+            this.user_naem_textBox.Size = new System.Drawing.Size(165, 20);
+            this.user_naem_textBox.TabIndex = 1;
+            this.user_naem_textBox.Text = "Insert your name";
+            // 
+            // game_over_play_again
+            // 
+            this.game_over_play_again.BackColor = System.Drawing.Color.White;
+            this.game_over_play_again.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.game_over_play_again.Location = new System.Drawing.Point(126, 270);
+            this.game_over_play_again.Name = "game_over_play_again";
+            this.game_over_play_again.Size = new System.Drawing.Size(166, 44);
+            this.game_over_play_again.TabIndex = 0;
+            this.game_over_play_again.Text = "Play again";
+            this.game_over_play_again.UseVisualStyleBackColor = false;
+            this.game_over_play_again.Click += new System.EventHandler(this.button1_Click);
             // 
             // boss_label
             // 
             this.boss_label.BackColor = System.Drawing.Color.Black;
             this.boss_label.Font = new System.Drawing.Font("Senor Saturno", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boss_label.ForeColor = System.Drawing.Color.White;
-            this.boss_label.Location = new System.Drawing.Point(911, 28);
+            this.boss_label.Location = new System.Drawing.Point(1022, 740);
             this.boss_label.Name = "boss_label";
             this.boss_label.Size = new System.Drawing.Size(216, 88);
             this.boss_label.TabIndex = 58;
@@ -758,32 +821,62 @@
             this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.boss_label.Visible = false;
             // 
-            // user_naem_textBox
+            // button1
             // 
-            this.user_naem_textBox.Location = new System.Drawing.Point(98, 202);
-            this.user_naem_textBox.Name = "user_naem_textBox";
-            this.user_naem_textBox.Size = new System.Drawing.Size(100, 20);
-            this.user_naem_textBox.TabIndex = 1;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.No;
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(200, 740);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "Leaderboard";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // add_user_naem_button
+            // be_rady_panel
             // 
-            this.add_user_naem_button.Location = new System.Drawing.Point(269, 198);
-            this.add_user_naem_button.Name = "add_user_naem_button";
-            this.add_user_naem_button.Size = new System.Drawing.Size(75, 23);
-            this.add_user_naem_button.TabIndex = 2;
-            this.add_user_naem_button.Text = "add\r\n";
-            this.add_user_naem_button.UseVisualStyleBackColor = true;
+            this.be_rady_panel.Controls.Add(this.be_rady_txt);
+            this.be_rady_panel.Controls.Add(this.be_rady_counter);
+            this.be_rady_panel.Location = new System.Drawing.Point(100, 100);
+            this.be_rady_panel.Name = "be_rady_panel";
+            this.be_rady_panel.Size = new System.Drawing.Size(700, 700);
+            this.be_rady_panel.TabIndex = 60;
+            // 
+            // be_rady_counter
+            // 
+            this.be_rady_counter.AutoSize = true;
+            this.be_rady_counter.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.be_rady_counter.Location = new System.Drawing.Point(326, 278);
+            this.be_rady_counter.Name = "be_rady_counter";
+            this.be_rady_counter.Size = new System.Drawing.Size(66, 72);
+            this.be_rady_counter.TabIndex = 0;
+            this.be_rady_counter.Text = "3";
+            // 
+            // be_rady_txt
+            // 
+            this.be_rady_txt.AutoSize = true;
+            this.be_rady_txt.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.be_rady_txt.ForeColor = System.Drawing.Color.White;
+            this.be_rady_txt.Location = new System.Drawing.Point(206, 155);
+            this.be_rady_txt.Name = "be_rady_txt";
+            this.be_rady_txt.Size = new System.Drawing.Size(318, 72);
+            this.be_rady_txt.TabIndex = 1;
+            this.be_rady_txt.Text = "BE READY";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1237, 861);
+            this.ClientSize = new System.Drawing.Size(1600, 861);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.boss_label);
             this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.game_over_panel);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.instructions_button);
             this.Controls.Add(this.start_game_button);
@@ -838,6 +931,7 @@
             this.Controls.Add(this.block_a2);
             this.Controls.Add(this.block_a1);
             this.Controls.Add(this.score_txt);
+            this.Controls.Add(this.be_rady_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -897,8 +991,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.game_over_panel.ResumeLayout(false);
+            this.game_over_panel.PerformLayout();
+            this.be_rady_panel.ResumeLayout(false);
+            this.be_rady_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -961,12 +1057,18 @@
         private System.Windows.Forms.PictureBox boss_img;
         private System.Windows.Forms.Button start_game_button;
         private System.Windows.Forms.Button instructions_button;
-        private System.Windows.Forms.Button quit_button;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel game_over_panel;
+        private System.Windows.Forms.Button game_over_play_again;
         private System.Windows.Forms.Label boss_label;
         private System.Windows.Forms.Button add_user_naem_button;
         private System.Windows.Forms.TextBox user_naem_textBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button home_play_again;
+        private System.Windows.Forms.Button quit_button;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel be_rady_panel;
+        private System.Windows.Forms.Label be_rady_txt;
+        private System.Windows.Forms.Label be_rady_counter;
     }
 }
 

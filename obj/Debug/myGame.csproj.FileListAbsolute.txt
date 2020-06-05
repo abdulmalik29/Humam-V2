@@ -18,4 +18,3 @@ C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csproj.CoreCompileInput
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.exe
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.pdb
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csprojAssemblyReference.cache
-C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.Form2.resources

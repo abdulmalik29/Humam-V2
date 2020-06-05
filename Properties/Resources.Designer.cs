@@ -63,6 +63,16 @@ namespace myGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _705928d396944cff05417cfe7ea07f2f {
+            get {
+                object obj = ResourceManager.GetObject("705928d396944cff05417cfe7ea07f2f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap block100 {
             get {
                 object obj = ResourceManager.GetObject("block100", resourceCulture);
