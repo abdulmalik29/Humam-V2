@@ -8,6 +8,7 @@ namespace myGame
         public bool goUp, goDown, goLeft, goRight;
         private PictureBox player_img;
         public int playerVel;
+        //public int score;
 
         public Player(PictureBox img)
         {

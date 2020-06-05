@@ -89,6 +89,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.boss_label = new System.Windows.Forms.Label();
+            this.user_naem_textBox = new System.Windows.Forms.TextBox();
+            this.add_user_naem_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -724,6 +726,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.add_user_naem_button);
+            this.panel1.Controls.Add(this.user_naem_textBox);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(819, 129);
             this.panel1.Name = "panel1";
@@ -732,7 +736,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(60, 77);
+            this.button1.Location = new System.Drawing.Point(98, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -753,6 +757,22 @@
             this.boss_label.Text = "Hello";
             this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.boss_label.Visible = false;
+            // 
+            // user_naem_textBox
+            // 
+            this.user_naem_textBox.Location = new System.Drawing.Point(98, 202);
+            this.user_naem_textBox.Name = "user_naem_textBox";
+            this.user_naem_textBox.Size = new System.Drawing.Size(100, 20);
+            this.user_naem_textBox.TabIndex = 1;
+            // 
+            // add_user_naem_button
+            // 
+            this.add_user_naem_button.Location = new System.Drawing.Point(269, 198);
+            this.add_user_naem_button.Name = "add_user_naem_button";
+            this.add_user_naem_button.Size = new System.Drawing.Size(75, 23);
+            this.add_user_naem_button.TabIndex = 2;
+            this.add_user_naem_button.Text = "add\r\n";
+            this.add_user_naem_button.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -878,6 +898,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block_a2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_a1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -944,6 +965,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label boss_label;
+        private System.Windows.Forms.Button add_user_naem_button;
+        private System.Windows.Forms.TextBox user_naem_textBox;
     }
 }
 
