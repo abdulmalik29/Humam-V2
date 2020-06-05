@@ -849,6 +849,7 @@
             // 
             this.be_rady_counter.AutoSize = true;
             this.be_rady_counter.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.be_rady_counter.ForeColor = System.Drawing.Color.White;
             this.be_rady_counter.Location = new System.Drawing.Point(326, 278);
             this.be_rady_counter.Name = "be_rady_counter";
             this.be_rady_counter.Size = new System.Drawing.Size(66, 72);

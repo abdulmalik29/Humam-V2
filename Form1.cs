@@ -38,7 +38,7 @@ namespace myGame
 
         private void game_start_menu()
         {
-            BackColor = Color.Snow;
+            BackColor = Color.WhiteSmoke;
             foreach (Control control in this.Controls)
             {
                 if (control is Button)
