@@ -273,15 +273,6 @@ namespace myGame
             }
         }
 
-        private void gameOver()
-        {
-            is_game_over = true;
-            game_timer.Stop();
-            panel1.Location = new Point(250, 250);
-            panel1.Visible = true;
-
-
-        }
 
         private void increase_score(int number)
         {
@@ -291,12 +282,12 @@ namespace myGame
 
         private async Task start_gameAsync()
         {
-            int delay_between_stages = 3900; ;
+            int delay1 = Convert.ToInt32(score * .9);  // the amount of time that the blocks disappear for
+            int delay2 = Convert.ToInt32(score * .2); //  the amount of time that the blocks shake for
+            int delay_between_stages = 3900;
             int rand;
-            stage_2(0, -100);
+            stage_1(0, -100);
             await Task.Delay(delay_between_stages);
-            //stage_1(0, -100);
-            //await Task.Delay(delay_between_stages);
             while (score < 900 && !is_game_over)
             {
                 rand = Random_Number.random_number_between(1, 4);
@@ -307,19 +298,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_16(0, score);
+                            stage_16(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(0, score);
+                            stage_13(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_8(0, score);
+                            stage_8(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(0, score);
+                            stage_5(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
 
@@ -330,19 +321,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(0, score);
+                            stage_10(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_6(0, score);
+                            stage_6(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_2(0, score);
+                            stage_2(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_12(0, score);
+                            stage_12(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -352,19 +343,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_14(0, score);
+                            stage_14(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_9(0, score);
+                            stage_9(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(0, score);
+                            stage_7(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(0, score);
+                            stage_4(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -374,19 +365,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_17(0, score);
+                            stage_17(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_9(0, score);
+                            stage_9(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(0, score);
+                            stage_7(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(0, score);
+                            stage_5(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -396,19 +387,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(0, score);
+                            stage_10(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_6(0, score);
+                            stage_6(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_3(0, score);
+                            stage_3(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_12(0, score);
+                            stage_12(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -418,19 +409,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_15(0, score);
+                            stage_15(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(0, score);
+                            stage_13(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_8(0, score);
+                            stage_8(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(0, score);
+                            stage_4(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -647,6 +638,30 @@ namespace myGame
         {
             reset_game();
             this.Focus();
+
+        }
+        private void gameOver()
+        {
+            is_game_over = true;
+
+            if (score <= 20)
+            {
+                show_game_over_screen();
+            }
+            else
+            {
+                show_game_over_screen();
+            }
+            
+
+            void show_game_over_screen()
+            {
+                game_timer.Stop();
+                panel1.Location = new Point(250, 250);
+                panel1.Visible = true;
+                panel1.BringToFront();
+
+            }
 
         }
 

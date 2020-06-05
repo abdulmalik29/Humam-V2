@@ -31,12 +31,12 @@ namespace myGame
         }
         
 
-        public static async void shake_2(PictureBox block1, PictureBox block2, int delay_time, int stages_delay)
+        public static async void shake_2(PictureBox block1, PictureBox block2, int delay_time, int stages_delay) // a method that shakes two block and hide them
         {
             for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(210 - delay_time); //  the amount of time that the blocks shake for
 
                 block1.Top--;
                 await Task.Delay(210 - delay_time);
@@ -58,16 +58,16 @@ namespace myGame
             }
 
             block1.Visible = false; block2.Visible = false;
-            await Task.Delay(1150 - stages_delay);
+            await Task.Delay(1150 - stages_delay); // the amount of time that the blocks disappear for
             block1.Visible = true; block2.Visible = true;
         }
 
-        public static async void shake_1(PictureBox block1, int delay_time, int stages_delay)
+        public static async void shake_1(PictureBox block1, int delay_time, int stages_delay) // a method thats shake one block and hide it
         {
             for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(210 - delay_time); //  the amount of time that the blocks shake for
 
                 block1.Top--;
                 await Task.Delay(210 - delay_time);
@@ -80,7 +80,7 @@ namespace myGame
             }
 
             block1.Visible = false;
-            await Task.Delay(1150 - stages_delay);
+            await Task.Delay(1150 - stages_delay);  // the amount of time that the blocks disappear for
             block1.Visible = true;
         }
 
