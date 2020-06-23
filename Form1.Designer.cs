@@ -91,12 +91,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.add_user_naem_button = new System.Windows.Forms.Button();
             this.user_naem_textBox = new System.Windows.Forms.TextBox();
-            this.game_over_play_again = new System.Windows.Forms.Button();
+            this.play_again_button = new System.Windows.Forms.Button();
             this.boss_label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Leaderboard_button = new System.Windows.Forms.Button();
             this.be_rady_panel = new System.Windows.Forms.Panel();
-            this.be_rady_counter = new System.Windows.Forms.Label();
             this.be_rady_txt = new System.Windows.Forms.Label();
+            this.be_rady_counter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -746,7 +746,7 @@
             this.game_over_panel.Controls.Add(this.label1);
             this.game_over_panel.Controls.Add(this.add_user_naem_button);
             this.game_over_panel.Controls.Add(this.user_naem_textBox);
-            this.game_over_panel.Controls.Add(this.game_over_play_again);
+            this.game_over_panel.Controls.Add(this.play_again_button);
             this.game_over_panel.Location = new System.Drawing.Point(852, 154);
             this.game_over_panel.Name = "game_over_panel";
             this.game_over_panel.Size = new System.Drawing.Size(406, 394);
@@ -795,17 +795,18 @@
             this.user_naem_textBox.TabIndex = 1;
             this.user_naem_textBox.Text = "Insert your name";
             // 
-            // game_over_play_again
+            // play_again_button
             // 
-            this.game_over_play_again.BackColor = System.Drawing.Color.White;
-            this.game_over_play_again.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.game_over_play_again.Location = new System.Drawing.Point(126, 270);
-            this.game_over_play_again.Name = "game_over_play_again";
-            this.game_over_play_again.Size = new System.Drawing.Size(166, 44);
-            this.game_over_play_again.TabIndex = 0;
-            this.game_over_play_again.Text = "Play again";
-            this.game_over_play_again.UseVisualStyleBackColor = false;
-            this.game_over_play_again.Click += new System.EventHandler(this.button1_Click);
+            this.play_again_button.BackColor = System.Drawing.Color.White;
+            this.play_again_button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.play_again_button.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.play_again_button.Location = new System.Drawing.Point(126, 270);
+            this.play_again_button.Name = "play_again_button";
+            this.play_again_button.Size = new System.Drawing.Size(166, 44);
+            this.play_again_button.TabIndex = 0;
+            this.play_again_button.Text = "Play again";
+            this.play_again_button.UseVisualStyleBackColor = false;
+            this.play_again_button.Click += new System.EventHandler(this.play_again_button_Click);
             // 
             // boss_label
             // 
@@ -821,20 +822,20 @@
             this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.boss_label.Visible = false;
             // 
-            // button1
+            // Leaderboard_button
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.No;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(200, 740);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "Leaderboard";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Leaderboard_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Leaderboard_button.Cursor = System.Windows.Forms.Cursors.No;
+            this.Leaderboard_button.Enabled = false;
+            this.Leaderboard_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Leaderboard_button.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Leaderboard_button.ForeColor = System.Drawing.Color.White;
+            this.Leaderboard_button.Location = new System.Drawing.Point(200, 740);
+            this.Leaderboard_button.Name = "Leaderboard_button";
+            this.Leaderboard_button.Size = new System.Drawing.Size(108, 23);
+            this.Leaderboard_button.TabIndex = 59;
+            this.Leaderboard_button.Text = "Leaderboard";
+            this.Leaderboard_button.UseVisualStyleBackColor = false;
             // 
             // be_rady_panel
             // 
@@ -844,17 +845,6 @@
             this.be_rady_panel.Name = "be_rady_panel";
             this.be_rady_panel.Size = new System.Drawing.Size(700, 700);
             this.be_rady_panel.TabIndex = 60;
-            // 
-            // be_rady_counter
-            // 
-            this.be_rady_counter.AutoSize = true;
-            this.be_rady_counter.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.be_rady_counter.ForeColor = System.Drawing.Color.White;
-            this.be_rady_counter.Location = new System.Drawing.Point(326, 278);
-            this.be_rady_counter.Name = "be_rady_counter";
-            this.be_rady_counter.Size = new System.Drawing.Size(66, 72);
-            this.be_rady_counter.TabIndex = 0;
-            this.be_rady_counter.Text = "3";
             // 
             // be_rady_txt
             // 
@@ -867,13 +857,24 @@
             this.be_rady_txt.TabIndex = 1;
             this.be_rady_txt.Text = "BE READY";
             // 
+            // be_rady_counter
+            // 
+            this.be_rady_counter.AutoSize = true;
+            this.be_rady_counter.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.be_rady_counter.ForeColor = System.Drawing.Color.White;
+            this.be_rady_counter.Location = new System.Drawing.Point(326, 278);
+            this.be_rady_counter.Name = "be_rady_counter";
+            this.be_rady_counter.Size = new System.Drawing.Size(66, 72);
+            this.be_rady_counter.TabIndex = 0;
+            this.be_rady_counter.Text = "3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1600, 861);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1390, 861);
+            this.Controls.Add(this.Leaderboard_button);
             this.Controls.Add(this.boss_label);
             this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
@@ -1059,14 +1060,14 @@
         private System.Windows.Forms.Button start_game_button;
         private System.Windows.Forms.Button instructions_button;
         private System.Windows.Forms.Panel game_over_panel;
-        private System.Windows.Forms.Button game_over_play_again;
+        private System.Windows.Forms.Button play_again_button;
         private System.Windows.Forms.Label boss_label;
         private System.Windows.Forms.Button add_user_naem_button;
         private System.Windows.Forms.TextBox user_naem_textBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button home_play_again;
         private System.Windows.Forms.Button quit_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Leaderboard_button;
         private System.Windows.Forms.Panel be_rady_panel;
         private System.Windows.Forms.Label be_rady_txt;
         private System.Windows.Forms.Label be_rady_counter;

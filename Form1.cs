@@ -141,13 +141,9 @@ namespace myGame
             {
                 player.goRight = false;
             }
-/*            if (e.KeyCode == Keys.Enter)
-            {
-                start_gameAsync();
-            }*/
         }
 
-        private void check_for_overlapping()
+        private void check_for_overlapping() // a method that always checks if the player is on block or not
         {
             foreach (Control block in this.Controls) // used to check for other tags ??????
             {
@@ -167,7 +163,7 @@ namespace myGame
                     }
                 }
             }
-        } // a method that always checks if the player is on block or not
+        } 
 
 
         public async void reset_game() // a fucnction that reset the game or start the game
@@ -194,8 +190,8 @@ namespace myGame
             player.playerVel = 5;
             score = -10;
 
-            int player_start_x = Random_Number.random_number_between(2, 6) * 100;
-            int player_start_y = Random_Number.random_number_between(2, 6) * 100;
+            int player_start_x = Random_Number.random_number_between(2, 7) * 100;
+            int player_start_y = Random_Number.random_number_between(2, 7) * 100;
             player_img.Location = new Point(player_start_x, player_start_y);
 
             reset_blocks();
@@ -306,8 +302,8 @@ namespace myGame
             int rand;
             stage_1(0, -100);
             await Task.Delay(delay_between_stages);
-            while (score < 900 && !is_game_over)
-            {
+            while (score < 900 && !is_game_over) // in this part, the game do two tasks, it generate a random number after every stage
+            {                                           // the second task is to randomly choose the next stage depending on the player location
                 rand = Random_Number.random_number_between(1, 4);
                 delay_between_stages = 3900 - 100;
 
@@ -658,19 +654,25 @@ namespace myGame
             this.Focus();
 
         }
-        private void gameOver()
+        private async void gameOver()
         {
             is_game_over = true;
 
-            if (score <= 20)
+            show_game_over_screen();
+            play_again_button.Enabled = false;
+            await Task.Delay(1250);
+            play_again_button.Enabled = true;
+
+            // to chang the cursor,  Cursor = Cursors.Default;
+
+            /* if (score <= 20) 
             {
                 show_game_over_screen();
             }
             else
             {
                 show_game_over_screen();
-            }
-            
+            }*/
 
             void show_game_over_screen()
             {
@@ -682,8 +684,7 @@ namespace myGame
             }
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void play_again_button_Click(object sender, EventArgs e)
         {
             game_over_panel.Visible = false;
             BringToFront();
