@@ -705,6 +705,11 @@ namespace myGame
             Application.Exit();
 
         }
+
+        private void instructions_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

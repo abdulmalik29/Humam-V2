@@ -198,6 +198,7 @@
             this.instructions_button.TabStop = false;
             this.instructions_button.Text = "instructions";
             this.instructions_button.UseVisualStyleBackColor = false;
+            this.instructions_button.Click += new System.EventHandler(this.instructions_button_Click);
             // 
             // quit_button
             // 
