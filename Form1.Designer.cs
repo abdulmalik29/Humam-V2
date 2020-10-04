@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.score_txt = new System.Windows.Forms.Label();
             this.game_timer = new System.Windows.Forms.Timer(this.components);
             this.start_game_button = new System.Windows.Forms.Button();
@@ -219,10 +220,10 @@
             // 
             this.boss_img.BackColor = System.Drawing.Color.White;
             this.boss_img.BackgroundImage = global::myGame.Properties.Resources.block100;
-            this.boss_img.Image = global::myGame.Properties.Resources.boss;
-            this.boss_img.Location = new System.Drawing.Point(958, 554);
+            this.boss_img.Image = ((System.Drawing.Image)(resources.GetObject("boss_img.Image")));
+            this.boss_img.Location = new System.Drawing.Point(1044, 554);
             this.boss_img.Name = "boss_img";
-            this.boss_img.Size = new System.Drawing.Size(300, 295);
+            this.boss_img.Size = new System.Drawing.Size(300, 300);
             this.boss_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.boss_img.TabIndex = 52;
             this.boss_img.TabStop = false;
@@ -812,15 +813,15 @@
             // boss_label
             // 
             this.boss_label.BackColor = System.Drawing.Color.Black;
-            this.boss_label.Font = new System.Drawing.Font("Senor Saturno", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boss_label.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boss_label.ForeColor = System.Drawing.Color.White;
-            this.boss_label.Location = new System.Drawing.Point(1022, 740);
+            this.boss_label.Location = new System.Drawing.Point(1051, 822);
             this.boss_label.Name = "boss_label";
-            this.boss_label.Size = new System.Drawing.Size(216, 88);
+            this.boss_label.Size = new System.Drawing.Size(293, 88);
             this.boss_label.TabIndex = 58;
             this.boss_label.Tag = "enemy";
             this.boss_label.Text = "Hello";
-            this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.boss_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.boss_label.Visible = false;
             // 
             // Leaderboard_button
@@ -874,10 +875,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1390, 861);
+            this.ClientSize = new System.Drawing.Size(1390, 919);
+            this.Controls.Add(this.boss_img);
             this.Controls.Add(this.Leaderboard_button);
             this.Controls.Add(this.boss_label);
-            this.Controls.Add(this.boss_img);
             this.Controls.Add(this.player_img);
             this.Controls.Add(this.game_over_panel);
             this.Controls.Add(this.quit_button);
@@ -935,6 +936,7 @@
             this.Controls.Add(this.block_a1);
             this.Controls.Add(this.score_txt);
             this.Controls.Add(this.be_rady_panel);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
