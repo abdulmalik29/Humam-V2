@@ -312,19 +312,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_16(delay2, delay1);
+                            stage_0(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(delay2, delay1);
+                            stage_7(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_8(delay2, delay1);
+                            stage_13(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(delay2, delay1);
+                            stage_16(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
 
@@ -335,7 +335,7 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(delay2, delay1);
+                            stage_2(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
@@ -343,11 +343,11 @@ namespace myGame
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_2(delay2, delay1);
+                            stage_12(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_12(delay2, delay1);
+                            stage_19(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -357,7 +357,7 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_14(delay2, delay1);
+                            stage_1(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
@@ -365,11 +365,11 @@ namespace myGame
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(delay2, delay1);
+                            stage_14(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(delay2, delay1);
+                            stage_10(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -379,19 +379,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_17(delay2, delay1);
+                            stage_5(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_9(delay2, delay1);
+                            stage_8(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_7(delay2, delay1);
+                            stage_17(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_5(delay2, delay1);
+                            stage_20(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -401,19 +401,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(delay2, delay1);
-                            rand = await stages_func(delay_between_stages, rand);
-                            break;
-                        case 2:
-                            stage_6(delay2, delay1);
-                            rand = await stages_func(delay_between_stages, rand);
-                            break;
-                        case 3:
                             stage_3(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
+                        case 2:
+                            stage_23(delay2, delay1);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
+                        case 3:
+                            stage_18(delay2, delay1);
+                            rand = await stages_func(delay_between_stages, rand);
+                            break;
                         case 4:
-                            stage_12(delay2, delay1);
+                            stage_22(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -423,19 +423,19 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_15(delay2, delay1);
+                            stage_4(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
-                            stage_13(delay2, delay1);
+                            stage_11(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 3:
-                            stage_8(delay2, delay1);
+                            stage_15(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 4:
-                            stage_4(delay2, delay1);
+                            stage_21(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                     }
@@ -459,13 +459,14 @@ namespace myGame
 
         public void stage_0(int t1, int t2) // locks like l l l removes 2 4 6 ▥
         {
-            Blocks.shake_7(block_a2, block_b2, block_c2, block_d2, block_e2, block_f2, block_g2, t1, t2);
-            Blocks.shake_7(block_a4, block_b4, block_c4, block_d4, block_e4, block_f4, block_g4, t1, t2);
-            Blocks.shake_7(block_a6, block_b6, block_c6, block_d6, block_e6, block_f6, block_g6, t1, t2);
+            Blocks.shake_7(block_a2, block_b1, block_c2, block_d1, block_e2, block_f1, block_g2, t1, t2);
+            Blocks.shake_7(block_a4, block_b3, block_c4, block_d3, block_e4, block_f3, block_g4, t1, t2);
+            Blocks.shake_7(block_a6, block_b5, block_c6, block_d5, block_e6, block_f5, block_g6, t1, t2);
+            Blocks.shake_3(block_b7, block_d7, block_f7, t1, t2);
             increase_score(10);
 
         }
-        public void stage_1(int t1, int t2) // locks like l l l removes a c e g 
+        public void stage_1(int t1, int t2) // locks like ≡ removes a c e g 
         {
             Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
             Blocks.shake_7(block_c1, block_c2, block_c3, block_c4, block_c5, block_c6, block_c7, t1, t2);
@@ -487,7 +488,7 @@ namespace myGame
             Blocks.shake_3(block_e7, block_f7, block_g7, t1, t2);
             increase_score(10);
         }
-        public void stage_3(int t1, int t2) //  removes the entire bottom side  (d e f h)
+        public void stage_3(int t1, int t2) //  removes the entire bottom side  (d e f g)
         {
             Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
             Blocks.shake_7(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
@@ -527,7 +528,7 @@ namespace myGame
         }
 
 
-        public void stage_7(int t1, int t2) // 2 reove top left and bottom right  □ ■
+        public void stage_7(int t1, int t2) //  remove top left and bottom right  □ ■
         {                                                                      // ■ □
             Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_b1, block_b2, block_b3, t1, t2);
             Blocks.shake_7(block_b4, block_c1, block_c2, block_c3, block_c4, block_d1, block_d2, t1, t2);
@@ -570,7 +571,7 @@ namespace myGame
             increase_score(10);
         }
 
-        public void stage_11(int t1, int t2) // locks like ⯐ can be the second to last stage
+        public void stage_11(int t1, int t2) // locks like ⯐ 
         {
             Blocks.shake_7(block_a1, block_a2, block_a3, block_b1, block_b2, block_b3, block_c1, t1, t2);
             Blocks.shake_7(block_c2, block_c3, block_e1, block_e2, block_e3, block_f1, block_f2, t1, t2);
@@ -643,7 +644,87 @@ namespace myGame
             increase_score(10);
         }
 
-        public void level1_final(int t1, int t2) // locks like ⧇
+        public void stage_18(int t1, int t2) // locks like 🔲
+        {
+            Blocks.shake_3(block_b3, block_b4, block_b5, t1, t2);
+            Blocks.shake_5(block_c2, block_c3, block_c4, block_c5, block_c6, t1, t2);
+            Blocks.shake_5(block_d2, block_d3, block_d4, block_d5, block_d6, t1, t2);
+            Blocks.shake_5(block_e2, block_e3, block_e4, block_e5, block_e6, t1, t2);
+            Blocks.shake_3(block_f3, block_f4, block_f5,t1, t2);
+            increase_score(10);
+        }
+
+        public void stage_19(int t1, int t2) // locks like / \
+        //                                                 \ /
+        {
+            Blocks.shake_5(block_a1, block_a2, block_a4, block_a6, block_a7, t1, t2);
+            Blocks.shake_5(block_b1, block_b3, block_b4, block_b5, block_b7, t1, t2);
+            Blocks.shake_5(block_c2, block_c3, block_c4, block_c5, block_c6, t1, t2);
+            Blocks.shake_7(block_d1, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            Blocks.shake_5(block_e2, block_e3, block_e4, block_e5, block_e6, t1, t2);
+            Blocks.shake_5(block_f1, block_f3, block_f4, block_f5, block_f7, t1, t2);
+            Blocks.shake_5(block_g1, block_g2, block_g4, block_g6, block_g7, t1, t2);
+            increase_score(10);
+        }
+
+        public void stage_20(int t1, int t2) // random blocks
+        {
+            Blocks.shake_7(block_a1, block_a2, block_a3, block_a4, block_a5, block_a6, block_a7, t1, t2);
+            Blocks.shake_5(block_b1, block_b3, block_b3, block_b4, block_b5, t1, t2);
+            Blocks.shake_1(block_b7, t1, t2);
+
+            Blocks.shake_5(block_c1, block_c2, block_c3, block_c4, block_c5, t1, t2);
+            Blocks.shake_1(block_c6, t1, t2);
+
+            Blocks.shake_7(block_d2, block_d2, block_d3, block_d4, block_d5, block_d6, block_d7, t1, t2);
+            Blocks.shake_7(block_e1, block_e2, block_e3, block_e4, block_e5, block_e6, block_e7, t1, t2);
+
+            Blocks.shake_5(block_f1, block_f2, block_f3, block_f5, block_f6, t1, t2);
+            Blocks.shake_1(block_f7, t1, t2);
+
+            Blocks.shake_5(block_g1, block_g3, block_g4, block_g5, block_g6, t1, t2);
+            Blocks.shake_1(block_g7, t1, t2);
+
+            increase_score(30);
+        }
+
+        public void stage_21(int t1, int t2) // locks like ◙
+        {
+            Blocks.shake_1(block_a7, t1, t2);
+            Blocks.shake_5(block_b1, block_b3, block_b4, block_b5, block_b7, t1, t2);
+            Blocks.shake_5(block_c2, block_c3, block_c4, block_c5, block_c6, t1, t2);
+            Blocks.shake_5(block_d2, block_d3, block_d4, block_d5, block_d6, t1, t2);
+            Blocks.shake_5(block_e2, block_e3, block_e4, block_e5, block_e6, t1, t2);
+            Blocks.shake_5(block_f1, block_f3, block_f4, block_f5, block_f7, t1, t2);
+            Blocks.shake_3(block_g1, block_g2, block_g6, t1, t2); Blocks.shake_1(block_g7, t1, t2);
+            increase_score(10);
+        }
+
+        public void stage_22(int t1, int t2) // locks like 🌀
+        {
+            Blocks.shake_1(block_a7,t1,t2);
+            Blocks.shake_5(block_b1, block_b2, block_b3, block_b4, block_b5, t1, t2); Blocks.shake_1(block_b7, t1, t2);
+            Blocks.shake_3(block_c1, block_c5, block_c7, t1, t2);
+            Blocks.shake_3(block_d1, block_d3, block_d5, t1, t2); Blocks.shake_1(block_d7, t1, t2);
+            Blocks.shake_5(block_e1, block_e3, block_e4, block_e5, block_e7, t1, t2);
+            Blocks.shake_2(block_f1, block_f7, t1, t2);
+            Blocks.shake_7(block_g1, block_g2, block_g3, block_g4, block_g5, block_g6, block_g7, t1, t2);
+            increase_score(10);
+        }
+
+        public void stage_23(int t1, int t2) // locks like 8
+        {
+            Blocks.shake_3(block_a1, block_a2, block_a6, t1, t2); Blocks.shake_1(block_a7, t1, t2);
+            Blocks.shake_5(block_b1, block_b3, block_b4, block_b5, block_b7, t1, t2);
+            Blocks.shake_5(block_c1, block_c3, block_c4, block_c5, block_c7, t1, t2);
+            Blocks.shake_3(block_d1, block_d2, block_d6, t1, t2); Blocks.shake_1(block_d7, t1, t2);
+            Blocks.shake_5(block_e1, block_e3, block_e4, block_e5, block_e7, t1, t2);
+            Blocks.shake_5(block_f1, block_f3, block_f4, block_f5, block_f7, t1, t2);
+            Blocks.shake_3(block_g1, block_g2, block_g6, t1, t2); Blocks.shake_1(block_g7, t1, t2);
+            increase_score(10);
+        }
+
+        public void level1_final(int t1, int t2) // locks like 
         {
 
         }
