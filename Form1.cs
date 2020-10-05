@@ -188,8 +188,8 @@ namespace myGame
             player.playerVel = 5;
             score = -10;
 
-            int player_start_x = Random_Number.random_number_between(2, 7) * 100;
-            int player_start_y = Random_Number.random_number_between(2, 7) * 100;
+            int player_start_x = Random_Number.random_number_between(1, 7) * 100;
+            int player_start_y = Random_Number.random_number_between(3, 7) * 100;
             player_img.Location = new Point(player_start_x, player_start_y);
 
             reset_blocks();
@@ -337,17 +337,17 @@ namespace myGame
             int rand;
             stage_1(0, -100);
             await Task.Delay(delay_between_stages);
-            while (score < 900 && !is_game_over) // in this part, the game do two tasks, it generate a random number after every stage
+            while (score < 9000 && !is_game_over) // in this part, the game do two tasks, it generate a random number after every stage
             {                                           // the second task is to randomly choose the next stage depending on the player location
                 rand = Random_Number.random_number_between(1, 4);
-                delay_between_stages = 3900 - 100;
+                delay_between_stages = 3900 - 150;
 
                 if (player.is_player_TopLeft() == true)
                 {
                     switch (rand)
                     {
                         case 1:
-                            stage_16(delay2, delay1);
+                            stage_20(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
@@ -392,7 +392,7 @@ namespace myGame
                     switch (rand)
                     {
                         case 1:
-                            stage_10(delay2, delay1);
+                            stage_21(delay2, delay1);
                             rand = await stages_func(delay_between_stages, rand);
                             break;
                         case 2:
@@ -773,29 +773,82 @@ namespace myGame
         private async void gameOver()
         {
             is_game_over = true;
+            game_timer.Stop();
 
-            show_game_over_screen();
+            show_game_over_screenAsync();
+
             play_again_button.Enabled = false;
             home_play_again.Enabled = false;
             Cursor = Cursors.WaitCursor;
-
             await Task.Delay(1250);
             play_again_button.Enabled = true;
             home_play_again.Enabled = true;
             Cursor = Cursors.Default;
 
-            void show_game_over_screen()
+            async Task show_game_over_screenAsync()
             {
-                game_timer.Stop();
-                game_over_panel.Location = new Point(250, 250);
+
+               
+                game_over_panel.Location = new Point(250, 400);
                 game_over_panel.Visible = true;
                 game_over_panel.BringToFront();
+
+                boss_img.Location = new Point(200, 100);
+                boss_label.Location = new Point(500, 130);
+
+                boss_img.Visible = true;
+                boss_label.Visible = true;
+
+                boss_img.BringToFront();
+                boss_label.BringToFront();
+
+                int boss_random_text = 5;
+
+                if (boss_random_text == 1)
+                {
+                    boss_label.Text = "You reached Only " + score + " HAHAHAHA";
+                }
+                else if (boss_random_text == 2) 
+                {
+                    boss_label.Text = "DON'T PLAY THIS GAME EVER AGAIN";
+                }
+                else if (boss_random_text == 3)
+                {
+                    boss_label.Text = "I could get better score than yours even if i was BLINDFOLD";
+                }
+                else if (boss_random_text == 4)
+                {
+                    boss_label.Text = "JUST QUIT THE GAME";
+                }
+                else if (boss_random_text == 5)
+                {
+                    boss_label.Text = "Did you lose INTENTIONALLY!!!";
+                }
+                else if (boss_random_text == 6)
+                {
+                    boss_label.Text = "YOU NEED THOUSANDS OF YEAR TO BEAT ME";
+                }
+                else if (boss_random_text == 7)
+                {
+                    boss_label.Text = "My CAT got a better score than yours!!!";
+                }
+                else if (boss_random_text == 8)
+                {
+                    boss_label.Text = "you know you have to use the keyboard to move????";
+                }
+                else if (boss_random_text == 9)
+                {
+                    boss_label.Text = score + " is your family proud of you?";
+                }
+
 
             }
 
         }
         private void play_again_button_Click(object sender, EventArgs e)
         {
+            boss_img.Visible = false;
+            boss_label.Visible = false;
             game_over_panel.Visible = false;
             BringToFront();
             reset_game();
@@ -804,6 +857,8 @@ namespace myGame
 
         private void home_play_again_Click(object sender, EventArgs e)
         {
+            boss_img.Visible = false;
+            boss_label.Visible = false;
             game_over_panel.Visible = false;
             BringToFront();
             game_start_menu();

@@ -743,7 +743,8 @@
             // 
             // game_over_panel
             // 
-            this.game_over_panel.BackColor = System.Drawing.Color.Black;
+            this.game_over_panel.BackColor = System.Drawing.Color.Transparent;
+            this.game_over_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.game_over_panel.Controls.Add(this.home_play_again);
             this.game_over_panel.Controls.Add(this.label1);
             this.game_over_panel.Controls.Add(this.add_user_naem_button);
@@ -791,6 +792,7 @@
             // 
             // user_naem_textBox
             // 
+            this.user_naem_textBox.Cursor = System.Windows.Forms.Cursors.No;
             this.user_naem_textBox.Location = new System.Drawing.Point(85, 201);
             this.user_naem_textBox.Name = "user_naem_textBox";
             this.user_naem_textBox.Size = new System.Drawing.Size(165, 20);
@@ -817,7 +819,7 @@
             this.boss_label.ForeColor = System.Drawing.Color.White;
             this.boss_label.Location = new System.Drawing.Point(1051, 822);
             this.boss_label.Name = "boss_label";
-            this.boss_label.Size = new System.Drawing.Size(293, 88);
+            this.boss_label.Size = new System.Drawing.Size(293, 111);
             this.boss_label.TabIndex = 58;
             this.boss_label.Tag = "enemy";
             this.boss_label.Text = "Hello";
