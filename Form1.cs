@@ -226,6 +226,7 @@ namespace myGame
 
                 boss_img.BringToFront();
                 boss_label.BringToFront();
+                
 
                 if (death_counter == 0)
                 {
@@ -251,40 +252,61 @@ namespace myGame
                 }
                 else if (death_counter >= 1)
                 {
-                    int boss_random_text2 = Random_Number.random_number_between(1, 5);
+                    int boss_random_text3 = Random_Number.random_number_between(1, 10);
+                    int time_delay = 3500;
 
-                    if (boss_random_text2 == 1)
-                    {
-                        boss_label.Text = "keep trying you won't win";
 
-                    }
-                    else if (boss_random_text2 == 2)
+                    if (boss_random_text3 == 1)
                     {
-                        boss_label.Text = "So... , What are you? a sqare or a cube, maybe something else";
+                        boss_label.Text = "keep trying you WILL NOT WIN";
                     }
-                    else if (boss_random_text2 == 3)
+
+                    else if (boss_random_text3 == 2)
+                    {
+                        boss_label.Text = "So... , What are you? a sqare or a cube, something else?";
+                    }
+
+                    else if (boss_random_text3 == 3)
                     {
                         boss_label.Text = "Still trying to figure out what you are";
-
                     }
-                    else if (boss_random_text2 == 4)
+
+                    else if (boss_random_text3 == 4)
                     {
                         boss_label.Text = "If you keep playing you may get more intresting responses";
-
                     }
-                    else if (boss_random_text2 == 5)
+
+                    else if (boss_random_text3 == 5)
                     {
                         boss_label.Text = "Why you keep trying? Do you like the game?";
-
                     }
 
-                    else if (boss_random_text2 == 6)
+                    else if (boss_random_text3 == 6)
                     {
-                        boss_label.Text = "";
-
+                        boss_label.Text = "Do you know how many attempts you have done? I lost count";
                     }
 
-                    await Task.Delay(2400);
+                    else if (boss_random_text3 == 7)
+                    {
+                        boss_label.Text = "well... if you are going to spend a lot of time here can you at least tell me your name";
+                        time_delay = 4200;
+                    }
+
+                    else if (boss_random_text3 == 8)
+                    {
+                        boss_label.Text = "I think you have lost for " + death_counter + "  times btw";
+                    }
+
+                    else if (boss_random_text3 == 9)
+                    {
+                        boss_label.Text = "believe me you are not going to win";
+                    }
+
+                    else if (boss_random_text3 == 10)
+                    {
+                        boss_label.Text = "YOU ARE WORTHLESS";
+                    }
+                    await Task.Delay(time_delay);
                 }
 
 
@@ -376,7 +398,7 @@ namespace myGame
         private async Task start_gameAsync()
         {
             int delay1 = Convert.ToInt32(score * .9);  // the amount of time that the blocks disappear for
-            int delay2 = Convert.ToInt32(score * .2); //  the amount of time that the blocks shake for
+            int delay2 = Convert.ToInt32(score * .3); //  the amount of time that the blocks shake for
             int delay_between_stages = 3900;
             int rand;
             stage_1(0, -100);
@@ -835,7 +857,7 @@ namespace myGame
             {
 
                
-                game_over_panel.Location = new Point(300, 400);
+                game_over_panel.Location = new Point(200, 400);
                 game_over_panel.Visible = true;
                 game_over_panel.BringToFront();
 
@@ -852,7 +874,7 @@ namespace myGame
 
                 if (boss_random_text == 1)
                 {
-                    boss_label.Text = "You reached Only " + score + " HAHAHAHA";
+                    boss_label.Text = "You got Only " + score + " HAHAHAHA";
                 }
                 else if (boss_random_text == 2) 
                 {
@@ -921,9 +943,27 @@ namespace myGame
 
         }
 
+        private void instructions_play_button_Click(object sender, EventArgs e)
+        {
+            instructions_panel.Visible = false;
+            BringToFront();
+            reset_game();
+            Focus();
+        }
+
+        private void instructions_home_button_Click(object sender, EventArgs e)
+        {
+            instructions_panel.Visible = false;
+            BringToFront();
+            game_start_menu();
+            Focus();
+        }
+
         private void instructions_button_Click(object sender, EventArgs e)
         {
-
+            instructions_panel.Location = new Point(0, 0);
+            instructions_panel.Visible = true;
+            instructions_panel.BringToFront();
         }
     }
 
