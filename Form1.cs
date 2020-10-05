@@ -65,7 +65,7 @@ namespace myGame
             {
                 if (player_img.Left <= (100 - player.playerVel) || (player_img.Left > 750 + player.playerVel) || player_img.Top <= (100 - player.playerVel) || player_img.Top >= (750 + player.playerVel)) // to check if the player have left the initial game boundaries
                 {
-                    Debug.WriteLine("you lost");
+                    Debug.WriteLine("you lost ---- left the map");
                     gameOver();
                 }
             }
@@ -156,7 +156,7 @@ namespace myGame
                     {
                         if (player_img.Bounds.IntersectsWith(block.Bounds) && !block.Visible)  // to check if the player is on a visible block or not
                         {                                                                     // if they are not they fall over and lose the game
-                            Debug.WriteLine("you lost 0000");
+                            Debug.WriteLine("you lost ----  fell over");
                             gameOver();
                         }
                         else if (player_img.Bounds.IntersectsWith(block.Bounds))
@@ -188,7 +188,7 @@ namespace myGame
             score_txt.Text = "Score = 0";
             player.playerVel = 5;
             score = -10;
-
+            player_img.Visible = true;
             int player_start_x = Random_Number.random_number_between(1, 7) * 100;
             int player_start_y = Random_Number.random_number_between(4, 7) * 100;
             player_img.Location = new Point(player_start_x, player_start_y);
@@ -252,57 +252,58 @@ namespace myGame
                 }
                 else if (death_counter >= 1)
                 {
-                    int boss_random_text3 = Random_Number.random_number_between(1, 10);
+                    int boss_random_start_text = Random_Number.random_number_between(1, 10);
+                    Debug.WriteLine("boss random3 = " + boss_random_start_text);
                     int time_delay = 3500;
 
 
-                    if (boss_random_text3 == 1)
+                    if (boss_random_start_text == 1)
                     {
                         boss_label.Text = "keep trying you WILL NOT WIN";
                     }
 
-                    else if (boss_random_text3 == 2)
+                    else if (boss_random_start_text == 2)
                     {
                         boss_label.Text = "So... , What are you? a sqare or a cube, something else?";
                     }
 
-                    else if (boss_random_text3 == 3)
+                    else if (boss_random_start_text == 3)
                     {
                         boss_label.Text = "Still trying to figure out what you are";
                     }
 
-                    else if (boss_random_text3 == 4)
+                    else if (boss_random_start_text == 4)
                     {
                         boss_label.Text = "If you keep playing you may get more intresting responses";
                     }
 
-                    else if (boss_random_text3 == 5)
+                    else if (boss_random_start_text == 5)
                     {
                         boss_label.Text = "Why you keep trying? Do you like the game?";
                     }
 
-                    else if (boss_random_text3 == 6)
+                    else if (boss_random_start_text == 6)
                     {
                         boss_label.Text = "Do you know how many attempts you have done? I lost count";
                     }
 
-                    else if (boss_random_text3 == 7)
+                    else if (boss_random_start_text == 7)
                     {
                         boss_label.Text = "well... if you are going to spend a lot of time here can you at least tell me your name";
                         time_delay = 4200;
                     }
 
-                    else if (boss_random_text3 == 8)
+                    else if (boss_random_start_text == 8)
                     {
                         boss_label.Text = "I think you have lost for " + death_counter + "  times btw";
                     }
 
-                    else if (boss_random_text3 == 9)
+                    else if (boss_random_start_text == 9)
                     {
                         boss_label.Text = "believe me you are not going to win";
                     }
 
-                    else if (boss_random_text3 == 10)
+                    else if (boss_random_start_text == 10)
                     {
                         boss_label.Text = "YOU ARE WORTHLESS";
                     }
@@ -553,7 +554,7 @@ namespace myGame
             {
                 await Task.Delay(delay);
                 rand = Random_Number.random_number_between(1, 4);
-                Debug.WriteLine(num);
+                Debug.WriteLine("stages random = " + num);
                 return rand;
             }
         }
@@ -839,8 +840,11 @@ namespace myGame
         private async void gameOver()
         {
             is_game_over = true;
+            player_img.Visible = false;
             death_counter++;
             game_timer.Stop();
+
+            Debug.WriteLine("death counter = " + death_counter);
             await Task.Delay(750);
 
             show_game_over_screenAsync();
@@ -871,6 +875,7 @@ namespace myGame
                 boss_label.BringToFront();
 
                 int boss_random_text = Random_Number.random_number_between(1, 10);
+                Debug.WriteLine("boss random1 = " + boss_random_text);
 
                 if (boss_random_text == 1)
                 {

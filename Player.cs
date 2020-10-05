@@ -22,26 +22,26 @@ namespace myGame
             if (goUp == true && player_img.Top >= 10)
             {
                 player_img.Top -= playerVel;
-                Debug.WriteLine("{0} , {1}", player_x, player_y);
+                //Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goDown == true && player_img.Top <= 800)
             {
                 player_img.Top += playerVel;
                 //player_img.Image = Properties.Resources.PikPng_com_blue_flame_png_840679;
-                Debug.WriteLine("{0} , {1}", player_x, player_y);
+                //Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goRight == true && player_img.Left < 830)
             {
                 player_img.Left += playerVel;
-                Debug.WriteLine("{0} , {1}", player_x, player_y);
+                //Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
 
             if (goLeft == true && player_img.Left > 0)
             {
                 player_img.Left -= playerVel;
-                Debug.WriteLine("{0} , {1}", player_x, player_y);
+                //Debug.WriteLine("{0} , {1}", player_x, player_y);
             }
         }
 
