@@ -21,7 +21,7 @@ namespace myGame
     public partial class Form1 : Form
     {
         //bool game_is_paused;
-        public int score;
+        public int score, death_counter;
         private Player player;
         private bool is_game_over;
         Enemy boss;
@@ -31,6 +31,7 @@ namespace myGame
             InitializeComponent();
             this.Width = 900;
             this.Height = 900;
+            death_counter = 0;
             player = new Player(player_img);
             boss = new Enemy(boss_img);
             //reset_game();
@@ -189,7 +190,7 @@ namespace myGame
             score = -10;
 
             int player_start_x = Random_Number.random_number_between(1, 7) * 100;
-            int player_start_y = Random_Number.random_number_between(3, 7) * 100;
+            int player_start_y = Random_Number.random_number_between(4, 7) * 100;
             player_img.Location = new Point(player_start_x, player_start_y);
 
             reset_blocks();
@@ -226,24 +227,67 @@ namespace myGame
                 boss_img.BringToFront();
                 boss_label.BringToFront();
 
-                for (int aCounter = 3; aCounter > 0; aCounter--)
+                if (death_counter == 0)
                 {
-                    if (aCounter == 3)
-                    {
-                        boss_label.Text = "Greeting Cube?!";
-                        
-                    }
-                    else if (aCounter == 2)
-                    {
-                        boss_label.Text = "or whatever you are...   (ಠ_ಠ)";
-                    }
-                    else if (aCounter == 1)
-                    {
-                        boss_label.Text = "just don't fall loser, HAHAHA";
-                    }
-                    await Task.Delay(2400);
 
+                    for (int aCounter = 3; aCounter > 0; aCounter--)
+                    {
+                        if (aCounter == 3)
+                        {
+                            boss_label.Text = "Greeting Cube?!";
+
+                        }
+                        else if (aCounter == 2)
+                        {
+                            boss_label.Text = "or whatever you are...   (ಠ_ಠ)";
+                        }
+                        else if (aCounter == 1)
+                        {
+                            boss_label.Text = "just don't fall loser, HAHAHA";
+                        }
+                        await Task.Delay(2400);
+
+                    }
                 }
+                else if (death_counter >= 1)
+                {
+                    int boss_random_text2 = Random_Number.random_number_between(1, 5);
+
+                    if (boss_random_text2 == 1)
+                    {
+                        boss_label.Text = "keep trying you won't win";
+
+                    }
+                    else if (boss_random_text2 == 2)
+                    {
+                        boss_label.Text = "So... , What are you? a sqare or a cube, maybe something else";
+                    }
+                    else if (boss_random_text2 == 3)
+                    {
+                        boss_label.Text = "Still trying to figure out what you are";
+
+                    }
+                    else if (boss_random_text2 == 4)
+                    {
+                        boss_label.Text = "If you keep playing you may get more intresting responses";
+
+                    }
+                    else if (boss_random_text2 == 5)
+                    {
+                        boss_label.Text = "Why you keep trying? Do you like the game?";
+
+                    }
+
+                    else if (boss_random_text2 == 6)
+                    {
+                        boss_label.Text = "";
+
+                    }
+
+                    await Task.Delay(2400);
+                }
+
+
                 boss_img.Visible = false;
                 boss_label.Visible = false;
                 await Task.Delay(500);
@@ -773,7 +817,9 @@ namespace myGame
         private async void gameOver()
         {
             is_game_over = true;
+            death_counter++;
             game_timer.Stop();
+            await Task.Delay(750);
 
             show_game_over_screenAsync();
 
@@ -789,7 +835,7 @@ namespace myGame
             {
 
                
-                game_over_panel.Location = new Point(250, 400);
+                game_over_panel.Location = new Point(300, 400);
                 game_over_panel.Visible = true;
                 game_over_panel.BringToFront();
 
@@ -802,7 +848,7 @@ namespace myGame
                 boss_img.BringToFront();
                 boss_label.BringToFront();
 
-                int boss_random_text = 5;
+                int boss_random_text = Random_Number.random_number_between(1, 10);
 
                 if (boss_random_text == 1)
                 {
@@ -818,7 +864,7 @@ namespace myGame
                 }
                 else if (boss_random_text == 4)
                 {
-                    boss_label.Text = "JUST QUIT THE GAME";
+                    boss_label.Text = "JUST QUIT THE GAME LOSER";
                 }
                 else if (boss_random_text == 5)
                 {
@@ -826,11 +872,11 @@ namespace myGame
                 }
                 else if (boss_random_text == 6)
                 {
-                    boss_label.Text = "YOU NEED THOUSANDS OF YEAR TO BEAT ME";
+                    boss_label.Text = "YOU NEED THOUSANDS OF YEARS TO BEAT THIS";
                 }
                 else if (boss_random_text == 7)
                 {
-                    boss_label.Text = "My CAT got a better score than yours!!!";
+                    boss_label.Text = "even my CAT got a better score than yours !!!";
                 }
                 else if (boss_random_text == 8)
                 {
@@ -838,7 +884,11 @@ namespace myGame
                 }
                 else if (boss_random_text == 9)
                 {
-                    boss_label.Text = score + " is your family proud of you?";
+                    boss_label.Text = score + ",  is your family proud of you?";
+                }
+                else if (boss_random_text == 10)
+                {
+                    boss_label.Text = score + " ONLY,  WHAT ARE YOU DOING?!!!";
                 }
 
 

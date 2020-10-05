@@ -743,8 +743,8 @@
             // 
             // game_over_panel
             // 
-            this.game_over_panel.BackColor = System.Drawing.Color.Transparent;
-            this.game_over_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.game_over_panel.BackColor = System.Drawing.Color.Black;
+            this.game_over_panel.BackgroundImage = global::myGame.Properties.Resources.block1001;
             this.game_over_panel.Controls.Add(this.home_play_again);
             this.game_over_panel.Controls.Add(this.label1);
             this.game_over_panel.Controls.Add(this.add_user_naem_button);
@@ -752,7 +752,7 @@
             this.game_over_panel.Controls.Add(this.play_again_button);
             this.game_over_panel.Location = new System.Drawing.Point(852, 154);
             this.game_over_panel.Name = "game_over_panel";
-            this.game_over_panel.Size = new System.Drawing.Size(406, 394);
+            this.game_over_panel.Size = new System.Drawing.Size(400, 400);
             this.game_over_panel.TabIndex = 56;
             // 
             // home_play_again
@@ -760,7 +760,7 @@
             this.home_play_again.BackColor = System.Drawing.Color.White;
             this.home_play_again.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_play_again.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.home_play_again.Location = new System.Drawing.Point(166, 329);
+            this.home_play_again.Location = new System.Drawing.Point(166, 284);
             this.home_play_again.Name = "home_play_again";
             this.home_play_again.Size = new System.Drawing.Size(84, 35);
             this.home_play_again.TabIndex = 4;
@@ -771,9 +771,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label1.Font = new System.Drawing.Font("Cosmic Alien", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(53, 69);
+            this.label1.Location = new System.Drawing.Point(49, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(322, 56);
             this.label1.TabIndex = 3;
@@ -783,7 +784,7 @@
             // 
             this.add_user_naem_button.Cursor = System.Windows.Forms.Cursors.No;
             this.add_user_naem_button.Enabled = false;
-            this.add_user_naem_button.Location = new System.Drawing.Point(269, 198);
+            this.add_user_naem_button.Location = new System.Drawing.Point(265, 142);
             this.add_user_naem_button.Name = "add_user_naem_button";
             this.add_user_naem_button.Size = new System.Drawing.Size(75, 23);
             this.add_user_naem_button.TabIndex = 2;
@@ -793,7 +794,7 @@
             // user_naem_textBox
             // 
             this.user_naem_textBox.Cursor = System.Windows.Forms.Cursors.No;
-            this.user_naem_textBox.Location = new System.Drawing.Point(85, 201);
+            this.user_naem_textBox.Location = new System.Drawing.Point(85, 145);
             this.user_naem_textBox.Name = "user_naem_textBox";
             this.user_naem_textBox.Size = new System.Drawing.Size(165, 20);
             this.user_naem_textBox.TabIndex = 1;
@@ -804,9 +805,9 @@
             this.play_again_button.BackColor = System.Drawing.Color.White;
             this.play_again_button.Cursor = System.Windows.Forms.Cursors.Default;
             this.play_again_button.Font = new System.Drawing.Font("Cosmic Alien", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.play_again_button.Location = new System.Drawing.Point(126, 270);
+            this.play_again_button.Location = new System.Drawing.Point(98, 209);
             this.play_again_button.Name = "play_again_button";
-            this.play_again_button.Size = new System.Drawing.Size(166, 44);
+            this.play_again_button.Size = new System.Drawing.Size(215, 52);
             this.play_again_button.TabIndex = 0;
             this.play_again_button.Text = "Play again";
             this.play_again_button.UseVisualStyleBackColor = false;
@@ -814,7 +815,7 @@
             // 
             // boss_label
             // 
-            this.boss_label.BackColor = System.Drawing.Color.Black;
+            this.boss_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.boss_label.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boss_label.ForeColor = System.Drawing.Color.White;
             this.boss_label.Location = new System.Drawing.Point(1051, 822);
