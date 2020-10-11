@@ -36,29 +36,29 @@ namespace myGame
             for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
-                await Task.Delay(210 - delay_time); //  the amount of time that the blocks shake for
+                await Task.Delay(230 - delay_time); //  the amount of time that the blocks shake for
 
                 block1.Top--;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
 
                 block2.Left++;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
 
                 block2.Left--;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
 
                 block1.Top++;
                 block2.Left++;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
 
                 block1.Top--;
                 block2.Left--;
 
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
             }
 
             block1.Visible = false; block2.Visible = false;
-            await Task.Delay(1150 - stages_delay); // the amount of time that the blocks disappear for
+            await Task.Delay(1200 - stages_delay); // the amount of time that the blocks disappear for
             block1.Visible = true; block2.Visible = true;
         }
 
@@ -67,20 +67,20 @@ namespace myGame
             for (int counter = 0; counter < 2; counter++)
             {
                 block1.Top++;
-                await Task.Delay(210 - delay_time); //  the amount of time that the blocks shake for
+                await Task.Delay(230 - delay_time); //  the amount of time that the blocks shake for
 
                 block1.Top--;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
 
                 block1.Top++;
-                await Task.Delay(630 - delay_time);
+                await Task.Delay(690 - delay_time);
                 
                 block1.Top--;
-                await Task.Delay(210 - delay_time);
+                await Task.Delay(230 - delay_time);
             }
 
             block1.Visible = false;
-            await Task.Delay(1150 - stages_delay);  // the amount of time that the blocks disappear for
+            await Task.Delay(1200 - stages_delay);  // the amount of time that the blocks disappear for
             block1.Visible = true;
         }
 

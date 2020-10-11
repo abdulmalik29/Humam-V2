@@ -8,3 +8,17 @@ C:\Users\Malk al\Source\Repos\myGamenew\obj\Release\myGame.csproj.GenerateResour
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Release\myGame.csproj.CoreCompileInputs.cache
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Release\myGame.exe
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Release\myGame.pdb
+C:\Users\Malk al\Source\Repos\myGame\bin\Release\myGame.exe.config
+C:\Users\Malk al\Source\Repos\myGame\bin\Release\myGame.exe.manifest
+C:\Users\Malk al\Source\Repos\myGame\bin\Release\myGame.application
+C:\Users\Malk al\Source\Repos\myGame\bin\Release\myGame.exe
+C:\Users\Malk al\Source\Repos\myGame\bin\Release\myGame.pdb
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.csprojAssemblyReference.cache
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.Form1.resources
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.Properties.Resources.resources
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.csproj.GenerateResource.cache
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.csproj.CoreCompileInputs.cache
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.exe.manifest
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.application
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.exe
+C:\Users\Malk al\Source\Repos\myGame\obj\Release\myGame.pdb

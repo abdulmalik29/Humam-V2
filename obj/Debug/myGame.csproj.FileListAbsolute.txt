@@ -18,3 +18,7 @@ C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csproj.CoreCompileInput
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.exe
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.pdb
 C:\Users\Malk al\Source\Repos\myGamenew\obj\Debug\myGame.csprojAssemblyReference.cache
+C:\Users\Malk al\Source\Repos\myGame\bin\Debug\myGame.exe.manifest
+C:\Users\Malk al\Source\Repos\myGame\bin\Debug\myGame.application
+C:\Users\Malk al\Source\Repos\myGame\obj\Debug\myGame.exe.manifest
+C:\Users\Malk al\Source\Repos\myGame\obj\Debug\myGame.application

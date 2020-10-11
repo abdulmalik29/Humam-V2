@@ -99,19 +99,19 @@
             this.be_rady_txt = new System.Windows.Forms.Label();
             this.be_rady_counter = new System.Windows.Forms.Label();
             this.instructions_panel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.instructions_play_button = new System.Windows.Forms.Button();
             this.instructions_home_button = new System.Windows.Forms.Button();
+            this.instructions_play_button = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.boss_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block_g7)).BeginInit();
@@ -778,7 +778,7 @@
             this.home_play_again.Cursor = System.Windows.Forms.Cursors.Hand;
             this.home_play_again.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_play_again.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.home_play_again.Location = new System.Drawing.Point(199, 298);
+            this.home_play_again.Location = new System.Drawing.Point(199, 296);
             this.home_play_again.Name = "home_play_again";
             this.home_play_again.Size = new System.Drawing.Size(103, 54);
             this.home_play_again.TabIndex = 4;
@@ -792,7 +792,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label1.Font = new System.Drawing.Font("Cosmic Alien", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(57, 22);
+            this.label1.Location = new System.Drawing.Point(57, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(414, 72);
             this.label1.TabIndex = 3;
@@ -802,6 +802,7 @@
             // 
             this.add_user_naem_button.Cursor = System.Windows.Forms.Cursors.No;
             this.add_user_naem_button.Enabled = false;
+            this.add_user_naem_button.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_user_naem_button.Location = new System.Drawing.Point(327, 139);
             this.add_user_naem_button.Name = "add_user_naem_button";
             this.add_user_naem_button.Size = new System.Drawing.Size(75, 23);
@@ -812,9 +813,10 @@
             // user_naem_textBox
             // 
             this.user_naem_textBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.user_naem_textBox.Font = new System.Drawing.Font("Cosmic Alien", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_naem_textBox.Location = new System.Drawing.Point(125, 142);
             this.user_naem_textBox.Name = "user_naem_textBox";
-            this.user_naem_textBox.Size = new System.Drawing.Size(165, 20);
+            this.user_naem_textBox.Size = new System.Drawing.Size(165, 24);
             this.user_naem_textBox.TabIndex = 1;
             this.user_naem_textBox.Text = "Insert your name";
             // 
@@ -823,7 +825,7 @@
             this.play_again_button.BackColor = System.Drawing.Color.White;
             this.play_again_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.play_again_button.Font = new System.Drawing.Font("Cosmic Alien", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.play_again_button.Location = new System.Drawing.Point(99, 202);
+            this.play_again_button.Location = new System.Drawing.Point(99, 198);
             this.play_again_button.Name = "play_again_button";
             this.play_again_button.Size = new System.Drawing.Size(303, 67);
             this.play_again_button.TabIndex = 0;
@@ -838,7 +840,7 @@
             this.boss_label.ForeColor = System.Drawing.Color.White;
             this.boss_label.Location = new System.Drawing.Point(1051, 822);
             this.boss_label.Name = "boss_label";
-            this.boss_label.Size = new System.Drawing.Size(293, 111);
+            this.boss_label.Size = new System.Drawing.Size(293, 155);
             this.boss_label.TabIndex = 58;
             this.boss_label.Tag = "enemy";
             this.boss_label.Text = "Hello";
@@ -911,115 +913,19 @@
             this.instructions_panel.Size = new System.Drawing.Size(900, 900);
             this.instructions_panel.TabIndex = 61;
             // 
-            // label2
+            // instructions_home_button
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cosmic Alien", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(283, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 56);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Instructions";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(572, 187);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 36);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Move upward";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(107, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(699, 506);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 461);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(223, 32);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Move leftward";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(346, 451);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 32);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Move downward";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(583, 461);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 32);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Move righward";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 36);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Controls";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 594);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 36);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "How to play";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 124);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 24);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "⚫";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 602);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 24);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "⚫";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(101, 643);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(655, 128);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Be aware of the shacking blocks as they \r\ntend to fall...\r\nGood luck\r\n\r\n";
+            this.instructions_home_button.BackColor = System.Drawing.Color.Black;
+            this.instructions_home_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.instructions_home_button.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructions_home_button.ForeColor = System.Drawing.Color.White;
+            this.instructions_home_button.Location = new System.Drawing.Point(503, 760);
+            this.instructions_home_button.Name = "instructions_home_button";
+            this.instructions_home_button.Size = new System.Drawing.Size(130, 69);
+            this.instructions_home_button.TabIndex = 14;
+            this.instructions_home_button.Text = "home";
+            this.instructions_home_button.UseVisualStyleBackColor = false;
+            this.instructions_home_button.Click += new System.EventHandler(this.instructions_home_button_Click);
             // 
             // instructions_play_button
             // 
@@ -1035,19 +941,115 @@
             this.instructions_play_button.UseVisualStyleBackColor = false;
             this.instructions_play_button.Click += new System.EventHandler(this.instructions_play_button_Click);
             // 
-            // instructions_home_button
+            // label11
             // 
-            this.instructions_home_button.BackColor = System.Drawing.Color.Black;
-            this.instructions_home_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.instructions_home_button.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructions_home_button.ForeColor = System.Drawing.Color.White;
-            this.instructions_home_button.Location = new System.Drawing.Point(503, 760);
-            this.instructions_home_button.Name = "instructions_home_button";
-            this.instructions_home_button.Size = new System.Drawing.Size(130, 69);
-            this.instructions_home_button.TabIndex = 14;
-            this.instructions_home_button.Text = "home";
-            this.instructions_home_button.UseVisualStyleBackColor = false;
-            this.instructions_home_button.Click += new System.EventHandler(this.instructions_home_button_Click);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(101, 643);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(655, 128);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Be aware of the shacking blocks as they \r\ntend to fall...\r\nGood luck\r\n\r\n";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(30, 602);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 24);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "⚫";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(30, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 24);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "⚫";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(61, 594);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(213, 36);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "How to play";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(61, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 36);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Controls";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(583, 461);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(223, 32);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Move righward";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(346, 451);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(223, 32);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Move downward";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cosmic Alien", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(117, 461);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(223, 32);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Move leftward";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cosmic Alien", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(572, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(213, 36);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Move upward";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cosmic Alien", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(283, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(360, 56);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Instructions";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(107, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 506);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 

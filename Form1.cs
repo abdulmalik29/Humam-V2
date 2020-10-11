@@ -25,6 +25,7 @@ namespace myGame
         private Player player;
         private bool is_game_over;
         Enemy boss;
+        List<int> player_scores;
 
         public Form1()
         {
@@ -34,6 +35,7 @@ namespace myGame
             death_counter = 0;
             player = new Player(player_img);
             boss = new Enemy(boss_img);
+            player_scores = new List<int>();
             //reset_game();
             game_start_menu();
         }
@@ -307,6 +309,12 @@ namespace myGame
                     {
                         boss_label.Text = "YOU ARE WORTHLESS";
                     }
+
+                    else if (boss_random_start_text == 11 && death_counter >= 2 && player_scores[death_counter - 1] < player_scores[death_counter - 2])
+                    {
+                        boss_label.Text = "WHAT A SHAME!!";
+                    }
+
                     await Task.Delay(time_delay);
                 }
 
@@ -400,14 +408,14 @@ namespace myGame
         {
             int delay1 = Convert.ToInt32(score * .9);  // the amount of time that the blocks disappear for
             int delay2 = Convert.ToInt32(score * .3); //  the amount of time that the blocks shake for
-            int delay_between_stages = 3900;
+            int delay_between_stages = 4200;
             int rand;
-            stage_1(0, -100);
+            stage_1(0, -200);
             await Task.Delay(delay_between_stages);
             while (score < 9000 && !is_game_over) // in this part, the game do two tasks, it generate a random number after every stage
             {                                           // the second task is to randomly choose the next stage depending on the player location
                 rand = Random_Number.random_number_between(1, 4);
-                delay_between_stages = 3900 - 150;
+                delay_between_stages = 4200;
 
                 if (player.is_player_TopLeft() == true)
                 {
@@ -837,14 +845,18 @@ namespace myGame
             this.Focus();
 
         }
-        private async void gameOver()
+        private async void gameOver() // a function that is triggerd when the player loses the game
+            //                           thats 1- show the game over window and 2- show the boss (the enemy)
         {
+            player_scores.Add(score);
             is_game_over = true;
             player_img.Visible = false;
             death_counter++;
             game_timer.Stop();
 
             Debug.WriteLine("death counter = " + death_counter);
+            Debug.WriteLine("player score " + player_scores[death_counter-1]);
+
             await Task.Delay(750);
 
             show_game_over_screenAsync();
@@ -857,6 +869,7 @@ namespace myGame
             home_play_again.Enabled = true;
             Cursor = Cursors.Default;
 
+            
             async Task show_game_over_screenAsync()
             {
 
@@ -874,7 +887,7 @@ namespace myGame
                 boss_img.BringToFront();
                 boss_label.BringToFront();
 
-                int boss_random_text = Random_Number.random_number_between(1, 10);
+                int boss_random_text = Random_Number.random_number_between(1, 12);
                 Debug.WriteLine("boss random1 = " + boss_random_text);
 
                 if (boss_random_text == 1)
@@ -887,7 +900,7 @@ namespace myGame
                 }
                 else if (boss_random_text == 3)
                 {
-                    boss_label.Text = "I could get better score than yours even if i was BLINDFOLD";
+                    boss_label.Text = "I could get better score than yours even if i was BLINDFOLDED";
                 }
                 else if (boss_random_text == 4)
                 {
@@ -899,7 +912,7 @@ namespace myGame
                 }
                 else if (boss_random_text == 6)
                 {
-                    boss_label.Text = "YOU NEED THOUSANDS OF YEARS TO BEAT THIS";
+                    boss_label.Text = "YOU NEED THOUSANDS OF YEARS TO BEAT THIS GAME";
                 }
                 else if (boss_random_text == 7)
                 {
@@ -917,7 +930,14 @@ namespace myGame
                 {
                     boss_label.Text = score + " ONLY,  WHAT ARE YOU DOING?!!!";
                 }
-
+                else if (boss_random_text == 11 && death_counter >= 2 && player_scores[death_counter - 1] < player_scores[death_counter - 2])
+                {
+                    boss_label.Text = "You know that your score is getting worst";
+                }
+                else if (boss_random_text == 12 && death_counter >= 2 && player_scores[death_counter - 1] < player_scores[death_counter - 2])
+                {
+                    boss_label.Text = "YOU ARE BECOMING WORST THE MOER YOU PLAY!!!";
+                }
 
             }
 
@@ -964,12 +984,11 @@ namespace myGame
             Focus();
         }
 
-        private void instructions_button_Click(object sender, EventArgs e)
+        private void instructions_button_Click(object sender, EventArgs e) // a function thats shows the instructions window
         {
             instructions_panel.Location = new Point(0, 0);
             instructions_panel.Visible = true;
             instructions_panel.BringToFront();
         }
     }
-
 }
